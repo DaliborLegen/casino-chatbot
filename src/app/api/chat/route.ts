@@ -1,11 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 import { systemPrompt } from "@/lib/system-prompt";
-
-const client = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY!,
-});
 
 export async function POST(req: NextRequest) {
   try {
@@ -16,6 +12,8 @@ export async function POST(req: NextRequest) {
     }
 
     const sid = sessionId || crypto.randomUUID();
+    const supabase = getSupabase();
+    const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY! });
 
     // Get or create conversation
     let { data: conversation } = await supabase
