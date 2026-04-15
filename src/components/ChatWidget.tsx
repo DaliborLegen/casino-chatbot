@@ -13,7 +13,7 @@ export default function ChatWidget() {
     {
       role: "assistant",
       content:
-        "Pozdravljeni! 👋 Sem virtualni pomočnik Casino.si. Kako vam lahko pomagam?",
+        "Pozdravljeni! Sem virtualni pomočnik Casino.si. Kako vam lahko pomagam?",
     },
   ]);
   const [input, setInput] = useState("");
@@ -74,7 +74,7 @@ export default function ChatWidget() {
         <button
           onClick={() => setIsOpen(true)}
           className="fixed bottom-6 right-6 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-50 cursor-pointer transition-transform hover:scale-110"
-          style={{ background: "linear-gradient(135deg, #f59e0b, #d97706)" }}
+          style={{ background: "linear-gradient(135deg, #ff0000, #aa0000)" }}
         >
           <svg
             width="28"
@@ -93,17 +93,18 @@ export default function ChatWidget() {
 
       {/* Chat window */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 w-96 h-[32rem] flex flex-col rounded-2xl shadow-2xl z-50 overflow-hidden border"
+        <div
+          className="fixed bottom-6 right-6 w-96 h-[32rem] flex flex-col rounded-2xl shadow-2xl z-50 overflow-hidden"
           style={{
-            background: "var(--surface)",
-            borderColor: "var(--border)",
+            background: "#1c1d1e",
+            border: "1px solid #3c3c3c",
             maxHeight: "calc(100vh - 3rem)",
           }}
         >
           {/* Header */}
           <div
             className="flex items-center justify-between px-4 py-3 shrink-0"
-            style={{ background: "linear-gradient(135deg, #f59e0b, #d97706)" }}
+            style={{ background: "linear-gradient(90deg, #aa0000, #ff0000, #aa0000)" }}
           >
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-sm">
@@ -120,14 +121,24 @@ export default function ChatWidget() {
               onClick={() => setIsOpen(false)}
               className="text-white/80 hover:text-white cursor-pointer"
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
                 <path d="M18 6L6 18M6 6l12 12" />
               </svg>
             </button>
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-3" style={{ background: "var(--background)" }}>
+          <div
+            className="flex-1 overflow-y-auto p-4 space-y-3"
+            style={{ background: "#222222" }}
+          >
             {messages.map((msg, i) => (
               <div
                 key={i}
@@ -138,13 +149,13 @@ export default function ChatWidget() {
                   style={
                     msg.role === "user"
                       ? {
-                          background: "linear-gradient(135deg, #f59e0b, #d97706)",
+                          background: "linear-gradient(135deg, #ff0000, #aa0000)",
                           color: "white",
                           borderBottomRightRadius: "4px",
                         }
                       : {
-                          background: "var(--surface-light)",
-                          color: "var(--foreground)",
+                          background: "#323232",
+                          color: "#cfd0d1",
                           borderBottomLeftRadius: "4px",
                         }
                   }
@@ -157,7 +168,7 @@ export default function ChatWidget() {
               <div className="flex justify-start">
                 <div
                   className="px-4 py-2.5 rounded-2xl text-sm"
-                  style={{ background: "var(--surface-light)", color: "var(--foreground)" }}
+                  style={{ background: "#323232", color: "#cfd0d1" }}
                 >
                   <span className="animate-pulse">Tipkam...</span>
                 </div>
@@ -167,7 +178,10 @@ export default function ChatWidget() {
           </div>
 
           {/* Input */}
-          <div className="p-3 shrink-0" style={{ borderTop: "1px solid var(--border)", background: "var(--surface)" }}>
+          <div
+            className="p-3 shrink-0"
+            style={{ borderTop: "1px solid #3c3c3c", background: "#1c1d1e" }}
+          >
             <div className="flex gap-2">
               <input
                 type="text"
@@ -177,9 +191,9 @@ export default function ChatWidget() {
                 placeholder="Vnesite sporočilo..."
                 className="flex-1 px-4 py-2.5 rounded-xl text-sm outline-none"
                 style={{
-                  background: "var(--background)",
-                  color: "var(--foreground)",
-                  border: "1px solid var(--border)",
+                  background: "#222222",
+                  color: "#ffffff",
+                  border: "1px solid #3c3c3c",
                 }}
                 disabled={loading}
               />
@@ -187,12 +201,31 @@ export default function ChatWidget() {
                 onClick={sendMessage}
                 disabled={loading || !input.trim()}
                 className="px-4 py-2.5 rounded-xl text-white text-sm font-medium cursor-pointer disabled:opacity-50 transition-opacity"
-                style={{ background: "linear-gradient(135deg, #f59e0b, #d97706)" }}
+                style={{ background: "linear-gradient(135deg, #ff0000, #aa0000)" }}
               >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
                   <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
                 </svg>
               </button>
+            </div>
+            {/* Powered by */}
+            <div className="text-center mt-2">
+              <a
+                href="https://aiprosolutions.si"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[10px] hover:underline"
+                style={{ color: "#848383" }}
+              >
+                Powered by <span className="font-semibold" style={{ color: "#ff0000" }}>AIPROSOLUTIONS.SI</span>
+              </a>
             </div>
           </div>
         </div>
