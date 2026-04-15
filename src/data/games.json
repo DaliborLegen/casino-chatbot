@@ -1,0 +1,2187 @@
+{
+  "providers": [
+    {
+      "provider": "Amusnet",
+      "gameCount": 88,
+      "games": [
+        {
+          "name": "10 Burning Heart",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10BurningHeart_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10BurningHeart_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10BurningHeart_HR.pdf"
+          }
+        },
+        {
+          "name": "100 Burning Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100BurningHot_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100BurningHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100BurningHot_HR.pdf"
+          }
+        },
+        {
+          "name": "100 Golden Coins",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100_Golden_Coins_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100-Golden-Coins_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100_Golden_Coins_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "100 Power Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100_Power_Hot_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100-Power-Hot_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100_Power_Hot_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "100 Super Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100SuperHot_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100SuperHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100SuperHot_HR.pdf"
+          }
+        },
+        {
+          "name": "100 Bulky Fruits",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100_Bulky_Fruits_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100-Bulky-Fruits_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100_Bulky_Fruits_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Bulky Fruits",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20_Bulky_Fruits_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20-Bulky-Fruits_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20_Bulky_Fruits_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Burning Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20BurningHot_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20BurningHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20BurningHot_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Dazzling Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20DazzlingHot_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20DazzlingHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20DazzlingHot_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Extra Crown",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20_Extra_Crown_Game%20Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20-Extra-Crown_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20%20Extra%20Crown_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Golden Coins",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20_Golden_Coins_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20-Golden-Coins_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20_Golden_Coins_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Hot Blast",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20_Hot_Blast_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20-Hot-Blast_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20_Hot_Blast_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Power Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20_Power_Hot_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20-Power-Hot_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20_Hot_Blast_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Super Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20SuperHot_PJ_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20SuperHot_PJ_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20SuperHot_PJ_HR.pdf"
+          }
+        },
+        {
+          "name": "27 Eternal Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/27_Eternal_Hot_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/27-Eternal-Hot_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/27_Eternal_Hot_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "27 Wins",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/27_Wins_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/27-Wins_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/27_Wins_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Bulky Fruits",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40_Bulky_Fruits_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40-Bulky-Fruits_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40_Bulky_Fruits_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Burning Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40BurningHot_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40BurningHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40BurningHot_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Bulky Fruits 6 Reels",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40_Bulky_Fruits_6_Reels_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40-Bulky-Fruits-6-Reels_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40_Bulky_Fruits_6_Reels_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Golden Coins",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40_Golden_Coins_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40-Golden-Coins_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40_Golden_Coins_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Power Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40_Power_Hot_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40-Power-Hot_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40_Power_Hot_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Super Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40SuperHot_PJ_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40SuperHot_PJ_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40SuperHot_PJ_HR.pdf"
+          }
+        },
+        {
+          "name": "5 Burning Heart",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5BurningHeart_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5BurningHeart_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5BurningHeart_HR.pdf"
+          }
+        },
+        {
+          "name": "5 Dazzling Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5DazzlingHot_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5DazzlingHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5DazzlingHot_HR.pdf"
+          }
+        },
+        {
+          "name": "5 Power Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/5_Power_Hot_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/5-Power-Hot_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/5_Power_Hot_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "7 & Crystals",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/7&Crystals_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/7&Crystals_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/7&Crystals_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Amazons Battle",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Amazons_%20Battle_Game%20Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Amazons-Battle_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Amazons_%20Battle_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Art of Gold",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Art_of_Gold_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Art-of-Gold_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Art_of_Gold_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Bier O'Meter",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Bier_O_Meter_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Bier-O_Meter_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Bier_O_Meter_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Bulky Fruits",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Bulky_Fruits_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Bulky-Fruits_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Bulky_Fruits_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Burning Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_BurningHot_PJ_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_BurningHot_PJ_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_BurningHot_PJ_HR.pdf"
+          }
+        },
+        {
+          "name": "Candy Palace",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Candy_Palace_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Candy-Palace_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Candy_Palace_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Cocktail Rush",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Cocktail_Rush_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Cocktail-Rush_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Cocktail_Rush_Game%20Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Diamond Plus",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Diamond_Plus_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Diamond-Plus_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Diamond_Plus_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Coin Gobbler",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Coin_Gobbler_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Coin-Gobbler_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Coin_Gobbler_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Dancing Dead",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Dancing_Dead_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Dancing-Dead_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Dancing_Dead_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Extra Crown",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Extra_Crown_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Extra-Crown_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Extra_Crown_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Fruits & Gold",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Fruits&Gold_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Fruits&Gold_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Fruits&Gold_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Flaming Hot Extreme",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_FlamingHotExtreme_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_FlamingHotExtreme_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_FlamingHotExtreme_HR.pdf"
+          }
+        },
+        {
+          "name": "Fruity Time",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Fruity_Time_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Fruity-Time_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Fruity_Time_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Great 27",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Great_27_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Great-27_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Great_27_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Hot Deco",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Hot_Deco_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Hot-Deco_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Hot_Deco_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Kemet's Treasures",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Kemet_s%20Treasures_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Kemet_s%20Treasures_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Kemet_s_Treasures_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Phoenix Star",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Phoenix_Star_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Phoenix-Star_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Phoenix_Star_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Mythical Treasure",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Mythical_Treasure_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Mythical-Treasure_Game%20Rules-EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Mythical_Treasure_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Shining Crown",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_ShiningCrown_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_ShiningCrown_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_ShiningCrown_HR.pdf"
+          }
+        },
+        {
+          "name": "Stoichov #8",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Stoichkov_8_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Stoichkov-8_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Stoichkov_8_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Supreme Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Supreme_Hot_Game_Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Supreme-Hot_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Supreme_Hot_Game_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Ultimate Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_UltimateHot_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_UltimateHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_UltimateHot_HR.pdf"
+          }
+        },
+        {
+          "name": "Vampire Beast",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Vampire_Beast_Game%20Rules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Vampire-Beast_Game_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Vampire_Beast_Game%20Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "100 Bulky Fruits Golden Coins Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100BulkyFruitsGoldenCoinsLink_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100BulkyFruitsGoldenCoinsLink_GameRules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100BulkyFruitsGoldenCoinsLink_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "100 Power Hot Golden Coins Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100PowerHotGoldenCoinsLink_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100PowerHotGoldenCoinsLink_GameRules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100PowerHotGoldenCoins%20Link_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Glossy Hot Golden Coins Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20GlossyHotGoldenCoinsLink_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20GlossyHotGoldenCoinsLink_GameRules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20GlossyHotGoldenCoinsLink_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Bulky Fruits Golden Coins Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40BulkyFruitsGoldenCoinsLink_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40BulkyFruitsGoldenCoinsLink_GameRules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40BulkyFruitsGoldenCoinsLink_Game%20Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Extra Crown Golden Coins Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40ExtraCrownGoldenCoinsLink_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40ExtraCrownGoldenCoinsLink_Game%20Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40ExtraCrownGoldenCoinsLink_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Mystic Gem Golden Coins Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40MysticGemGoldenCoinsLink_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40MysticGemGoldenCoinsLink_Game%20Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40MysticGemGoldenCoinsLink_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Power Hot Golden Coins Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40PowerHotGoldenCoinsLink_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40PowerHotGoldenCoinsLink_GameRules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40PowerHotGoldenCoinsLink_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "Art of Gold Golden Coins Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/ArtofGoldGoldenCoinsLink_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/ArtofGoldGoldenCoinsLink_GameRules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/ArtofGoldGoldenCoinsLink_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "100 Bulky Fruits Buy Bonus",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100BulkyFruitsBuyBonus_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100BulkyFruitsBuyBonus_GameRules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100BulkyFruitsBuyBonus_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "100 Burning Hot Buy Bonus",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100BurningHotBuyBonus_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100BurningHotBuyBonus_GameRules_Croatia_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100BurningHotBuyBonus_GameRules_Croatia_HR.pdf"
+          }
+        },
+        {
+          "name": "100 Golden Coins: Reel Fishing",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100GoldenCoinsReelFishing_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100GoldenCoinsReelFisshing_GameRules_Croatia_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/100GoldenCoinsReelFisshing_GameRules_Croatia_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Aztec Coins",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20AztecCoins_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20AztecCoins_GameRules_Croatia_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20AztecCoins_GameRules_Croatia_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Bulky Fruits Buy Bonus",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20BulkyFruitsBuyBonus_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20BulkyFruitsBuyBonus_GameRules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20BulkyFruitsBuyBonus_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Burning Hot Buy Bonus",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20BurningHotBuyBonus_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20BurningHotBuyBonus_GameRules_Croatia_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20BurningHotBuyBonus_GameRules_Croatia_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Golden Coins: Reel Fishing",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20GoldenCoinsReelFishing_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20GoldenCoinsReelFisshing_GameRules_Croatia_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20GoldenCoinsReelFisshing_GameRules_Croatia_HR.pdf"
+          }
+        },
+        {
+          "name": "27 Wild Shots",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/27WildShots_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/27WildShots_GameRules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/27WildShots_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Bulky Fruits Buy Bonus",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40BulkyFruitsBuyBonus_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40BulkyFruitsBuyBonus_GameRules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40BulkyFruitsBuyBonus_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Burning Hot Buy Bonus",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40BurningHotBuyBonus_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40BurningHotBuyBonus_GameRules_Croatia_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40BurningHotBuyBonus_GameRules_Croatia_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Fruits & Gold",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40FruitsnGold_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40FruitsnGold_GameRules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40FruitsnGold_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Golden Coins: Reel Fishing",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40GoldenCoinsReelFishing_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40GoldenCoinsReelFisshing_GameRules_Croatia_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40GoldenCoinsReelFisshing_Game%20Rules_Croatia_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Mystic Gem",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40MysticGem_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40MysticGem_GameRules_Croatia_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40MysticGem_Game%20Rules_Croatia_HR.pdf"
+          }
+        },
+        {
+          "name": "Asian Palace",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/AsianPalace_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/AsianPalace_GameRules_Croatia_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/AsianPalace_GameRules_Croatia_HR.pdf"
+          }
+        },
+        {
+          "name": "Bulky Fruits Buy Bonus",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BulkyFruitsBuyBonus_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BulkyFruitsBuyBonus_GameRules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BulkyFruitsBuyBonus_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "Burning Hot Buy Bonus",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BurningHotBuyBonus_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BurningHotBuyBonus_GameRules_Croatia_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BurningHotBuyBonus_GameRules_Croatia_HR.pdf"
+          }
+        },
+        {
+          "name": "Golden Goal Roulette",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SL_GoldenGoalRoulette.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/GoldenGoalRoulette_GameRules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/GoldenGoalRoulette_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "Virtual Monaco Roulette 72x",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SL_VirtualMonacoRoulette72x.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/VirtualMonacoRoulette72x_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/VirtualMonacoRoulette72x_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Virtual Roulette",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SL_VirtualRoulette.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/VirtualRoulette_GameRules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/VirtualRoulette_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "Virtual Space Roulette 120x",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SL_VirtualSpaceRoulette120x.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/VirtualSpaceRoulette120x_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/VirtualSpaceRoulette120x_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Virtual Vegas Roulette 500x",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SL_VirtualVegasRoulette500x.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/VirtualVegasRoulette500x_Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/VirtualVegasRoulette500x_Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "10 Alebrijes Eternal",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10AlebrijesEternal_GameRules_Slovenia_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10AlebrijesEternal_GameRules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10AlebrijesEternal_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Alebrijes Eternal",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40AlebrijesEternal_GameRules_Slovenia_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40AlebrijesEternal_GameRules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40AlebrijesEternal_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Glossy Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40GlossyHot_GameRules_Slovenia_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40GlossyHot_GameRules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40GlossyHot_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "Book of Waka-Waka",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BookofWaka-Waka_GameRules_Slovenia_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BookofWaka-Waka_GameRules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BookofWaka-Waka_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "Great Sparta",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/GreatSparta_GameRules_Slovenia_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/GreatSparta_GameRules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/GreatSparta_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "Panda's Gold",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Panda_sGold_GameRules_Slovenia_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Panda_sGold_Game%20Rules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Panda_sGold_Game%20Rules_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Lucky Wilds Hot Golden Coins Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40LuckyWildsHotGoldenCoinsLink_GameRules_Slovenia_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40LuckyWildsHotGoldenCoinsLink_GameRules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/40LuckyWildsHotGoldenCoinsLink_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "Panda's Gold Golden Coins Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Panda_sGoldGoldenCoinsLink_Game%20Rules_Slovenia_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Panda_sGoldGoldenCoinsLink_GameRules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/Panda_sGoldGoldenCoinsLink_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "Mystic Tiger",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/MysticTiger_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/MysticTiger_GameRules_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/MysticTiger_GameRules_HR.pdf"
+          }
+        }
+      ]
+    },
+    {
+      "provider": "BF Games",
+      "gameCount": 15,
+      "games": [
+        {
+          "name": "777 Golden Hit",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/777_golden_hit_game_rules_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/777_golden_hit_game_rules.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/777_golden_hit_game_rules_hr.pdf"
+          }
+        },
+        {
+          "name": "777 Winter Hit",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/777_winter_hit_game_rules_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/777_winter_hit_game_rules.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/777_winter_hit_game_rules_hr.pdf"
+          }
+        },
+        {
+          "name": "Blasting Rubies",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/blasting_rubies_game_rules_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/blasting_rubies_game_rules.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/blasting_rubies_game_rules_hr.pdf"
+          }
+        },
+        {
+          "name": "Book of Gods",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/book_of_gods_game_rules_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/book_of_gods_game_rules.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/book_of_gods_game_rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Buffalo Trail",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/buffalo_trail_game_rules_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/buffalo_trail_game_rules.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/buffalo_trail_game_rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Burning Slots",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/burning_slots_game_rules_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/burning_slots_game_rules.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/burning_slots_game_rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Cave of Xmas",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/cave_of_xmas_game_rules_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/cave_of_xmas_game_rules.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/cave_of_xmas_game_rules_hr.pdf"
+          }
+        },
+        {
+          "name": "Chicken Madness",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/chicken_madness_game_rules_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/chicken_madness_game_rules.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/chicken_madness_game_rules_hr.pdf"
+          }
+        },
+        {
+          "name": "Fiery Slots",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/fiery_slots_game_rules_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/fiery_slots_game_rules.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/fiery_slots_game_rules_hr.pdf"
+          }
+        },
+        {
+          "name": "Golem Wildwoods",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/golem_wildwoods_game_rules_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/golem_wildwoods_game_rules.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/golem_wildwoods_game_rules_hr.pdf"
+          }
+        },
+        {
+          "name": "Ruby Joker",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/ruby_joker_game_rules_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/ruby_joker_game_rules.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/ruby_joker_game_rules_hr.pdf"
+          }
+        },
+        {
+          "name": "Stunning Crown",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/stunning_crown_game_rules_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/stunning_crown_game_rules.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/stunning_crown_game_rules_hr.pdf"
+          }
+        },
+        {
+          "name": "Stunning Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/stunning_hot_rules_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/stunning_hot_game_rules.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/stunning_hot_rules_hr.pdf"
+          }
+        },
+        {
+          "name": "Stunning Snow Remastered",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/stunning%20_snow_remastered_rules_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/stunning_snow_remastered_game_rules.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/stunning_snow_remastered_game_rules_HR.pdf"
+          }
+        },
+        {
+          "name": "Sweet Reward",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/sweet_reward_rules_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/sweet_reward_game_rules.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/sweet_reward_game_rules_hr.pdf"
+          }
+        }
+      ]
+    },
+    {
+      "provider": "EGT Digital",
+      "gameCount": 94,
+      "games": [
+        {
+          "name": "40 Burning Hot Bell Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40BurningHot_BellLink_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40BurningHot_BellLink_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40BurningHot_BellLink_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Burning Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40BurningHot_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40BurningHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40BurningHot_HR.pdf"
+          }
+        },
+        {
+          "name": "5 Dazzling Hot Bell Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5DazzlingHot_BellLink_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5DazzlingHot_BellLink_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5DazzlingHot_BellLink_HR.pdf"
+          }
+        },
+        {
+          "name": "5 Dazzling Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5DazzlingHot_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5DazzlingHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5DazzlingHot_HR.pdf"
+          }
+        },
+        {
+          "name": "Flaming Hot Bell Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_FlamingHot_BellLink_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_FlamingHot_BellLink_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_FlamingHot_BellLink_HR.pdf"
+          }
+        },
+        {
+          "name": "Flaming Hot Extreme Bell Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_FlamingHotExtreme_BellLink_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_FlamingHotExtreme_BellLink_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_FlamingHotExtreme_BellLink_HR.pdf"
+          }
+        },
+        {
+          "name": "Flaming Hot Extreme",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_FlamingHotExtreme_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_FlamingHotExtreme_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_FlamingHotExtreme_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Lucky King Bell Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40LuckyKing_BellLink_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40LuckyKing_BellLink_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40LuckyKing_BellLink_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Lucky King Extreme Bell Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40LuckyKingExtreme_BellLink_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40LuckyKingExtreme_BellLink_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40LuckyKingExtreme_BellLink_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Shining Crown Bell Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40ShiningCrown_BellLink_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40ShiningCrown_BellLink_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40ShiningCrown_BellLink_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Shining Crown",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40ShiningCrown_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40ShiningCrown_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40ShiningCrown_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Super Fruits Bell Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40SuperFruits_BellLink_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40SuperFruits_BellLink_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40SuperFruits_BellLink_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Super Hot Bell Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40SuperHot_BellLink_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40SuperHot_BellLink_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40SuperHot_BellLink_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Super Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40SuperHot_PJ_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40SuperHot_PJ_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40SuperHot_PJ_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Zodiac Wheel Bell Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40ZodiacWheel_BellLink_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40ZodiacWheel_BellLink_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40ZodiacWheel_BellLink_HR.pdf"
+          }
+        },
+        {
+          "name": "Leprechaun Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_LeprechaunHot_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_Leprechaun_Hot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_LeprechaunHot_HR.pdf"
+          }
+        },
+        {
+          "name": "100 Burning Clover",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100BurningClover_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100BurningClover_UI_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100BurningClover_HR.pdf"
+          }
+        },
+        {
+          "name": "100 Burning Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100BurningHot_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100BurningHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100BurningHot_HR.pdf"
+          }
+        },
+        {
+          "name": "100 Super Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100SuperHot_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100SuperHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100SuperHot_HR.pdf"
+          }
+        },
+        {
+          "name": "Shining Crown Bell Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_ShiningCrown_BellLink_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_ShiningCrown_BellLink_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_ShiningCrown_BellLink_HR.pdf"
+          }
+        },
+        {
+          "name": "Shining Crown",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_ShiningCrown_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_ShiningCrown_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_ShiningCrown_HR.pdf"
+          }
+        },
+        {
+          "name": "10 Burning Heart",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10BurningHeart_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10BurningHeart_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10BurningHeart_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Burning Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20BurningHot_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20BurningHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20BurningHot_HR.pdf"
+          }
+        },
+        {
+          "name": "10 Crown Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10CrownHot_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10CrownHot_UI_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10CrownHot_HR.pdf"
+          }
+        },
+        {
+          "name": "10 Shinning Diamond",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10ShiningDiamond_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10ShiningDiamond_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10ShiningDiamnod_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Super Fruits Bell Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20SuperFruits_BellLink_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20SuperFruits_BellLink_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20SuperFruits_BellLink_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Super Hot Bell Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20SuperHot_BellLink_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20SuperHot_BellLink_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20SuperHot_BellLink_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Super Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20SuperHot_PJ_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20SuperHot_PJ_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20SuperHot_PJ_HR.pdf"
+          }
+        },
+        {
+          "name": "Vampire Night Bell Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_VampireNight_BellLink_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_VampireNight_BellLink_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_VampireNight_BellLink_HR.pdf"
+          }
+        },
+        {
+          "name": "Zodiac Wheel Bell Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_ZodiacWheel_BellLink_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_ZodiacWheel_BellLink_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_ZodiacWheel_BellLink_HR.pdf"
+          }
+        },
+        {
+          "name": "Sugartime",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_Sugartime_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_Sugartime_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_Sugartime_HR.pdf"
+          }
+        },
+        {
+          "name": "Hermes Fortunes",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_HermesFortunes_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_HermesFortunes_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_HermesFortunes_HR.pdf"
+          }
+        },
+        {
+          "name": "Shining Boooom",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_ShiningBoooom_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_ShiningBoooom_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_ShiningBoooom_HR.pdf"
+          }
+        },
+        {
+          "name": "Desert Wealth",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_DesertWealth_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_DesertWealth_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_DesertWealth_HR.pdf"
+          }
+        },
+        {
+          "name": "Royal Secrets",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_RoyalSecrets_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_RoyalSecrets_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_RoyalSecrets_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Crown Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20CrownHot_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20CrownHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20CrownHot_HR.pdf"
+          }
+        },
+        {
+          "name": "Versailles Gold",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_VersaillesGold_PJ_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_VersaillesGold_PJ_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_VersaillesGold_PJ_HR.pdf"
+          }
+        },
+        {
+          "name": "Spinning Crown",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_SpinningCrown_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_SpinningCrown_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_SpinningCrown_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Super Fruits",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20SuperFruits_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20SuperFruits_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20SuperFruits_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Crown Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40CrownHot_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40CrownHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40CrownHot_HR.pdf"
+          }
+        },
+        {
+          "name": "Spooky Jack",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_SpookyJack_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_SpookyJack_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_SpookyJack_HR.pdf"
+          }
+        },
+        {
+          "name": "10 Super Fruits",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10SuperFruits_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10SuperFruits_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10SuperFruits_HR.pdf"
+          }
+        },
+        {
+          "name": "Amazons' Battle",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_AmazonsBattle_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_AmazonsBattle_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_AmazonsBattle_HR.pdf"
+          }
+        },
+        {
+          "name": "5 Burning Power",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5BurningPower_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5BurningPower_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5BurningPower_HR.pdf"
+          }
+        },
+        {
+          "name": "Desert Wealth",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_DesertWealth_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_DesertWealth_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_DesertWealth_HR.pdf"
+          }
+        },
+        {
+          "name": "10 Leprechaun Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10LeprechaunHot_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10LeprechaunHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10LeprechaunHot_HR.pdf"
+          }
+        },
+        {
+          "name": "5 Super Fruits",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5SuperFruits_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5SuperFruits_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5SuperFruits_HR.pdf"
+          }
+        },
+        {
+          "name": "Rise of Ra",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_RiseOfRa_PJ_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_RiseOfRa_PJ_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_RiseofRa_PJ_HR.pdf"
+          }
+        },
+        {
+          "name": "10 Action Diamond",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10ActionDiamond_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10ActionDiamond_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10ActionDiamond_HR.pdf"
+          }
+        },
+        {
+          "name": "Supreme Cash",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_SupremeCash_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_SupremeCash_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_SupremeCash_HR.pdf"
+          }
+        },
+        {
+          "name": "5 Crown Hit",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5CrownHit_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5CrownHit_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5CrownHit_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Charming Joker",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20CharmingJoker_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20CharmingJoker_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20CharmingJoker_HR.pdf"
+          }
+        },
+        {
+          "name": "5 Dazzling Cash",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5DazzlingCash_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5DazzlingCash_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5DazzlingCash_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Charming Joker",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40CharmingJoker_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40CharmingJoker_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40CharmingJoker_HR.pdf"
+          }
+        },
+        {
+          "name": "10 Dazzling Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10DazzlingHot_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10DazzlingHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10DazzlingHot_HR.pdf"
+          }
+        },
+        {
+          "name": "Book Of Shining Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_BookOfShiningHot_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_BookOfShiningHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_Book%20of%20ShiningHot_HR.pdf"
+          }
+        },
+        {
+          "name": "5 Clover Hit",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5CloverHit_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5CloverHit_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5CloverHit_HR.pdf"
+          }
+        },
+        {
+          "name": "Ultimate Fruits",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_UltimateFruits_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_UltimateFruits_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_UltimateHot_HR.pdf"
+          }
+        },
+        {
+          "name": "100 Super Fruits",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100SuperFruits_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100SuperFruits_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100SuperFruits_HR.pdf"
+          }
+        },
+        {
+          "name": "Burning Goals",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_BurningGoals_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_BurningGoals_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_BurningGoals_HR.pdf"
+          }
+        },
+        {
+          "name": "100 Leprechaun Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100LeprechaunHot_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100LeprechaunHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100LeprechaunHot_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Leprechaun Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20LeprechaunHot_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20LeprechaunHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20LeprechaunHot_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Dazzling Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40DazzlingHot_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40DazzlingHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40DazzlingHot_HR.pdf"
+          }
+        },
+        {
+          "name": "Sugar Duke",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_SugarDuke_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_SugarDuke_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_SugarDuke_HR.pdf"
+          }
+        },
+        {
+          "name": "10 Burning Clover",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10BurningClover_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10BurningClover_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10BurningClover_HR.pdf"
+          }
+        },
+        {
+          "name": "10 Crystal Wish",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10CrystalWish_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10CrystalWish_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_10CrystalWish_HR.pdf"
+          }
+        },
+        {
+          "name": "100 Lucky Hat",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100LuckyHat_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100LuckyHat_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100LuckyHat_HR.pdf"
+          }
+        },
+        {
+          "name": "100 Super Hot 6 Reels",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100SuperHot(6Reels)_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100SuperHot(6Reels)_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_100SuperHot(6Reels)_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Burning Clover",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20BurningClover_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20BurningClover_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20BurningClover_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Dazzling Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20DazzlingHot_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20DazzlingHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20DazzlingHot_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Super Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20SuperHot_PJ_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20SuperHot_PJ_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_20SuperHot_PJ_HR.pdf"
+          }
+        },
+        {
+          "name": "27 Fruit Ways",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_27FruitWays_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_27FruitWays_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_27FruitWays_HR.pdf"
+          }
+        },
+        {
+          "name": "30 Spicy Fruits",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_30SpicyFruits_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_30SpicyFruits_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_30SpicyFruits_HR.pdf"
+          }
+        },
+        {
+          "name": "30 Spinning 7's",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_30Spinning7s_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_30Spinning7s_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_30Spinning7s_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Burning Clover",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40BurningClover_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40BurningClover_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40BurningClover_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Burning Clover 6 Reels",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40BurningClover(6Reels)_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40BurningClover(6Reels)_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40BurningClover(6Reels)_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Burning Hot 6 Reels",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40BurningHot(6Reels)_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40BurningHot(6Reels)_UI_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40BurningHot(6Reels)_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Lucky King",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40LuckyKing_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40LuckyKing_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40LuckyKing_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Mega Clover",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40MegaClover_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40MegaClover_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40MegaClover_HR.pdf"
+          }
+        },
+        {
+          "name": "40 Super Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40SuperHot_PJ_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40SuperHot_PJ_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_40SuperHot_PJ_HR.pdf"
+          }
+        },
+        {
+          "name": "5 Burning Heart",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5BurningHeart_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5BurningHeart_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5BurningHeart_HR.pdf"
+          }
+        },
+        {
+          "name": "5 Crown Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5CrownHot_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5CrownHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_5CrownHot_HR.pdf"
+          }
+        },
+        {
+          "name": "50 Hot Blast",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_50HotBlast_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_50HotBlast_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_50HotBlast_HR.pdf"
+          }
+        },
+        {
+          "name": "Book of Shining Hot Bell Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_BookOfShiningHot_BellLInk_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_BookOfShiningHot_BellLInk_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_BookOfShiningHot_BellLink_HR.pdf"
+          }
+        },
+        {
+          "name": "Burning Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_BurningHot_PJ_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_BurningHot_PJ_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_BurningHot_PJ_HR.pdf"
+          }
+        },
+        {
+          "name": "Clover Respin",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_CloverRespin_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_CloverRespin_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_CloverRespin_HR.pdf"
+          }
+        },
+        {
+          "name": "Mystic Desert Bell Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_MysticDesert_BellLInk_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_MysticDesert_BellLInk_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_MysticDesert_BellLink_HR.pdf"
+          }
+        },
+        {
+          "name": "Rise of Ra",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_RiseOfRa_PJ_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_RiseOfRa_PJ_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_RiseofRa_PJ_HR.pdf"
+          }
+        },
+        {
+          "name": "Shining Crown Cash Heat",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_ShiningCrown_CashHeat_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_ShiningCrown_CashHeat_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_ShiningCrown_CashHeat_HR.pdf"
+          }
+        },
+        {
+          "name": "Sword and Crown Bell Link",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_Sword&Crown_BellLink_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_Sword&Crown_BellLink_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_Sword&Crown_BellLink_HR.pdf"
+          }
+        },
+        {
+          "name": "Ultimate Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_UltimateHot_UI_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_UltimateHot_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_UltimateHot_HR.pdf"
+          }
+        },
+        {
+          "name": "Vampire Night",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_VampireNight_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_VampireNight_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_VampireNight_HR.pdf"
+          }
+        },
+        {
+          "name": "Versailles Gold",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_VersaillesGold_PJ_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_VersaillesGold_PJ_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_VersaillesGold_PJ_HR.pdf"
+          }
+        },
+        {
+          "name": "Zodiac Wheel",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_ZodiacWheel_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_ZodiacWheel_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EGTD_OnlineGames_UIManual_ZodiacWheel_HR.pdf"
+          }
+        }
+      ]
+    },
+    {
+      "provider": "ELK Studios",
+      "gameCount": 11,
+      "games": [
+        {
+          "name": "Gritty Kitty",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10208-Gritty%20Kitty_GameDescription_FULL_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10208-Gritty%20Kitty_GameDescription_MGA_en_gb.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10208-Gritty%20Kitty_GameDescription_FULL_hr_hr.pdf"
+          }
+        },
+        {
+          "name": "Nitropolis 5",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10215-Nitropolis%205_GameDescription_FULL_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10215-Nitropolis%205_GameDescription_MGA_en_gb.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10215-Nitropolis%205_GameDescription_CRMF_hr_hr.pdf"
+          }
+        },
+        {
+          "name": "Pirots",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10184-Pirots_GameDescription_FULL_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10184-Pirots_GameDescription_MGA_en_gb.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10184-Pirots_GameDescription_CRMF_hr_hr.pdf"
+          }
+        },
+        {
+          "name": "Pirots 2",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10202-Pirots%202_GameDescription_FULL_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10202-Pirots%202_GameDescription_MGA_en_gb.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10202-Pirots%202_GameDescription_CRMF_hr_hr.pdf"
+          }
+        },
+        {
+          "name": "Pirots 3",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10214-Pirots%203_GameDescription_FULL_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10214-Pirots%203_GameDescription_MGA_en_gb.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10214-Pirots%203_GameDescription_CRMF_hr_hr.pdf"
+          }
+        },
+        {
+          "name": "Pirots X",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10223-Pirots%20X_GameDescription_FULL_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10223-Pirots%20X_GameDescription_MGA_en_gb.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10223-Pirots%20X_GameDescription_CRMF_hr_hr.pdf"
+          }
+        },
+        {
+          "name": "Ryze",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10224-Ryze_GameDescription_FULL_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10224-Ryze_GameDescription_MGA_en_gb.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10224-Ryze_GameDescription_CRMF_hr_hr.pdf"
+          }
+        },
+        {
+          "name": "Slurpy",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10220-Slurpy_GameDescription_FULL_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10220-Slurpy_GameDescription_MGA_en_gb.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10220-Slurpy_GameDescription_FULL_hr_hr.pdf"
+          }
+        },
+        {
+          "name": "Tropicool 2",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10189-Tropicool%202_GameDescription_FULL_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10189-Tropicool%202_GameDescription_MGA_en_gb.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10189-Tropicool%202_GameDescription_CRMF_hr_hr.pdf"
+          }
+        },
+        {
+          "name": "Tropicool 3",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10212-Tropicool%203_GameDescription_FULL_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10212-Tropicool%203_GameDescription_MGA_en_gb.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10212-Tropicool%203_GameDescription_CRMF_hr_hr.pdf"
+          }
+        },
+        {
+          "name": "Valhall Gold",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10201-Valhall%20Gold_GameDescription_FULL_sl.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10201-Valhall%20Gold_GameDescription_MGA_en_gb.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/10201-Valhall%20Gold_GameDescription_CRMF_hr_hr.pdf"
+          }
+        }
+      ]
+    },
+    {
+      "provider": "Greentube",
+      "gameCount": 14,
+      "games": [
+        {
+          "name": "Book of Ra Classic",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BookofRaclassic_PublicSpecs_SI.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BookofRaclassic_PublicSpecs_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BookofRaclassic_PublicSpecs_HR.pdf"
+          }
+        },
+        {
+          "name": "Book of Ra Deluxe",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BookofRadeluxe_PublicSpecs_SI.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BookofRadeluxe_PublicSpecs_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BookofRadeluxe6_PublicSpecs_HR.pdf"
+          }
+        },
+        {
+          "name": "Book of Ra Deluxe 6",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BookofRadeluxe6_PublicSpecs_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BookofRadeluxe6_PublicSpecs_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BookofRadeluxe6_PublicSpecs_HR.pdf"
+          }
+        },
+        {
+          "name": "Book of Ra Magic",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BookofRaMagic_PublicSpecs_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BookofRaMagic_PublicSpecs_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BookofRaMagic_PublicSpecs_HR.pdf"
+          }
+        },
+        {
+          "name": "Cash Connection Charming Lady",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/CashConnectionCharmingLady_PublicSpecs_SI.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/CashConnectionCharmingLadyLinked_PublicSpecs_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/CashConnectionCharmingLady_PublicSpecs_HR.pdf"
+          }
+        },
+        {
+          "name": "Cash Connection Sizzling Hot",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/CashConnectionSizzlingHot_PublicSpecs_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/CashConnectionSizzlingHot_PublicSpec_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/CashConnectionSizzlingHot_PublicSpec_HR.pdf"
+          }
+        },
+        {
+          "name": "Charming Lady's Boom",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/CharmingLadysBoom_PublicSpecs_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/CharmingLadysBoom_PublicSpecs_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/CharmingLadysBoom_Public%20Specs_HR.pdf"
+          }
+        },
+        {
+          "name": "Coin Frenzy",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/CoinFrenzy_PublicSpecs_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/CoinFrenzy_PublicSpecs_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/CoinFrenzy_PublicSpec_HR.pdf"
+          }
+        },
+        {
+          "name": "Dolphin's Pearl Classic",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/DolphinsPearlclassic_PublicSpecs_SI.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/DolphinsPearlclassic_PublicSpecs_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/DolphinsPearlclassic_PublicSpecs_HR.pdf"
+          }
+        },
+        {
+          "name": "Dolphin's Pearl Deluxe",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/DolphinsPearlDeluxe_PublicSpecs_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/DolphinsPearldeluxe_PublicSpec_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/DolphinsPearlDeluxe_PublicSpecs_HR.pdf"
+          }
+        },
+        {
+          "name": "Lord of the Ocean",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/LordoftheOcean_PublicSpecs_SI.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/LordoftheOcean_PublicSpecs_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/LordoftheOcean_PublicSpecs_HR.pdf"
+          }
+        },
+        {
+          "name": "Lucky Lady's Charm Deluxe 6",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/LuckyLadysCharmdeluxe6_PublicSpecs_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/LuckyLadysCharmdeluxe6_PublicSpecs_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/LuckyLadysCharmdeluxe6_PublicSpecs_HR.pdf"
+          }
+        },
+        {
+          "name": "Lucky Lady's Charm Deluxe",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/LuckyLadysCharmdeluxe_PublicSpecs_SI.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/LuckyLadysCharmdeluxe_PublicSpecs_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/LuckyLadysCharmdeluxe_PublicSpecs_HR.pdf"
+          }
+        },
+        {
+          "name": "Sizzling Hot Deluxe",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SizzlingHotdeluxe_PublicSpecs_SI.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SizzlingHotdeluxe_PublicSpecs_EN.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SizzlingHotdeluxe_PublicSpecs_HR.pdf"
+          }
+        }
+      ]
+    },
+    {
+      "provider": "Play'N GO",
+      "gameCount": 25,
+      "games": [
+        {
+          "name": "BlackJack MH",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-BlackJackMH-Standard.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-BlackJack-MH-Standard.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-BlackJacK-MH-Standard.pdf"
+          }
+        },
+        {
+          "name": "Book of Dead",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-Book-of-Dead.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-Book-of-Dead.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-Book-of-Dead.pdf"
+          }
+        },
+        {
+          "name": "Crabby's Gold",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-Crabbys-Gold.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-Crabby_s_Gold.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-CrabbyS-Gold.pdf"
+          }
+        },
+        {
+          "name": "European BlackJack MH",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-BlackJackMH-European.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-BlackJack-MH-European.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-BlackJack-MH-European.pdf"
+          }
+        },
+        {
+          "name": "European Roulette",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-European-Roulette.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-EuropeanRoulettePro.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-EuropeanRoulette.pdf"
+          }
+        },
+        {
+          "name": "Fire Joker",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-Fire-Joker.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-Fire-Joker.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-Fire-Joker.pdf"
+          }
+        },
+        {
+          "name": "Golden Ticket",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-Golden_Ticket.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-Golden_Ticket.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-Golden_Ticket.pdf"
+          }
+        },
+        {
+          "name": "Legacy of Dead",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-Legacy_of_Dead.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-Legacy_of_Dead.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-Legacy_of_Dead.pdf"
+          }
+        },
+        {
+          "name": "Legacy of Egypt",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-Legacy_of_Egypt.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-Legacy_of_Egypt.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-Legacy_of_Egypt.pdf"
+          }
+        },
+        {
+          "name": "Moon Princess 100",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-Moon_Princess_100.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-Moon_Princess.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-Moon_Princess.pdf"
+          }
+        },
+        {
+          "name": "Mystery Joker",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-Mystery_Joker.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-Mystery_Joker.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-Mystery_Joker.pdf"
+          }
+        },
+        {
+          "name": "Pearl Lagoon",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-Pearl_Lagoon.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-Pearl_Lagoon.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-Pearl_Lagoon.pdf"
+          }
+        },
+        {
+          "name": "Pimped",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-Pimped.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-Pimped.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-Pimped.pdf"
+          }
+        },
+        {
+          "name": "Reactoonz",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-Reactoonz.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-Reactoonz.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-Reactoonz.pdf"
+          }
+        },
+        {
+          "name": "Reactoonz 100",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-Reactoonz_100.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-Reactoonz100.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-Reactoonz_100.pdf"
+          }
+        },
+        {
+          "name": "Rich Wilde and the Tome of Insanity",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-Rich_Wilde_and_the_Tome_of_Insanity.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-Rich_Wilde_and_the_Tome_of_Insanity.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-Rich_Wilde_and_the_Tome_of_Insanity.pdf"
+          }
+        },
+        {
+          "name": "Rise of Merlin",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-Rise_of_Merlin.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-Rise_of_Merlin.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-Rise_of_Merlin.pdf"
+          }
+        },
+        {
+          "name": "Rise of Olympus",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-Rise_of_Olympus.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-Rise_of_Olympus.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-Rise_of_Olympus.pdf"
+          }
+        },
+        {
+          "name": "Rise Of Olympus 100",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-Rise_of_Olympus_100.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-Rise_of_Olympus100.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-Rise_of_Olympus_100.pdf"
+          }
+        },
+        {
+          "name": "Rise of Olympus Extreme",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-Rise_of_Olympus_Extreme.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-Rise_of_Olympus_Extreme.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-Rise_of_Olympus_Extreme.pdf"
+          }
+        },
+        {
+          "name": "Scroll of Dead",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-Scroll_of_Dead.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-Scroll_of_Dead.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-Scroll_of_Dead.pdf"
+          }
+        },
+        {
+          "name": "Star Joker",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-Star_Joker.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-Star_Joker.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-Star_Joker.pdf"
+          }
+        },
+        {
+          "name": "Super Flip",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-Super_Flip.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-Super_Flip.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-Super_Flip.pdf"
+          }
+        },
+        {
+          "name": "Tome of Madness",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-Tome-of-Madness.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-Tome-of-Madness.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-Tome-of-Madness.pdf"
+          }
+        },
+        {
+          "name": "Viking Runecraft",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SI-Viking-Runecraft.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/EN-Viking-Runecraft.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HR-Viking-Runecraft.pdf"
+          }
+        }
+      ]
+    },
+    {
+      "provider": "Wazdan",
+      "gameCount": 15,
+      "games": [
+        {
+          "name": "9 Bells",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/9Bells_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/9Bells_GameRules_ENG.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/9Bells_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "9 Coins",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/9Coins_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/9Coins_GameRules_ENG.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/9Coins_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "9 Coins 1000 Edition",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/9Coins1000Edition_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/9Coins1000Edition_GameRules_ENG.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/9Coins1000Edition_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "9 Coins Grand Gold Edition",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/9CoinsGrandGoldEdition_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/9CoinsGrandGoldEdition_GameRules_ENG.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/9CoinsGrandGoldEdition_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "12 Bells",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/12Bells_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/12Bells_GameRules_ENG.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/12Bells_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "12 Coins Grand Gold Edition",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/12CoinsGrandGoldEdition_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/12CoinsGrandGoldEdition_GameRules_ENG.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/12CoinsGrandGoldEdition_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "20 Coins",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20Coins_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20Coins_GameRules_ENG.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/20Coins_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "Burning Sun",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BurningSun_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BurningSun_GameRules_ENG.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/BurningSun_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "Hot Slot: 777 Crown",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HotSlot777Crown_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HotSlot777Crown_GameRules_ENG.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HotSlot777Crown_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "Hot Slot Mystery Jackpot Joker",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HotSlotMysteryJackpotJoker_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HotSlotMysteryJackpotJoker_GameRules_ENG.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/HotSlotMysteryJackpotJoker_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "Magic Spins",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/MagicSpins_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/MagicSpins_GameRules_ENG.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/MagicSpins_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "One Coin",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/OneCoin_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/OneCoin_GameRules_ENG.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/OneCoin_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "Power of Gods: Valhalla",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/PowerofGodsValhalla_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/PowerofGodsValhalla_GameRules_ENGL.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/PowerofGodsValhalla_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "Power of Sun: Svarog",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/PowerofSunSvarog_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/PowerofSunSvar_GameRules_ENG.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/PowerofSunSvarog_GameRules_HR.pdf"
+          }
+        },
+        {
+          "name": "Sizzling Eggs",
+          "rulesLinks": {
+            "slo": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SizzlingEggs_GameRules_SL.pdf",
+            "en": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SizzlingEggs_GameRules_ENG.pdf",
+            "hr": "https://cnsicdn.kubdev.com/common-content/help/CNSI/game-documents/SizzlingEggs_GameRules_HR.pdf"
+          }
+        }
+      ]
+    }
+  ],
+  "gamesFaq": [
+    {
+      "question": "Kaj storiti, če se igra v igralnici sesuje ali pride do prekinitve povezave med vrtljajem?",
+      "answer": "V primeru prekinitve povezave ali zamrznitve igre med krogom ni razloga za skrb. Sistem samodejno zaključi trenutni krog, morebitne dobitke pa pravilno pripiše glede na rezultat, ki ga je ustvaril strežnik igre.Na primer, če igrate igralni avtomat in izgubite povezavo med vrtljajem, bo strežnik krog nadaljeval v ozadju. Ko se ponovno povežete, boste videli bodisi neposredno prikazan rezultat bodisi animacijo zadnjega vrtljaja, po kateri sledi posodobitev stanja na računu.Če se povezava prekine, bo trenutni krog potekal brez vas, vendar bodo vsi dobitki, pridobljeni na podlagi prej opravljenih stav, samodejno pripisani vašemu računu. Te podatke si lahko ogledate v razdelku »Zgodovina« na vašem računu.Najboljši ukrepi so:Osvežite stran ali aplikacijoPonovno se povežite z vašim računomPreverite razdelek »Zgodovina« za zadnje stave in rezultate",
+      "category": "Igre"
+    },
+    {
+      "question": "Ali obstaja mobilna aplikacija Casino.si ali lahko igram na telefonu?",
+      "answer": "Trenutno aplikacija ni na voljo, vendar je platforma Casino.si popolnoma prilagojena za mobilne naprave, zato lahko do spletne strani dostopate neposredno prek brskalnika na telefonu in uživate v enakih funkcionalnostih kot na namizju – igre, stave, pologi, dvigi in promocije, vse na dosegu roke.",
+      "category": "Igre"
+    },
+    {
+      "question": "Kako lahko aktiviram bonus?",
+      "answer": "Bonuse lahko aktivirate z vnosom bonus kode ob pologu ali na strani Moje ponudbe v vašem profilu.Priporočamo, da pred aktivacijo vedno preverite Splošne pogoje vsake ponudbe, da zagotovite izpolnjevanje vseh zahtev in kar najbolje izkoristite razpoložljive ugodnosti.",
+      "category": "Igre"
+    },
+    {
+      "question": "Kaj pomeni pogoj za izpolnitev obveznosti stav (rollover)?",
+      "answer": "Pogoj za izpolnitev obveznosti stav (rollover) pomeni, kolikokrat morate obrniti (staviti) znesek bonusa, preden so sredstva upravičena do dviga.Na primer, če imate bonus v višini 100 EUR z 15-kratnim pogojem za izpolnitev obveznosti stav, boste morali staviti za skupni znesek 1.500 EUR, preden boste lahko dvignili morebitne dobitke, pridobljene iz tega bonusa.Pogoji za izpolnitev obveznosti stav se lahko razlikujejo glede na promocijo, zato je pomembno, da vedno preverite pravila in pogoje posameznega aktiviranega bonusa, da boste natančno vedeli, kaj morate storiti. Tako si lahko zagotovite, da boste iz ponudbe izkoristili vse prednosti, brez neprijetnih presenečenj.",
+      "category": "Igre"
+    },
+    {
+      "question": "Kako vem, ali sem izpolnil pogoje za izpolnitev obveznosti stav (rollover)?",
+      "answer": "Svoj napredek pri izpolnjevanju obveznosti stav (rollover) lahko kadarkoli spremljate neposredno v svojem računu, v razdelku Moje ponudbe. Tam boste videli, koliko denarja morate še staviti, da se vaš bonus pretvori v pravi denar, ki je na voljo za dvig.",
+      "category": "Igre"
+    },
+    {
+      "question": "Ali lahko prekličem bonus?",
+      "answer": "Da. Ob opravljanju pologa se lahko odločite, da ne boste aktivirali nobenega bonusa, če želite igrati brez dodatnih pogojev.Bonusi se lahko prekličejo ali zavrnejo tudi neposredno v razdelku Moje ponudbe. Preprosto kliknite na ponudbo, ki jo želite preklicati, in pritisnite gumb Prekliči.",
+      "category": "Igre"
+    },
+    {
+      "question": "Ali lahko imam hkrati aktivna dva bonusa v igralnici?",
+      "answer": "Ne, v vašem računu je lahko hkrati aktiven samo en igralniški bonus.Ko zaključite trenutno aktivni bonus – bodisi z izpolnitvijo pogojev za stave, bodisi z njegovo potekom ali preklicem – boste lahko aktivirali naslednji razpoložljivi bonus v razdelku »Moje ponudbe«.",
+      "category": "Igre"
+    },
+    {
+      "question": "Ali lahko igram brez vplačila denarja?",
+      "answer": "Da, nekatere igre na platformi ponujajo demo različice, ki jih lahko igrate brezplačno, za zabavo, brez potrebe po pologu. Nekatere promocije lahko vključujejo tudi brezplačne vrtljaje brez pologa, na voljo pod določenimi pogoji.Vendar pa, da bi imeli možnost osvojiti pravi denar in dvigniti morebitne dobitke, boste morali opraviti polog.",
+      "category": "Igre"
+    }
+  ],
+  "scrapedAt": "2026-04-15T16:10:54.451Z",
+  "source": "https://casino.si",
+  "promotionalContent": []
+}
