@@ -1,0 +1,1067 @@
+{
+  "summary": {
+    "totalUniqueAssets": 346,
+    "breakdown": {
+      "banners": 159,
+      "games": 9,
+      "providers": 11,
+      "payments": 19,
+      "footer": 6,
+      "logos": 17,
+      "socialMedia": 5,
+      "icons": 39,
+      "promotions": 2,
+      "other": 75
+    }
+  },
+  "categories": {
+    "banners": [
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=450,height=192,,format=auto/gaming-content/slider/hero-banner-homepage-tournament-kaoslegend-playngo.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=450,height=192,,format=auto/gaming-content/slider/referafriend-home.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=450,height=192,,format=auto/gaming-content/slider/slider-welcome-sl.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=450,height=192,,format=auto/gaming-content/slider/licenca1_si.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=450,height=192,,format=auto/gaming-content/slider/birthday-home.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=450,height=192,,format=auto/gaming-content/slider/signup-home.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=1920,height=540,,format=auto/gaming-content/jackpots/category/hero-banner-background-tournament-kaoslegend-playngo.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/285.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/1016.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/291.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/319.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/416.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/352.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/339.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/307.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/310.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/745.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/365.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/333.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/377.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/920.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FSCBLSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/670.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FSHBLSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/horizontal/470.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/VNBLSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/33/layout_1/game-banners/regular/414.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=132,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FBHBLSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=132,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/603.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=132,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/HFSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=132,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FZWBLSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=132,,format=auto/gaming-content/game-providers-new/57/layout_1/game-banners/regular/10184.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=132,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/8036.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=132,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/8002.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=132,,format=auto/gaming-content/game-providers-new/33/layout_1/game-banners/regular/436.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=132,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/VGSASlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=132,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/285.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/39/layout_1/game-banners/regular/174.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/39/layout_1/game-banners/regular/109.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/33/layout_1/game-banners/regular/524648.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/57/layout_1/game-banners/regular/10208.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FZWBLSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/RORSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/39/layout_1/game-banners/vertical/3319.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/vertical/SACBLSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/vertical/FSHBLSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/vertical/BFGcave-of-xmas.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/39/layout_1/game-banners/vertical/123.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/vertical/310.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/33/layout_1/game-banners/vertical/414.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/873.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/HFSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/57/layout_1/game-banners/regular/10215.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/39/layout_1/game-banners/regular/108.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/39/layout_1/game-banners/regular/16784.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/435.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/550.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/vertical/HFSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/31.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/vertical/452.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/604.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/vertical/BFGbook-of-gods.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/603.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/605.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/BGSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/407.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/SBSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/5118.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/8006.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/910.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/STSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/33/layout_1/game-banners/regular/421.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/57/layout_1/game-banners/regular/10202.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/57/layout_1/game-banners/regular/10189.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/33/layout_1/game-banners/regular/419.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/vertical/BHBLSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/vertical/FBHBLSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/vertical/BOSHBLSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/vertical/FHBLSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/vertical/FRLKEBLSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/vertical/FDHBLSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/39/layout_1/game-banners/regular/11278.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/39/layout_1/game-banners/regular/131.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/horizontal/FSCBLSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/regular/BFGbuffalo-trail.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/421.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/33/layout_1/game-banners/regular/411.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/57/layout_1/game-banners/regular/10184.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FHEBLSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/548.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/BCSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/831.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/vertical/5016.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/vertical/5015.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/vertical/405.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/vertical/5156.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/vertical/470.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/412.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/vertical/307.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/39/layout_1/game-banners/regular/123.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/802.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/horizontal/FHEBLSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/410.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FSHSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FCHJSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FHESlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/regular/BFGsh.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FDHSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/vertical/SJSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/vertical/SDSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FSCSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/OBCSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/LHSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/vertical/OLHSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FSHSASlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/vertical/920.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/33/layout_1/game-banners/regular/413.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/405.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/regular/BFGgolem-wildwoods.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/ZWBLSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/427.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/57/layout_1/game-banners/regular/10223.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/TSDSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/460.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/461.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/regular/BFGsweet-reward.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/8003.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/8000.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/vertical/8036.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/vertical/8005.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/8001.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/vertical/8011.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/8004.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/8007.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/5156.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/57/layout_1/game-banners/regular/10214.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/horizontal/BFGbuffalo-trail.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/241.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/vertical/440.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/regular/BFGchicken-madness.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/regular/BFGcave-of-xmas.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/33/layout_1/game-banners/regular/408.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/8036.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/39/layout_1/game-banners/regular/239.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=397,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/vertical/365.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=397,,format=auto/gaming-content/game-providers-new/57/layout_1/game-banners/vertical/10224.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=397,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/vertical/452.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=397,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/vertical/BFGbook-of-gods.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/vertical/437.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FHBLSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/411.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/regular/BFGfiery-slots.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/402.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/57/layout_1/game-banners/regular/10220.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FSFBLSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FRLKEBLSlot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/regular/BFG777-winter-hit.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/33/layout_1/game-banners/regular/420.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/33/layout_1/game-banners/regular/407.png"
+      }
+    ],
+    "games": [
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/game-providers-new/logos/GREENTUBE.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/game-providers-new/logos/EGTF.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/game-providers-new/logos/EGTI.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/game-providers-new/logos/BF.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/game-providers-new/logos/WAZDAN.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/game-providers-new/logos/PLAY_N_GO.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/game-providers-new/logos/ELK.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/game-of-the-month-yellow.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=244,height=184,,format=auto/gaming-content/big-winnings/vnblslot.jpg"
+      }
+    ],
+    "providers": [
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/partners/egtdigital2.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/partners/amusnet.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/partners/bfgames.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/partners/elk.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/partners/greentube.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/partners/playngo.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/partners/wazdan.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/common-content/footer/providers/EGTD.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/partners/gli.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/partners/ministry.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/partners/siq.svg"
+      }
+    ],
+    "payments": [
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/payments/clik-color.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/payments/visa-color.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/payments/skrill-color.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/payments/neteller-color1.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/payments/paysafecard-color.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/payments/mastercard-color1.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/payments/apple-pay-white.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/payments/aircash-color.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/payments/aircashbon-color.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/payments/aircashmarketplace-color.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/payments/ooglepay2.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/payments/revolut.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/payments/fliqa.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/payments/valu.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/payments/bitcoin.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/payments/etherium.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/payments/tether.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/payments/lite.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=70,,format=auto/common-content/footer/payments/xrp.svg"
+      }
+    ],
+    "footer": [
+      {
+        "url": "https://cnsicdn.kubdev.com/sport-content/flags/4x3/si.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/common-content/footer/links/email.svg",
+        "alt": "online@casino.si"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/common-content/footer/links/phone.svg",
+        "alt": "030 777 888 "
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/common-content/footer/links/igrajodgovorno18.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/common-content/brand/app-logo-footer.svg?v=1776241352"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/common-content/brand/footer-background.jpg"
+      }
+    ],
+    "logos": [
+      {
+        "url": "https://cnsicdn.kubdev.com/common-content/brand/app-logo--desktop.svg?v=1776241352"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/common-content/brand/favicon.ico?v=1776241352"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=54,,format=auto/gaming-content/jackpots/jackpot-logo/cards-overlay-v4.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=54,,format=auto/gaming-content/jackpots/jackpot-logo/bl-overlay-v4.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=50,,format=auto/gaming-content/jackpots/widget/logo/golden-coins.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=50,,format=auto/gaming-content/jackpots/widget/logo/bell-link-logo.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=50,,format=auto/gaming-content/jackpots/jackpot-logo/clover-chance.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=50,,format=auto/gaming-content/jackpots/widget/logo/jackpot-cards.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=38,height=38,,format=auto/gaming-content/custom/fire-logo-image.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=38,height=38,,format=auto/gaming-content/custom/snow-logo-image.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=28,height=28,,format=auto/gaming-content/custom/fire-logo-image.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=54,,format=auto/gaming-content/jackpots/jackpot-logo/gcl-overlay-v4.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=54,,format=auto/gaming-content/jackpots/jackpot-logo/cc-overlay-v4.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=270,,format=auto/gaming-content/jackpots/jackpot-logo/bell-link-jackpot.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=114,,format=auto/gaming-content/jackpots/jackpot-logo/jackpot-cards.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=131,,format=auto/gaming-content/jackpots/jackpot-logo/clover-chance.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=scale-down,width=auto,height=98,,format=auto/gaming-content/jackpots/jackpot-logo/Logo-Golden-Coins.png"
+      }
+    ],
+    "socialMedia": [
+      {
+        "url": "https://cnsicdn.kubdev.com/common-content/footer/social/cn-fb.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/common-content/footer/social/cn-x.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/common-content/footer/social/cn-ig.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/common-content/footer/social/cn-tt.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/common-content/footer/social/cn-sc.svg"
+      }
+    ],
+    "icons": [
+      {
+        "url": "https://cnsicdn.kubdev.com/sport-content/flags/4x3/sl.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/tournament-ylw-50x50.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/most-played-numbers.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/jackpot-wellow.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/f9f80ea3-9c52-42d5-bc07-3cd1a9374ba4.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/new-bang.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/a36e4479-ce38-49bb-a664-2b0b460d6fe2.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/baccarat2.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/ee47eedd-7471-4ea5-bfb9-7020b3e5bee0.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/recommended.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/roulette-new.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/jackpotcards.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/buy.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/gcj1.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/clover-chance.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/bell.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/jackpots-las-vegas-2.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/book9.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/jackpotgames.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/cherries.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/animals.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/fishing_v2.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/coins.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/scarab.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/mythology.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/adventure.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/allgames_black.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/common-content/general-ui/icon-user.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/roulette-y.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/bell-link-jackpot-yellow.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/mostplayed-yellow.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/02e4102d-7362-4494-991c-7e0b3cc10618.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/fruit-games-yellow.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/clover-chance-yellow1.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/gcj2-yellow.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/animal-yellow.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/bigwins-yellow2.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/casino-choice-yellow.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/jackpot-cards-yellow.svg"
+      }
+    ],
+    "promotions": [
+      {
+        "url": "https://cnsicdn.kubdev.com/common-content/general-ui/link-offers--header.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/menu-icons/bonus-buy-yellow.svg"
+      }
+    ],
+    "other": [
+      {
+        "url": "https://cnsicdn.kubdev.com/common-content/general-ui/sprites.svg?v=1776241352"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/common-content/general-ui/chevron-right.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/common-content/general-ui/search-burger.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=248,height=432,,format=auto/gaming-content/widgets/lastw.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/common-content/general-ui/chevron-left.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=248,height=432,,format=auto/gaming-content/widgets/prazen.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/common-content/general-ui/chevron-default-right.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/common-content/general-ui/plus-circled.svg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=248,height=320,,format=auto/gaming-content/jackpots/widget/background/bell-link.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=248,height=320,,format=auto/gaming-content/jackpots/widget/background/golden-coins.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=248,height=320,,format=auto/gaming-content/jackpots/widget/background/clover-chance.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=248,height=320,,format=auto/gaming-content/jackpots/widget/background/jackpot-cards.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=215,height=43,,format=auto/gaming-content/jackpots/common/bell-link-jackpot/level-1.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=182,height=36,,format=auto/gaming-content/jackpots/common/bell-link-jackpot/level-2.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=110,height=24,,format=auto/gaming-content/jackpots/common/bell-link-jackpot/level-3.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=94,height=23,,format=auto/gaming-content/jackpots/common/golden-coins/level-3.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=94,height=23,,format=auto/gaming-content/jackpots/common/golden-coins/level-4.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=192,height=47,,format=auto/gaming-content/jackpots/common/golden-coins/level-1.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=112,height=24,,format=auto/gaming-content/jackpots/common/bell-link-jackpot/level-4.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=228,height=43,,format=auto/gaming-content/jackpots/common/jackpot-cards/level-1.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=154,height=38,,format=auto/gaming-content/jackpots/common/golden-coins/level-2.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=107,height=28,,format=auto/gaming-content/jackpots/common/clover-chance/level-3.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=191,height=50,,format=auto/gaming-content/jackpots/common/clover-chance/level-2.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=184,height=36,,format=auto/gaming-content/jackpots/common/jackpot-cards/level-2.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=107,height=28,,format=auto/gaming-content/jackpots/common/clover-chance/level-4.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=100,height=26,,format=auto/gaming-content/jackpots/common/jackpot-cards/level-3.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=221,height=57,,format=auto/gaming-content/jackpots/common/clover-chance/level-1.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=100,height=26,,format=auto/gaming-content/jackpots/common/jackpot-cards/level-4.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/custom/hot_icon.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/custom/cold-icon.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/custom/hot-background.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/custom/cold-v2-background.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=400,height=auto,,format=auto/gaming-content/custom/hot_orange_icon.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=400,height=auto,,format=auto/gaming-content/custom/cold_orange_icon.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=400,height=auto,,format=auto/gaming-content/custom/hot_777_icon.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=400,height=auto,,format=auto/gaming-content/custom/cold777icon.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=400,height=auto,,format=auto/gaming-content/custom/hot_dollar_icon.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=400,height=auto,,format=auto/gaming-content/custom/cold-dollar-coin.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=400,height=auto,,format=auto/gaming-content/custom/hot_lemon_icon.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=400,height=auto,,format=auto/gaming-content/custom/cold_lemon_icon.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=400,height=auto,,format=auto/gaming-content/custom/hot_watermelon_icon.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=400,height=auto,,format=auto/gaming-content/custom/cold_watermelon_icon.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/numbers/set1/1.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/numbers/set1/2.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/numbers/set1/3.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/numbers/set1/4.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/numbers/set1/5.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/numbers/set1/6.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/gaming-content/numbers/set1/7.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=350,height=70,,format=auto/gaming-content/jackpots/common/bell-link-jackpot/level-1.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=304,height=60,,format=auto/gaming-content/jackpots/common/bell-link-jackpot/level-2.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=248,height=54,,format=auto/gaming-content/jackpots/common/bell-link-jackpot/level-3.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=206,height=44,,format=auto/gaming-content/jackpots/common/bell-link-jackpot/level-4.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=1920,height=540,,format=auto/gaming-content/jackpots/lobby/bell-link-jackpot/desktop.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=476,height=90,,format=auto/gaming-content/jackpots/common/jackpot-cards/level-1.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=192,height=50,,format=auto/gaming-content/jackpots/common/jackpot-cards/level-3.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=192,height=50,,format=auto/gaming-content/jackpots/common/jackpot-cards/level-4.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=356,height=70,,format=auto/gaming-content/jackpots/common/jackpot-cards/level-2.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=1920,height=540,,format=auto/gaming-content/jackpots/lobby/jackpot-cards/desktop.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=448,height=116,,format=auto/gaming-content/jackpots/common/clover-chance/level-1.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=383,height=101,,format=auto/gaming-content/jackpots/common/clover-chance/level-2.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=236,height=62,,format=auto/gaming-content/jackpots/common/clover-chance/level-4.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=236,height=62,,format=auto/gaming-content/jackpots/common/clover-chance/level-3.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=1920,height=540,,format=auto/gaming-content/jackpots/lobby/clover-chance/desktop.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=367,height=90,,format=auto/gaming-content/jackpots/common/golden-coins/level-1.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=204,height=50,,format=auto/gaming-content/jackpots/common/golden-coins/level-3.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=286,height=70,,format=auto/gaming-content/jackpots/common/golden-coins/level-2.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=204,height=50,,format=auto/gaming-content/jackpots/common/golden-coins/level-4.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=1920,height=540,,format=auto/gaming-content/jackpots/category/golden-coins/bgrn-desktop-inner.png"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=244,height=184,,format=auto/gaming-content/big-winnings/460.jpg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=244,height=184,,format=auto/gaming-content/big-winnings/book-of-ra.jpg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=244,height=184,,format=auto/gaming-content/big-winnings/100powerhotgoldencoinslink.jpeg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=244,height=184,,format=auto/gaming-content/big-winnings/sizling-hot-deluxe.jpg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=244,height=184,,format=auto/gaming-content/big-winnings/lordoftheocean.jpg"
+      },
+      {
+        "url": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,width=244,height=184,,format=auto/gaming-content/big-winnings/legacy-of-dead.jpg"
+      }
+    ]
+  }
+}
