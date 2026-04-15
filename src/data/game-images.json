@@ -1,0 +1,717 @@
+[
+  {
+    "name": "10 Shining Diamond",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/TSDSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "100 Burning Clover",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/OBCSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "100 Lucky Hat",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=132,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/OLHSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "20 Super Fruits Bell Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/TSFBLSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "20 Super Hot Bell Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/TSHBLSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "40 Burning Hot Bell Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=132,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FBHBLSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "40 Charming Joker",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FCHJSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "40 Lucky King Bell Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FLKBLSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "40 Lucky King Extreme Bell Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=132,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FRLKEBLSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "40 Shining Crown",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FSCSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "40 Shining Crown Bell Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FSCBLSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "40 Super Fruits Bell Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FSFBLSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "40 Super Hot",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FSHSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "40 Super Hot",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FSHSASlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "40 Super Hot Bell Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FSHBLSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "40 Zodiac Wheel Bell Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FZWBLSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "5 Burning Clover",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/BCSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "5 Dazzling Hot",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FDHSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "5 Dazzling Hot Bell Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/vertical/FDHBLSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "Book of Shining Hot Bell Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/vertical/BOSHBLSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "Burning Goals",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/BGSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "Burning Hot Bell Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/vertical/BHBLSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "Flaming Hot Bell Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/vertical/FHBLSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "Flaming Hot Extreme",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FHESlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "Flaming Hot Extreme Bell Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/FHEBLSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "Hermes Fortunes",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=132,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/HFSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "Leprechaun Hot",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/LHSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "Mystic Desert Bell Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=132,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/MDBLSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "Rise of Ra",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/RORSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "Shining Boooom",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/SBSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "Spinning Crown",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=132,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/TSPCSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "Spooky Jack",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/vertical/SJSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "Sugar Duke",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/vertical/SDSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "Sugartime",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/STSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "Sword and Crown Bell Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/vertical/SACBLSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "Vampire Night",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/VNSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "Vampire Night Bell Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/VNBLSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "Zodiac Wheel Bell Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/2/layout_1/game-banners/regular/ZWBLSlot.png",
+    "provider": "Amusnet"
+  },
+  {
+    "name": "777 Golden Hit",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/regular/BFG777-golden-hit.png",
+    "provider": "BF Games"
+  },
+  {
+    "name": "777 Winter Hit",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/regular/BFG777-winter-hit.png",
+    "provider": "BF Games"
+  },
+  {
+    "name": "Blasting Rubies",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/regular/BFGblasting-rubies.png",
+    "provider": "BF Games"
+  },
+  {
+    "name": "Book of Gods",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/vertical/BFGbook-of-gods.png",
+    "provider": "BF Games"
+  },
+  {
+    "name": "Buffalo Trail",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/regular/BFGbuffalo-trail.png",
+    "provider": "BF Games"
+  },
+  {
+    "name": "Cave of Xmas",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/vertical/BFGcave-of-xmas.png",
+    "provider": "BF Games"
+  },
+  {
+    "name": "Chicken Madness",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/regular/BFGchicken-madness.png",
+    "provider": "BF Games"
+  },
+  {
+    "name": "Fiery Slots",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/regular/BFGfiery-slots.png",
+    "provider": "BF Games"
+  },
+  {
+    "name": "Golem Wildwoods",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/regular/BFGgolem-wildwoods.png",
+    "provider": "BF Games"
+  },
+  {
+    "name": "Stunning Hot",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/regular/BFGsh.png",
+    "provider": "BF Games"
+  },
+  {
+    "name": "Sweet Reward",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/38/layout_1/game-banners/regular/BFGsweet-reward.png",
+    "provider": "BF Games"
+  },
+  {
+    "name": "100 Bulky Fruits",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/441.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "100 Bulky Fruits Golden Coins Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/vertical/8005.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "100 Burning Hot",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/548.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "100 Golden Coins",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/horizontal/470.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "100 Power Hot Golden Coins Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/8003.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "20 Bulky Fruits",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/427.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "20 Glossy Hot Golden Coins Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/8007.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "20 Golden Coins",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/592.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "20 Power Hot",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/435.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "40 Bulky Fruits Golden Coins Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/8004.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "40 Burning Hot",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/529.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "40 Extra Crown Golden Coins Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/8001.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "40 Fruits & Gold",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/5108.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "40 Golden Coins: Reel Fishing",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/5169.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "40 Lucky Wilds Hot Golden Coins Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/vertical/8011.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "40 Power Hot Golden Coins Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/8000.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "5 Burning Heart",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/532.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "5 Dazzling Hot",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=132,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/810.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Art of Gold Golden Coins Link",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/8006.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Bier O' Meter",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/460.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Book of Waka Waka",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/vertical/5016.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Bulky Fruits",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/410.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Candy Palace",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/vertical/405.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Cocktail Rush",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/412.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Coin Gobbler",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/910.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Dancing Dead",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/vertical/437.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Diamond Plus",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/402.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Fruits & Gold",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/417.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Fruity Time",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/407.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Golden Goal Roulette",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/5118.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Great Sparta",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/vertical/5015.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Kemet's Treasures",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/vertical/452.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Mystic Tiger",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/5029.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Panda's Gold",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/vertical/5156.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Panda's Gold GCL",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=132,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/8036.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Shining Crown",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/831.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Stoichkov 8",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/475.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Supreme Hot",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/821.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Ultimate Hot",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/802.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Vampire Beast",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/461.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Virtual Monaco Roulette",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/605.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Virtual Roulette",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/550.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Virtual Space Roulette",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/604.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Virtual Vegas Roulette",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/regular/603.png",
+    "provider": "EGT Interactive"
+  },
+  {
+    "name": "Gritty Kitty of Nitropolis",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/57/layout_1/game-banners/regular/10208.png",
+    "provider": "ELK Studios"
+  },
+  {
+    "name": "Nitropolis 5",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/57/layout_1/game-banners/regular/10215.png",
+    "provider": "ELK Studios"
+  },
+  {
+    "name": "Pirots",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/57/layout_1/game-banners/regular/10184.png",
+    "provider": "ELK Studios"
+  },
+  {
+    "name": "Pirots 2",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/57/layout_1/game-banners/regular/10202.png",
+    "provider": "ELK Studios"
+  },
+  {
+    "name": "Pirots 3",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/57/layout_1/game-banners/regular/10214.png",
+    "provider": "ELK Studios"
+  },
+  {
+    "name": "Pirots X",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/57/layout_1/game-banners/regular/10223.png",
+    "provider": "ELK Studios"
+  },
+  {
+    "name": "Ryze",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=397,,format=auto/gaming-content/game-providers-new/57/layout_1/game-banners/vertical/10224.png",
+    "provider": "ELK Studios"
+  },
+  {
+    "name": "Slurpy",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/57/layout_1/game-banners/regular/10220.png",
+    "provider": "ELK Studios"
+  },
+  {
+    "name": "Tropicool 2",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/57/layout_1/game-banners/regular/10189.png",
+    "provider": "ELK Studios"
+  },
+  {
+    "name": "Tropicool 3",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/57/layout_1/game-banners/regular/10212.png",
+    "provider": "ELK Studios"
+  },
+  {
+    "name": "Valhall Gold",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/57/layout_1/game-banners/regular/10201.png",
+    "provider": "ELK Studios"
+  },
+  {
+    "name": "Book of Ra",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/39/layout_1/game-banners/regular/174.png",
+    "provider": "Greentube"
+  },
+  {
+    "name": "Book of Ra Deluxe",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/39/layout_1/game-banners/regular/131.png",
+    "provider": "Greentube"
+  },
+  {
+    "name": "Book of Ra deluxe 6",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/39/layout_1/game-banners/vertical/3319.png",
+    "provider": "Greentube"
+  },
+  {
+    "name": "Cash Connection - Charming Lady",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/39/layout_1/game-banners/regular/11278.png",
+    "provider": "Greentube"
+  },
+  {
+    "name": "Coin Frenzy",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/39/layout_1/game-banners/regular/16784.png",
+    "provider": "Greentube"
+  },
+  {
+    "name": "Dolphins Pearl Classic",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/39/layout_1/game-banners/regular/239.png",
+    "provider": "Greentube"
+  },
+  {
+    "name": "Dolphins Pearl Deluxe",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/39/layout_1/game-banners/regular/108.png",
+    "provider": "Greentube"
+  },
+  {
+    "name": "Lucky Lady's Charm Deluxe",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/39/layout_1/game-banners/regular/109.png",
+    "provider": "Greentube"
+  },
+  {
+    "name": "Sizzling Hot Deluxe",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/39/layout_1/game-banners/vertical/123.png",
+    "provider": "Greentube"
+  },
+  {
+    "name": "Book of Dead",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/310.png",
+    "provider": "Play'N GO"
+  },
+  {
+    "name": "Crabby's Gold",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/920.png",
+    "provider": "Play'N GO"
+  },
+  {
+    "name": "European Roulette Pro",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/31.png",
+    "provider": "Play'N GO"
+  },
+  {
+    "name": "Fire Joker",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/307.png",
+    "provider": "Play'N GO"
+  },
+  {
+    "name": "Golden Ticket",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/285.png",
+    "provider": "Play'N GO"
+  },
+  {
+    "name": "Legacy of Dead",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/416.png",
+    "provider": "Play'N GO"
+  },
+  {
+    "name": "Legacy of Egypt",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/339.png",
+    "provider": "Play'N GO"
+  },
+  {
+    "name": "Pearl Lagoon",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=132,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/241.png",
+    "provider": "Play'N GO"
+  },
+  {
+    "name": "Pimped",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/291.png",
+    "provider": "Play'N GO"
+  },
+  {
+    "name": "Reactoonz",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/333.png",
+    "provider": "Play'N GO"
+  },
+  {
+    "name": "Reactoonz 100",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/873.png",
+    "provider": "Play'N GO"
+  },
+  {
+    "name": "Rich Wilde and the Tome of Insanity",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/745.png",
+    "provider": "Play'N GO"
+  },
+  {
+    "name": "Rise of Merlin",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/377.png",
+    "provider": "Play'N GO"
+  },
+  {
+    "name": "Rise of Olympus",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/352.png",
+    "provider": "Play'N GO"
+  },
+  {
+    "name": "Rise of Olympus 100",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/670.png",
+    "provider": "Play'N GO"
+  },
+  {
+    "name": "Rise of Olympus Extreme",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/1016.png",
+    "provider": "Play'N GO"
+  },
+  {
+    "name": "Tome of Madness",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/365.png",
+    "provider": "Play'N GO"
+  },
+  {
+    "name": "Viking Runecraft",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/128/layout_1/game-banners/regular/319.png",
+    "provider": "Play'N GO"
+  },
+  {
+    "name": "12 Coins Grand Gold Edition",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/33/layout_1/game-banners/regular/439.png",
+    "provider": "Wazdan"
+  },
+  {
+    "name": "20 Coins",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/33/layout_1/game-banners/regular/436.png",
+    "provider": "Wazdan"
+  },
+  {
+    "name": "9 Bells",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=432,,format=auto/gaming-content/game-providers-new/1/layout_1/game-banners/vertical/440.png",
+    "provider": "Wazdan"
+  },
+  {
+    "name": "9 Coins",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/33/layout_1/game-banners/regular/411.png",
+    "provider": "Wazdan"
+  },
+  {
+    "name": "9 Coins 1 000 Edition",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/33/layout_1/game-banners/regular/420.png",
+    "provider": "Wazdan"
+  },
+  {
+    "name": "9 Coins Grand Gold Edition",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/33/layout_1/game-banners/regular/421.png",
+    "provider": "Wazdan"
+  },
+  {
+    "name": "Burning Sun",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/33/layout_1/game-banners/regular/414.png",
+    "provider": "Wazdan"
+  },
+  {
+    "name": "Hot Slot: 777 Crown",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/33/layout_1/game-banners/regular/524648.png",
+    "provider": "Wazdan"
+  },
+  {
+    "name": "Hot Slot: Mystery Jackpot Joker",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/33/layout_1/game-banners/regular/419.png",
+    "provider": "Wazdan"
+  },
+  {
+    "name": "Power of Gods: Valhalla",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/33/layout_1/game-banners/regular/413.png",
+    "provider": "Wazdan"
+  },
+  {
+    "name": "Power of Sun: Svarog",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/33/layout_1/game-banners/regular/422.png",
+    "provider": "Wazdan"
+  },
+  {
+    "name": "Sizzling Eggs",
+    "image": "https://cnsicdn.kubdev.com/cdn-cgi/image/fit=cover,height=210,,format=auto/gaming-content/game-providers-new/33/layout_1/game-banners/regular/408.png",
+    "provider": "Wazdan"
+  }
+]
