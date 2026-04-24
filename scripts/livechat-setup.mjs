@@ -47,7 +47,8 @@ async function api(path, body) {
 }
 
 async function findOrCreateBot() {
-  const { bots = [] } = await api("list_bots", {});
+  const listRes = await api("list_bots", { owner_client_id: LIVECHAT_CLIENT_ID });
+  const bots = Array.isArray(listRes) ? listRes : listRes.bots || [];
   const existing = bots.find((b) => b.name === BOT_NAME);
   if (existing) {
     console.log(`\n[bot] Using existing: ${existing.name} (${existing.id})`);
@@ -56,6 +57,7 @@ async function findOrCreateBot() {
   const created = await api("create_bot", {
     name: BOT_NAME,
     status: "accepting chats",
+    owner_client_id: LIVECHAT_CLIENT_ID,
   });
   console.log(`\n[bot] Created: ${BOT_NAME} (${created.id})`);
   return created.id;
