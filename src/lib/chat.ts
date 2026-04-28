@@ -42,20 +42,25 @@ async function getMessagesFromSupabase(sid: string, userMessage: string): Promis
 
   if (!conversation) throw new Error("Failed to create conversation");
 
+  const { data: history } = await supabase
+    .from("messages")
+    .select("role, content")
+    .eq("conversation_id", conversation.id)
+    .order("created_at", { ascending: true })
+    .limit(19);
+
   await supabase.from("messages").insert({
     conversation_id: conversation.id,
     role: "user",
     content: userMessage,
   });
 
-  const { data: history } = await supabase
-    .from("messages")
-    .select("role, content")
-    .eq("conversation_id", conversation.id)
-    .order("created_at", { ascending: true })
-    .limit(20);
-
-  return (history || []).map((m) => ({ role: m.role as "user" | "assistant", content: m.content }));
+  const past: StoredMessage[] = (history || []).map((m) => ({
+    role: m.role as "user" | "assistant",
+    content: m.content,
+  }));
+  while (past.length > 0 && past[past.length - 1].role === "user") past.pop();
+  return [...past, { role: "user", content: userMessage }];
 }
 
 async function saveReplyToSupabase(sid: string, reply: string) {
@@ -85,6 +90,9 @@ function getMessagesFromMemory(sid: string, userMessage: string): StoredMessage[
   }
   const session = memorySessions.get(sid)!;
   session.lastActive = Date.now();
+  while (session.messages.length > 0 && session.messages[session.messages.length - 1].role === "user") {
+    session.messages.pop();
+  }
   session.messages.push({ role: "user", content: userMessage });
   if (session.messages.length > 20) session.messages = session.messages.slice(-20);
   return [...session.messages];
