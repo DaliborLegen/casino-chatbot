@@ -58,16 +58,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true, ignored: "self" });
   }
 
-  // TEMP verification test 2026-04-28 — remove after Dalibor confirms
-  if (event.text.trim().toLowerCase() === "legen") {
-    try {
-      await sendTextMessage({ chat_id: chatId, text: "dalibor", bot_agent_id: botAgentId });
-    } catch (err) {
-      console.error("legen short-circuit send failed:", err);
-    }
-    return NextResponse.json({ ok: true, shortCircuit: "legen" });
-  }
-
   try {
     const reply = await generateReply(`lc_${chatId}`, event.text);
     if (reply) {
