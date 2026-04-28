@@ -104,13 +104,21 @@ export async function generateReply(sessionId: string, userMessage: string): Pro
 
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY! });
   const response = await client.messages.create({
-    model: "claude-sonnet-4-20250514",
+    model: "claude-sonnet-4-6",
     max_tokens: 1024,
     system: systemPrompt,
     messages,
   });
 
-  const reply = response.content[0].type === "text" ? response.content[0].text : "";
+  const textBlock = response.content.find((b) => b.type === "text");
+  const reply = textBlock && textBlock.type === "text" ? textBlock.text : "";
+
+  if (!reply) {
+    console.error("Empty Claude reply", {
+      stop_reason: response.stop_reason,
+      content_types: response.content.map((b) => b.type),
+    });
+  }
 
   if (useSupabase) {
     await saveReplyToSupabase(sessionId, reply);
