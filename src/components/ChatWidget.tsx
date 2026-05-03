@@ -12,10 +12,6 @@ export default function ChatWidget() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: "Pozdravljeni. Kako vam lahko pomagam?",
-    },
-    {
-      role: "assistant",
       content:
         "Naša ekipa je dosegljiva vsak dan med 8:00 in 24:00. Do takrat vam lahko pomagam jaz kot AI asistent.",
     },
