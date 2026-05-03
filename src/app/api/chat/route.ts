@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { generateReply } from "@/lib/chat";
+import { stripMarkdown } from "@/lib/format";
 
 export async function POST(req: NextRequest) {
   try {
@@ -12,7 +13,7 @@ export async function POST(req: NextRequest) {
     const sid = sessionId || crypto.randomUUID();
     const reply = await generateReply(sid, message.trim());
 
-    return NextResponse.json({ reply, sessionId: sid });
+    return NextResponse.json({ reply: stripMarkdown(reply), sessionId: sid });
   } catch (err) {
     console.error("Chat API error:", err);
     return NextResponse.json(
