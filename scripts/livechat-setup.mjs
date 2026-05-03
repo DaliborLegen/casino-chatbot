@@ -63,38 +63,37 @@ async function findOrCreateBot() {
   return created.id;
 }
 
-async function findOrRegisterWebhook() {
+async function findOrRegisterWebhook(action) {
   const list = await api("list_webhooks", { owner_client_id: LIVECHAT_CLIENT_ID });
   const hooks = Array.isArray(list) ? list : list.webhooks || [];
-  const existing = hooks.find(
-    (h) => h.action === "incoming_event" && h.url === LIVECHAT_WEBHOOK_URL
-  );
+  const existing = hooks.find((h) => h.action === action && h.url === LIVECHAT_WEBHOOK_URL);
   if (existing) {
-    console.log(`[webhook] Using existing: ${existing.id}`);
+    console.log(`[webhook ${action}] Using existing: ${existing.id}`);
     return existing.id;
   }
   const created = await api("register_webhook", {
-    action: "incoming_event",
+    action,
     secret_key: LIVECHAT_WEBHOOK_SECRET,
     url: LIVECHAT_WEBHOOK_URL,
     type: "bot",
     owner_client_id: LIVECHAT_CLIENT_ID,
   });
-  console.log(`[webhook] Registered: ${created.id}`);
+  console.log(`[webhook ${action}] Registered: ${created.id}`);
   return created.id;
 }
 
 async function main() {
   try {
     const botAgentId = await findOrCreateBot();
-    const webhookId = await findOrRegisterWebhook();
+    const incomingEventHook = await findOrRegisterWebhook("incoming_event");
+    const incomingChatHook = await findOrRegisterWebhook("incoming_chat");
 
     console.log("\n=== Setup complete ===");
     console.log("\nAdd these to Vercel env vars:");
     console.log(`LIVECHAT_BOT_AGENT_ID=${botAgentId}`);
     console.log(`LIVECHAT_PAT=${LIVECHAT_PAT}`);
     console.log(`LIVECHAT_WEBHOOK_SECRET=${LIVECHAT_WEBHOOK_SECRET}`);
-    console.log(`\nWebhook ID: ${webhookId}`);
+    console.log(`\nWebhooks: incoming_event=${incomingEventHook} incoming_chat=${incomingChatHook}`);
   } catch (err) {
     console.error("Setup failed:", err.message || err);
     process.exit(1);

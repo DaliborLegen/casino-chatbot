@@ -103,17 +103,12 @@ function saveReplyToMemory(sid: string, reply: string) {
   if (session) session.messages.push({ role: "assistant", content: reply });
 }
 
-const NIGHT_WELCOME =
-  "Naša ekipa je dosegljiva vsak dan med 8:00 in 24:00. Do takrat vam lahko pomagam jaz kot AI asistent.";
-
 export async function generateReply(sessionId: string, userMessage: string): Promise<string> {
   const useSupabase = hasSupabase();
 
   const messages = useSupabase
     ? await getMessagesFromSupabase(sessionId, userMessage)
     : getMessagesFromMemory(sessionId, userMessage);
-
-  const isFirstReply = messages.every((m) => m.role !== "assistant");
 
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY! });
   const response = await client.messages.create({
@@ -124,16 +119,14 @@ export async function generateReply(sessionId: string, userMessage: string): Pro
   });
 
   const textBlock = response.content.find((b) => b.type === "text");
-  const claudeReply = textBlock && textBlock.type === "text" ? textBlock.text : "";
+  const reply = textBlock && textBlock.type === "text" ? textBlock.text : "";
 
-  if (!claudeReply) {
+  if (!reply) {
     console.error("Empty Claude reply", {
       stop_reason: response.stop_reason,
       content_types: response.content.map((b) => b.type),
     });
   }
-
-  const reply = isFirstReply && claudeReply ? `${NIGHT_WELCOME}\n\n${claudeReply}` : claudeReply;
 
   if (useSupabase) {
     await saveReplyToSupabase(sessionId, reply);

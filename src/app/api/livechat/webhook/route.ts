@@ -12,6 +12,9 @@ interface LiveChatWebhook {
   payload?: {
     chat_id?: string;
     thread_id?: string;
+    chat?: {
+      id?: string;
+    };
     event?: {
       id?: string;
       author_id?: string;
@@ -20,6 +23,9 @@ interface LiveChatWebhook {
     };
   };
 }
+
+const NIGHT_WELCOME =
+  "Naša ekipa je dosegljiva vsak dan med 8:00 in 24:00. Do takrat vam lahko pomagam jaz kot AI asistent.";
 
 export async function POST(req: NextRequest) {
   const expectedSecret = process.env.LIVECHAT_WEBHOOK_SECRET;
@@ -40,6 +46,20 @@ export async function POST(req: NextRequest) {
   if (body.secret_key !== expectedSecret) {
     console.warn("LiveChat webhook: invalid secret_key");
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  if (body.action === "incoming_chat") {
+    const chatId = body.payload?.chat?.id ?? body.payload?.chat_id;
+    if (!chatId) {
+      return NextResponse.json({ ok: true, ignored: "no-chat-id" });
+    }
+    try {
+      await sendTextMessage({ chat_id: chatId, text: NIGHT_WELCOME, bot_agent_id: botAgentId });
+    } catch (err) {
+      console.error("LiveChat welcome send error:", err);
+      return NextResponse.json({ error: "Welcome failed" }, { status: 500 });
+    }
+    return NextResponse.json({ ok: true, sent: "welcome" });
   }
 
   if (body.action !== "incoming_event") {

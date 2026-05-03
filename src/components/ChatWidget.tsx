@@ -14,6 +14,11 @@ export default function ChatWidget() {
       role: "assistant",
       content: "Pozdravljeni. Kako vam lahko pomagam?",
     },
+    {
+      role: "assistant",
+      content:
+        "Naša ekipa je dosegljiva vsak dan med 8:00 in 24:00. Do takrat vam lahko pomagam jaz kot AI asistent.",
+    },
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
