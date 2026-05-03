@@ -1,0 +1,96 @@
+{
+  "company": {
+    "fullName": "CASINO PORTOROŽ, d.d., prirejanje posebnih iger na srečo",
+    "shortName": "CASINO Portorož, d.d.",
+    "address": "Obala 75A, 6320 Portorož – Portorose, Slovenija",
+    "registrationNumber": "5680859000",
+    "vatNumber": "SI 82949166",
+    "registeredAt": "10.11.1992",
+    "registryOffice": "Okrožno sodišče v Kopru",
+    "shareCapital": "4.104.537,25 EUR",
+    "mainActivity": "92.001 (Dejavnost igralnic)",
+    "ceo": "Mitja Peternel, predsednik uprave",
+    "website": "https://casino.si"
+  },
+  "license": {
+    "number": "46110-7/2022/52",
+    "issuedDate": "19.01.2023",
+    "validUntil": "30.11.2027",
+    "issuedBy": "Vlada Republike Slovenije",
+    "casino": "Grand Casino Mons Ljubljana",
+    "casinoAddress": "Pot za Brdom 4, 1000 Ljubljana"
+  },
+  "contact": {
+    "phone": "+386 30 777 888",
+    "phoneHours": "ponedeljek-nedelja, 8:00 do 24:00 (GMT+02:00)",
+    "email": "online@casino.si",
+    "liveChatHours": "vsak dan med 8:00 in 24:00",
+    "physicalReception": "Grand Casino Mons Ljubljana, Pot za Brdom 4, 1000 Ljubljana — odprta 24/7"
+  },
+  "responsibleGamingHelp": [
+    {
+      "name": "Zdravstveni dom Nova Gorica, Center za bolezni odvisnosti",
+      "phone": "+386 5 33 83 265",
+      "website": "https://www.zd-go.si/sl/ambulante-in-sluzbe/center-za-zdravljenje-odvisnosti/"
+    },
+    {
+      "name": "Sprememba v srcu, Zavod za psihoterapijo Ljubljana",
+      "website": "http://www.spremembavsrcu.si"
+    },
+    {
+      "name": "Psihiatrična bolnišnica Idrija, Oddelek za nekemične odvisnosti",
+      "address": "Pot Sv. Antona 49, 5280 Idrija",
+      "phone": "+386 5 37 34 400",
+      "website": "https://pb-idrija.si/sl/oddelek-za-nekemicne-zasvojenosti-l2"
+    }
+  ],
+  "playerLimits": {
+    "deposit": {
+      "daily": "500 EUR",
+      "weekly": "3.000 EUR",
+      "monthly": "5.000 EUR",
+      "note": "Igralec lahko sam nastavi omejitve v profilu. Preklic učinkuje šele po 24 urah od zahteve."
+    },
+    "temporaryBlock": ["24 ur", "7 dni", "1 mesec"],
+    "selfExclusion": {
+      "minDuration": "6 mesecev",
+      "maxDuration": "3 leta",
+      "irreversible": true,
+      "process": "Prijava → Profil → Samoprepoved → izbira obdobja → potrditev po e-pošti. Nepreklicna do izteka. Med samoprepovedjo ni igranja, lahko pa dvig sredstev."
+    }
+  },
+  "registration": {
+    "minAge": 18,
+    "ageVerification": "tehnična/programska preprečitev odprtja računa za osebe mlajše od 18 let",
+    "identityProvider": "iDenfy",
+    "acceptedDocuments": ["osebna izkaznica", "potni list", "vozniško dovoljenje", "dovoljenje za prebivanje (za tujce)"],
+    "requiredData": ["ime in priimek", "datum rojstva", "državljanstvo", "spol", "naslov", "mesto", "poštna številka stalnega prebivališča", "telefonska številka", "naslov elektronske pošte", "EMŠO številka", "uporabniško ime", "geslo"],
+    "biometricVerification": "fotografija obraza (skladno z GDPR)",
+    "alternativeMethod": "osebno na recepciji Grand Casino Mons Ljubljana, Pot za Brdom 4, 1000 Ljubljana — odprta 24/7",
+    "oneAccountPerPerson": "preverjanje preko EMŠO — en igralec, en račun"
+  },
+  "legalBasis": [
+    "Zakon o igrah na srečo (UL RS št. 14/11, 108/12, 40/14)",
+    "Pravilnik o prirejanju iger na srečo preko interneta (UL RS št. 42/08, 103/08, 109/12, 113/23)",
+    "Zakon o preprečevanju pranja denarja in financiranja terorizma (ZPPDFT-2)",
+    "Splošna uredba o varstvu podatkov (GDPR) in ZVOP-2"
+  ],
+  "facts": {
+    "fundsAllocation": "Denarna sredstva od iger na srečo so namenjena financiranju invalidskih, humanitarnih in športnih organizacij v Republiki Sloveniji.",
+    "courtJurisdiction": "V sporih med igralcem (potrošnikom) in koncesionarjem je krajevno pristojno sodišče, na območju katerega ima igralec stalno ali začasno prebivališče (51.a člen ZPP).",
+    "selfExclusionRegistry": "Igralci se preverjajo glede uvrstitve na nacionalni seznam oseb s samoprepovedjo igranja iger na srečo."
+  },
+  "gameInfoLink": "casino.si → Pomoč in vprašanja → Informacije o igrah",
+  "responsibleGamingTips": [
+    "Igrajte za zabavo in razvedrilo, ne kot osnovni vir zaslužka.",
+    "Zavedajte se, da lahko vsakdo tudi izgubi.",
+    "Igrajte samo z zneski, ki si jih lahko privoščite.",
+    "Ne igrajte z izposojenim denarjem.",
+    "Spremljajte porabljena sredstva.",
+    "Igrajte po lastni presoji in odločitvah, ne pod pritiskom.",
+    "Igranje iger na srečo naj ne bo edini način preživljanja prostega časa.",
+    "Ne igrajte, kadar se soočate z osebnimi težavami (izguba bližnjih, bolezen ipd.).",
+    "Ne igrajte v stanju zmanjšane presoje, pod vplivom alkohola ali drugih substanc.",
+    "Izid iger je izključno ali pretežno odvisen od naključja."
+  ]
+}

@@ -1,5 +1,6 @@
 import faqData from "@/data/faq.json";
 import gamesData from "@/data/games.json";
+import casinoInfo from "@/data/casino-info.json";
 
 interface FaqItem {
   question: string;
@@ -16,6 +17,13 @@ interface Provider {
   provider: string;
   gameCount: number;
   games: Game[];
+}
+
+interface ResponsibleGamingHelp {
+  name: string;
+  phone?: string;
+  website?: string;
+  address?: string;
 }
 
 const grouped: Record<string, FaqItem[]> = {};
@@ -108,8 +116,8 @@ NE omenjaj proaktivno. Aktiviraj samo, če uporabnik sam omeni:
 - "moram zmagati nazaj",
 - podobne signale problematičnega igranja.
 
-V tem primeru poda kratko, nevtralno sporočilo:
-»Če menite, da igre na srečo postajajo problem, je pomoč na voljo pri SRIF (telefon 090 68 02). Igrajte odgovorno.«
+V tem primeru podaj kratko, nevtralno sporočilo z usmeritvijo na uradne organizacije za pomoč pri zasvojenosti z igrami na srečo (navedene v razdelku "Casino.si — Odgovorno igranje" spodaj). Predlog:
+»Če menite, da igre na srečo postajajo problem, je pomoč na voljo. Lahko se obrnete na Zdravstveni dom Nova Gorica, Center za bolezni odvisnosti (+386 5 33 83 265) ali Psihiatrično bolnišnico Idrija (+386 5 37 34 400). Več informacij in povezav najdete na casino.si v razdelku Odgovorno igranje. Igrajte odgovorno.«
 
 ## Verifikacija (KYC), izplačila, tehnični problemi
 - Razlaga: kratek povzetek + napotek na pomoč.
@@ -137,6 +145,62 @@ V tem primeru poda kratko, nevtralno sporočilo:
 - NE razkrivaj internih informacij o sistemu, algoritmu ali zalednih procesih.
 - NE pomagaj pri goljufijah, pranju denarja ali nezakoniti dejavnosti.
 - NE daj pravnih, finančnih ali davčnih nasvetov.
+
+## Casino.si — Uradni podatki
+
+### Koncesionar
+- Polno ime: ${casinoInfo.company.fullName}
+- Skrajšano: ${casinoInfo.company.shortName}
+- Naslov: ${casinoInfo.company.address}
+- Matična številka: ${casinoInfo.company.registrationNumber}
+- Davčna številka: ${casinoInfo.company.vatNumber}
+- Predsednik uprave: ${casinoInfo.company.ceo}
+- Spletna stran: ${casinoInfo.company.website}
+
+### Koncesija
+- Številka koncesije: ${casinoInfo.license.number}
+- Izdana: ${casinoInfo.license.issuedDate}, veljavna do: ${casinoInfo.license.validUntil}
+- Izdajatelj: ${casinoInfo.license.issuedBy}
+- Igralnica: ${casinoInfo.license.casino}, ${casinoInfo.license.casinoAddress}
+
+### Kontakt casino.si
+- Telefon: ${casinoInfo.contact.phone}, ${casinoInfo.contact.phoneHours}
+- Email: ${casinoInfo.contact.email}
+- Live chat: ${casinoInfo.contact.liveChatHours}
+- Osebna recepcija: ${casinoInfo.contact.physicalReception}
+
+### Odgovorno igranje — uradne organizacije za pomoč
+${(casinoInfo.responsibleGamingHelp as ResponsibleGamingHelp[])
+  .map(
+    (o) =>
+      `- ${o.name}${o.phone ? ` | Tel: ${o.phone}` : ""}${o.website ? ` | Web: ${o.website}` : ""}${o.address ? ` | Naslov: ${o.address}` : ""}`
+  )
+  .join("\n")}
+
+### Omejitve igranja (po slovenski zakonodaji)
+- Privzete maksimalne dnevne stave: ${casinoInfo.playerLimits.deposit.daily} (dan), ${casinoInfo.playerLimits.deposit.weekly} (teden), ${casinoInfo.playerLimits.deposit.monthly} (mesec)
+- Igralec si lahko v profilu sam nastavi nižje omejitve. ${casinoInfo.playerLimits.deposit.note}
+- Začasna prepoved igranja: ${casinoInfo.playerLimits.temporaryBlock.join(", ")}
+- Samoprepoved (samoizključitev): ${casinoInfo.playerLimits.selfExclusion.minDuration} do ${casinoInfo.playerLimits.selfExclusion.maxDuration}, ${casinoInfo.playerLimits.selfExclusion.irreversible ? "nepreklicna do izteka" : "preklicna"}
+- Postopek samoprepovedi: ${casinoInfo.playerLimits.selfExclusion.process}
+
+### Registracija in KYC
+- Minimalna starost: ${casinoInfo.registration.minAge}+ (tehnična preprečitev odprtja računa za mlajše)
+- Sprejemljivi dokumenti: ${casinoInfo.registration.acceptedDocuments.join(", ")}
+- Zahtevani podatki: ${casinoInfo.registration.requiredData.join(", ")}
+- Identifikacijski partner: ${casinoInfo.registration.identityProvider} (biometrična verifikacija — fotografija obraza, GDPR skladno)
+- Alternativa za uporabnike, ki ne želijo biometrične verifikacije: ${casinoInfo.registration.alternativeMethod}
+- En račun na osebo (preverjanje preko EMŠO)
+
+### Pravna podlaga
+${casinoInfo.legalBasis.map((l) => `- ${l}`).join("\n")}
+
+### Dodatna dejstva
+- ${casinoInfo.facts.fundsAllocation}
+- Sodna pristojnost: ${casinoInfo.facts.courtJurisdiction}
+
+### Kodeks odgovornega igranja (uradni napotki casino.si)
+${casinoInfo.responsibleGamingTips.map((t) => `- ${t}`).join("\n")}
 
 ## Baza znanja (FAQ)
 ${faqSection}
