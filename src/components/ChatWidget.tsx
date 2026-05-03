@@ -12,8 +12,7 @@ export default function ChatWidget() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content:
-        "Pozdravljeni! Sem virtualni pomočnik Casino.si. Kako vam lahko pomagam?",
+      content: "Pozdravljeni. Kako vam lahko pomagam?",
     },
   ]);
   const [input, setInput] = useState("");
