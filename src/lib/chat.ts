@@ -1,6 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { getSupabase } from "@/lib/supabase";
-import { systemPrompt } from "@/lib/system-prompt";
+import { buildSystemPrompt } from "@/lib/system-prompt";
 
 export interface StoredMessage {
   role: "user" | "assistant";
@@ -114,7 +114,7 @@ export async function generateReply(sessionId: string, userMessage: string): Pro
   const response = await client.messages.create({
     model: "claude-sonnet-4-6",
     max_tokens: 1024,
-    system: systemPrompt,
+    system: buildSystemPrompt(),
     messages,
   });
 

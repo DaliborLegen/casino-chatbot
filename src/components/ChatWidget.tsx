@@ -59,7 +59,7 @@ export default function ChatWidget() {
         {
           role: "assistant",
           content:
-            "Povezava ni uspela. Prosimo, poskusite znova ali nas kontaktirajte na podpora@casino.si.",
+            "Povezava ni uspela. Prosimo, poskusite znova ali nas kontaktirajte na online@casino.si.",
         },
       ]);
     } finally {

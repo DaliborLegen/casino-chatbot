@@ -344,7 +344,7 @@ export default function Home() {
             <div>
               <h4 className="font-bold mb-2 text-xs">Kontakt</h4>
               <div className="space-y-1 text-xs" style={{ color: "#cfd0d1" }}>
-                <p>📧 podpora@casino.si</p>
+                <p>📧 online@casino.si</p>
                 <p className="text-xl font-bold text-white">030 777 888</p>
                 <p>Live chat na casino.si</p>
               </div>

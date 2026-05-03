@@ -50,6 +50,17 @@ export async function listWebhooks(owner_client_id: string) {
   return livechatFetch(`${CONFIG_API}/action/list_webhooks`, { owner_client_id });
 }
 
+export function formatForLiveChat(text: string): string {
+  // LiveChat widget renders messages as plain text — markdown markers (**bold**, *italic*,
+  // `code`) leak through visibly. Strip the markers so output is clean.
+  // Slovenian uses č/š/ž which are not in Unicode mathematical-bold block, so unicode-bold
+  // conversion produces inconsistent text — strip is the safe option.
+  return text
+    .replace(/\*\*(.+?)\*\*/g, "$1")
+    .replace(/(^|[^\*])\*(?!\s)([^\*\n]+?)\*(?!\*)/g, "$1$2")
+    .replace(/`([^`]+)`/g, "$1");
+}
+
 export async function sendTextMessage(params: {
   chat_id: string;
   text: string;
@@ -61,7 +72,7 @@ export async function sendTextMessage(params: {
       chat_id: params.chat_id,
       event: {
         type: "message",
-        text: params.text,
+        text: formatForLiveChat(params.text),
         recipients: "all",
       },
     },
