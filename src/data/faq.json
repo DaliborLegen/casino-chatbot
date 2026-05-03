@@ -198,5 +198,269 @@
     "question": "Na svojem računu imam dnevno/tedensko/mesečno omejitev. Pretekel je teden/mesec. Zakaj ne morem opraviti pologa?",
     "answer": "Omejitve so vrste „drseče omejitve“ (rolling limit), zato se ne ponastavijo na začetku dneva, tedna ali meseca, temveč po 1, 7 ali 30 dneh, odvisno od tega, kdaj ste opravili polog.Primeri:Tedenska omejitev• Imate skupno omejitev 100 EUR na teden:• V ponedeljek ob 18:30 opravite polog 50 EUR in v petek ob 9:50 polog 50 EUR. Dosegli ste omejitev in ne morete več položiti.• Naslednji teden boste lahko opravili polog največ 50 EUR naslednji ponedeljek po 18:31. Če ste opravili natančno polog 50 EUR, boste lahko naslednji polog opravili največ 50 EUR od petka 9:51 naprej.Mesečna omejitevI.• Imate mesečno omejitev 1000 EUR za marec.• V tem mesecu opravite prvi polog 5. marca ob 10:15 v višini 70 EUR.• Nadaljujete, dokler natančna omejitev 1000 EUR ni dosežena 17. marca.• Naslednji polog boste lahko opravili 4. aprila ob 10:16, v višini največ 70 EUR, 30 dni po prvotnem pologu. Naslednji pologi bodo sproščeni v istem vrstnem redu. II.• V tem mesecu ste opravili polog v višini 3000 EUR (pri čemer mesec = zadnjih 30 dni).• Nastavite skupno omejitev 1000 EUR na mesec.• Omejitev je nižja od skupnega zneska položenega v tem mesecu, zato ne boste mogli opraviti pologa, dokler skupni znesek pologov v zadnjih 30 dneh ne bo nižji od 1000 EUR.• Torej, če ste v prvem tednu položili 500 EUR, v drugem 1500 EUR, v tretjem 500 EUR in v četrtem 500 EUR, vidimo, kako je nastavljena omejitev 1000 EUR dosežena v tretjem in četrtem tednu. Zato boste lahko v tretjem tednu naslednjega meseca nadaljevali z opravljanjem pologov.",
     "category": "Odgovorno igranje"
+  },
+
+  {
+    "question": "Kako poteka preverjanje identitete (KYC)?",
+    "answer": "Preverjanje identitete poteka prek pogodbenega partnerja iDenfy. Skenirate sprednjo in zadnjo stran osebnega dokumenta ter naredite selfie, sistem pa s tehnologijo Face ID primerja fotografijo z dokumentom. Preverjanje je obvezno za polno uporabo računa in skladno z GDPR ter ZVOP-2.",
+    "category": "Registracija in verifikacija"
+  },
+  {
+    "question": "Katere dokumente lahko uporabim za verifikacijo?",
+    "answer": "Sprejemamo osebno izkaznico (vključno z biometrično), potni list (vključno z biometričnim), kartično vozniško dovoljenje in dovoljenje za prebivanje (za tujce s prebivališčem v Sloveniji). Stara papirnata vozniška dovoljenja niso sprejemljiva.",
+    "category": "Registracija in verifikacija"
+  },
+  {
+    "question": "Ali se lahko registriram brez biometrične verifikacije?",
+    "answer": "Da. Če ne želite podati biometričnih podatkov (fotografije obraza), lahko registracijo in identifikacijo opravite osebno na recepciji Grand Casino Mons Ljubljana, Pot za Brdom 4, 1000 Ljubljana. Recepcija je odprta 24 ur na dan, vse dni v tednu.",
+    "category": "Registracija in verifikacija"
+  },
+  {
+    "question": "Kako dolgo se hranijo moji biometrični podatki?",
+    "answer": "Biometrična predloga se uporabi samo za primerjavo s fotografijo na osebnem dokumentu in se izbriše po koncu postopka registracije in verifikacije (do 10 minut). Podatki se obdelujejo na strežnikih iDenfy v EU (Irska) in se ne prenašajo izven EU/EGP.",
+    "category": "Registracija in verifikacija"
+  },
+  {
+    "question": "Kaj pomeni status PEP (politično izpostavljena oseba)?",
+    "answer": "Če ste politično izpostavljena oseba (PEP), je v skladu z ZPPDFT-2 pred odprtjem računa potreben dodaten postopek. Prejeli boste e-pošto z navodili in obrazcem PEP izjave; potrebno je tudi dokazilo o izvoru sredstev. Račun bo aktiviran šele po pregledu in odobritvi.",
+    "category": "Registracija in verifikacija"
+  },
+  {
+    "question": "Iz katere države se lahko prijavim na Casino.si?",
+    "answer": "Igrati lahko samo iz ozemlja Republike Slovenije. Sistem geolokacijsko preverja dostop in ne dovoli prijave iz tujine. Tujci, ki imajo prebivališče v Sloveniji, lahko igrajo, dokler so fizično v Sloveniji.",
+    "category": "Registracija in verifikacija"
+  },
+  {
+    "question": "Kaj se zgodi, če mi poteče osebni dokument?",
+    "answer": "Mesec dni pred iztekom veljavnosti dokumenta vas opozorimo. Po izteku boste morali ponovno verificirati račun z novim veljavnim dokumentom. Do takrat račun pridobi status KYC/REGULATION in ne morete dostopati do iger.",
+    "category": "Registracija in verifikacija"
+  },
+  {
+    "question": "Kakšno geslo naj uporabim?",
+    "answer": "Uporabite močno geslo, ki ga drugi težko uganejo, in ga nikoli ne delite z nikomer. Geslo občasno menjajte. Casino.si uporabniških gesel ne shranjuje, zato bodite pri pozabi gesla pripravljeni na ponastavitev preko e-pošte.",
+    "category": "Račun in geslo"
+  },
+  {
+    "question": "Kaj naj naredim, če sumim, da nekdo drug uporablja moj račun?",
+    "answer": "Takoj zamenjajte geslo in obvestite podporo na online@casino.si ali pokličite +386 30 777 888. Casino.si bo vašemu računu dodelil novo geslo. Za zlorabe, ki nastanejo zaradi neustreznega varovanja prijavnih podatkov, je odgovoren imetnik računa.",
+    "category": "Račun in geslo"
+  },
+  {
+    "question": "Kaj pomeni status BLOKIRAN na mojem računu?",
+    "answer": "Status BLOKIRAN onemogoči prijavo. Pogosto se sproži po trikratnem napačnem vnosu gesla ali iz varnostnih razlogov. Račun se odmrzne po uspešni identifikaciji oziroma preverjanju s strani pooblaščene osebe – kontaktirajte podporo na online@casino.si.",
+    "category": "Račun in geslo"
+  },
+  {
+    "question": "Kaj se zgodi z neaktivnim računom?",
+    "answer": "Če 12 mesecev zapored ne dostopate do svojega računa, bo zaprt. Mesec pred tem prejmete obvestilo. Po zaprtju razpoložljiva sredstva v 10 dneh vrnemo na vaš plačilni račun.",
+    "category": "Račun in geslo"
+  },
+  {
+    "question": "Kako trajno zaprem svoj račun?",
+    "answer": "Račun lahko kadarkoli zaprete v razdelku Odgovorno igranje v profilu, ali pa pišete na online@casino.si. Po zaprtju vam v roku 10 dni nakažemo razpoložljivi saldo na izvorni način plačila. Ponovna aktivacija je možna le z novim postopkom registracije in verifikacije.",
+    "category": "Račun in geslo"
+  },
+
+  {
+    "question": "Katere plačilne metode sprejemate za polog?",
+    "answer": "Aktualne plačilne metode (bančne kartice in e-denarnice, npr. Aircash, Skrill, Neteller) najdete po prijavi v razdelku Banka → Vplačilo. Ker se ponudba lahko spreminja, vedno preverite trenutni seznam neposredno v računu.",
+    "category": "Pologi sredstev"
+  },
+  {
+    "question": "Ali so polog in dvig povezani s provizijami?",
+    "answer": "Glede na izbrano metodo plačila lahko provizije zaračuna ponudnik plačil ali vaša banka. V nekaterih primerih stroške pokrije Casino.si. Podrobnosti za vsako metodo najdete po prijavi v razdelku Banka.",
+    "category": "Pologi sredstev"
+  },
+  {
+    "question": "Zakaj je bil moj polog s kartico zavrnjen?",
+    "answer": "Plačila so lahko zavrnjena s strani varnostnih sistemov banke ali ponudnika plačil, tudi pri sicer veljavnih karticah. Razlogi so lahko limit, blokade ali interna pravila banke. Najprej se obrnite na izdajatelja kartice; če se težava ponavlja, kontaktirajte podporo Casino.si.",
+    "category": "Pologi sredstev"
+  },
+  {
+    "question": "Ali lahko polog opravim s kartico družinskega člana?",
+    "answer": "Ne. Pologi morajo biti opravljeni izključno z vašega osebnega bančnega računa, kartice ali e-denarnice. Uporaba tujega plačilnega sredstva je razlog za razveljavitev transakcij in morebitnih dobitkov.",
+    "category": "Pologi sredstev"
+  },
+  {
+    "question": "Koliko časa traja, da je polog viden na računu?",
+    "answer": "Pologi se običajno obdelajo takoj in so na računu vidni v nekaj sekundah. Če se polog ne prikaže, najprej preverite e-poštno potrdilo banke; če sredstev ni v razumnem času, kontaktirajte podporo na online@casino.si.",
+    "category": "Pologi sredstev"
+  },
+
+  {
+    "question": "Koliko časa traja izplačilo dobitkov?",
+    "answer": "Izplačila se po odobritvi izvedejo praviloma najkasneje v 10 dneh; rok se lahko podaljša za 5 dni, če dodatno preverjanje izvaja ponudnik programske opreme. Na bančne kartice banke nakažejo sredstva v 1–3 delovnih dneh, e-denarnice pa praviloma hitreje.",
+    "category": "Dvigi sredstev"
+  },
+  {
+    "question": "Ali moram pred dvigom igrati svoja sredstva?",
+    "answer": "Da. Vsa vplačana sredstva morajo biti vsaj enkrat odigrana, preden lahko dvignete. To je standardni ukrep proti pranju denarja. Ob aktivnem bonusu pa veljajo še dodatni pogoji za stave (rollover).",
+    "category": "Dvigi sredstev"
+  },
+  {
+    "question": "Ali lahko dvignem sredstva na drugačno metodo, kot sem jih položil?",
+    "answer": "Praviloma se dvigi izvajajo nazaj na isto metodo, s katero ste položili sredstva. Drugačna metoda je možna le izjemoma in je v presoji koncesionarja. Za informacije in dovoljenje pišite na online@casino.si.",
+    "category": "Dvigi sredstev"
+  },
+  {
+    "question": "Ali se od dobitkov plačuje davek?",
+    "answer": "Davčne obveznosti od dobitkov so v izključni odgovornosti igralca. Casino.si ne nudi davčnega svetovanja – za informacije se obrnite na FURS ali davčnega svetovalca.",
+    "category": "Dvigi sredstev"
+  },
+  {
+    "question": "Najmanjši/največji dvig?",
+    "answer": "Minimalni in maksimalni zneski se razlikujejo glede na izbrano plačilno metodo in se občasno spreminjajo. Aktualne omejitve preverite po prijavi v razdelku Banka → Izplačilo.",
+    "category": "Dvigi sredstev"
+  },
+
+  {
+    "question": "Kateri ponudniki iger so na voljo na Casino.si?",
+    "answer": "Trenutno na Casino.si igrate igre 7 ponudnikov: Amusnet, BF Games, EGT Digital, ELK Studios, Greentube, Play'N GO in Wazdan. Skupaj je v ponudbi približno 262 iger, ki vključujejo slote, virtualne rulete in namizne igre.",
+    "category": "Igre"
+  },
+  {
+    "question": "Kje najdem pravila konkretne igre?",
+    "answer": "Pravila vseh iger so v PDF obliki dostopna v slovenščini, angleščini in hrvaščini. Najdete jih na casino.si v razdelku Pomoč → Informacije o igrah ali neposredno na strani posamezne igre. Za določeno igro vam lahko pošljem tudi neposredno povezavo.",
+    "category": "Igre"
+  },
+  {
+    "question": "Kakšna je razlika med demo in pravim igranjem?",
+    "answer": "Demo različica omogoča igro z navideznim denarjem, brez vplačila in brez možnosti dobitka. Igra za pravi denar zahteva polog na verificiran račun in omogoča dejanske izplačljive dobitke.",
+    "category": "Igre"
+  },
+  {
+    "question": "Kako vem, da so igre poštene?",
+    "answer": "Vse igre na Casino.si zagotavljajo licencirani ponudniki s certifikati ustreznih organov. Izid je pretežno odvisen od naključja in ga določa strežnik igre, ne Casino.si. Casino.si je koncesionar Vlade RS (koncesija št. 46110-7/2022/52).",
+    "category": "Igre"
+  },
+
+  {
+    "question": "Kakšen bonus dobim ob registraciji?",
+    "answer": "Aktualni registracijski in dobrodošlični bonusi se redno spreminjajo. Točne pogoje (zneske, rollover, veljavnost) vedno preverite v razdelku Promocije na casino.si pred koriščenjem.",
+    "category": "Bonusi in promocije"
+  },
+  {
+    "question": "Koliko bonusov lahko imam aktivnih hkrati?",
+    "answer": "V igralnici je hkrati lahko aktiven samo en bonus. Šele ko je trenutni bonus zaključen (izpolnjen rollover, potek ali preklic), lahko aktivirate naslednji iz razdelka Moje ponudbe.",
+    "category": "Bonusi in promocije"
+  },
+  {
+    "question": "Ali so bonusi takoj izplačljivi?",
+    "answer": "Ne. Dobitki iz bonusov so izplačljivi šele po izpolnitvi pogoja stav (rollover), ki je določen v pogojih posameznega bonusa. Napredek lahko spremljate v razdelku Moje ponudbe.",
+    "category": "Bonusi in promocije"
+  },
+  {
+    "question": "Kaj se zgodi, če zlorabim bonus?",
+    "answer": "Zloraba bonusov (npr. več računov, sheme nasprotnih stav, kršenje pogojev) lahko vodi v zadržanje bonusa in dobitkov, preklic ponudbe, prepoved sodelovanja v promocijah ali zaprtje računa. Casino.si izvaja sistematične preglede.",
+    "category": "Bonusi in promocije"
+  },
+  {
+    "question": "Kako se prijavim na promocije?",
+    "answer": "Aktualne promocije so vidne v razdelku Promocije na casino.si. Bonus aktivirate z bonus kodo ob pologu ali neposredno v razdelku Moje ponudbe. Pred aktivacijo vedno preberite pogoje promocije.",
+    "category": "Bonusi in promocije"
+  },
+
+  {
+    "question": "Kakšne omejitve igranja lahko nastavim?",
+    "answer": "V razdelku Odgovorno igranje lahko sami nastavite dnevno, tedensko ali mesečno omejitev pologa (privzete maksimalne vrednosti so 500 EUR/dan, 3.000 EUR/teden, 5.000 EUR/mesec). Zniževanje omejitve velja takoj, povečanje ali odstranitev pa šele po 24 urah.",
+    "category": "Odgovorno igranje in samoprepoved"
+  },
+  {
+    "question": "Kakšna je razlika med začasno prepovedjo in samoprepovedjo?",
+    "answer": "Začasna prepoved (Time-Out) traja 24 ur, 7 dni ali 1 mesec in jo lahko po izteku prekličete. Samoprepoved traja od 6 mesecev do 3 let in je nepreklicna do izteka – pomeni izključitev iz vseh spletnih iger na srečo v Sloveniji.",
+    "category": "Odgovorno igranje in samoprepoved"
+  },
+  {
+    "question": "Ali samoprepoved velja samo za Casino.si?",
+    "answer": "Ne. Samoprepoved se vpiše v nacionalni register oseb s samoprepovedjo, ki ga vodi pristojni organ. To pomeni, da v izbranem obdobju ne morete sodelovati v nobenih spletnih igrah na srečo v Republiki Sloveniji.",
+    "category": "Odgovorno igranje in samoprepoved"
+  },
+  {
+    "question": "Ali lahko med samoprepovedjo dvignem sredstva?",
+    "answer": "Da. Med samoprepovedjo ni mogoče igrati ali staviti, lahko pa kadarkoli dvignete preostala razpoložljiva sredstva s svojega računa.",
+    "category": "Odgovorno igranje in samoprepoved"
+  },
+  {
+    "question": "Kam se obrnem, če mislim, da imam težavo z igralništvom?",
+    "answer": "Pomoč ponujajo: Zdravstveni dom Nova Gorica, Center za bolezni odvisnosti (+386 5 33 83 265), Sprememba v srcu Ljubljana (spremembavsrcu.si) in Psihiatrična bolnišnica Idrija, oddelek za nekemične odvisnosti (+386 5 37 34 400). Za vse povezave glejte casino.si → Odgovorno igranje → Kam po pomoč.",
+    "category": "Odgovorno igranje in samoprepoved"
+  },
+  {
+    "question": "Kakšni so napotki za odgovorno igranje?",
+    "answer": "Igrajte za zabavo, ne kot vir zaslužka. Postavite si proračun, ki si ga lahko privoščite, ne igrajte z izposojenim denarjem in se izogibajte igranju pod pritiskom, alkoholom ali v stiski. Izid iger je v pretežni meri odvisen od naključja.",
+    "category": "Odgovorno igranje in samoprepoved"
+  },
+
+  {
+    "question": "Igra se zatakne ali ne odpre, kaj naj naredim?",
+    "answer": "Najprej osvežite stran ali ponovno zaženite brskalnik. Preverite internetno povezavo in poskusite v drugem brskalniku. Če težava ostane, kontaktirajte podporo na online@casino.si in opišite igro ter čas dogodka – stave so vedno zabeležene v razdelku Zgodovina.",
+    "category": "Tehnične težave"
+  },
+  {
+    "question": "Spletna stran casino.si se ne naloži pravilno.",
+    "answer": "Počistite predpomnilnik in piškotke brskalnika ter poskusite znova. Onemogočite VPN ali proxy (Casino.si je dostopen le iz Slovenije) in preverite, da ima brskalnik omogočen JavaScript. Če težava ostane, pišite na online@casino.si.",
+    "category": "Tehnične težave"
+  },
+  {
+    "question": "Ne prejmem potrditvene e-pošte.",
+    "answer": "Najprej preverite mape Neželena pošta, Spam ali Promocije. Če sporočila ni v 15 minutah, poskusite ponoviti zahtevek za potrditev. Pri vztrajni težavi se obrnite na podporo na online@casino.si.",
+    "category": "Tehnične težave"
+  },
+  {
+    "question": "Live chat ni na voljo, kaj zdaj?",
+    "answer": "Klepet v živo je na voljo vsak dan med 8:00 in 24:00. Izven teh ur lahko z mano klepetate kot z AI asistentom, ali pa pišete na online@casino.si in agent vam bo odgovoril v doseglju.",
+    "category": "Tehnične težave"
+  },
+
+  {
+    "question": "Kaj če se ne strinjam s spremembo Splošnih pogojev?",
+    "answer": "Spremembe pogojev začnejo veljati po odobritvi pristojnega organa in objavi na casino.si. Če se s spremembami ne strinjate, prenehajte uporabljati storitev. Nadaljnja uporaba pomeni sprejem novih pogojev.",
+    "category": "Splošni pogoji"
+  },
+  {
+    "question": "Kako vložim pritožbo?",
+    "answer": "Pritožbo lahko pošljete na online@casino.si z jasno navedbo identitete in vseh okoliščin. Casino.si jo obravnava najpozneje v 14 dneh. Reševanje sporov je v pristojnosti slovenskih sodišč; krajevno pristojno je sodišče vašega prebivališča (51.a člen ZPP).",
+    "category": "Splošni pogoji"
+  },
+  {
+    "question": "Koliko časa hranite podatke o moji aktivnosti?",
+    "answer": "Podatki o igralnem računu in transakcijah se hranijo najmanj 10 let od odprtja računa, kot to nalaga zakonodaja proti pranju denarja. Drugi osebni podatki se hranijo skladno s Politiko zasebnosti, praviloma do 5 let po prenehanju razmerja.",
+    "category": "Splošni pogoji"
+  },
+  {
+    "question": "Ali lahko račun prenesem na drugo osebo?",
+    "answer": "Ne. Račun je osebni in neprenosljiv. Ne smete ga deliti z drugimi (vključno z mladoletnimi). V primeru smrti imetnika računa se sredstva dedičem izplačajo po predložitvi zakonsko zahtevanih dokazil; zahtevek se posreduje na online@casino.si.",
+    "category": "Splošni pogoji"
+  },
+
+  {
+    "question": "Katere osebne podatke zbirate?",
+    "answer": "Casino.si zbira identifikacijske podatke (ime, EMŠO, datum rojstva), kontaktne podatke (naslov, e-pošta, telefon), finančne podatke (transakcije, plačilna sredstva), tehnične podatke (IP, naprava, lokacija) in fotografije dokumentov za KYC. Podrobnosti so v Politiki zasebnosti.",
+    "category": "Zasebnost in varstvo podatkov"
+  },
+  {
+    "question": "Kakšne so moje pravice glede osebnih podatkov?",
+    "answer": "Po GDPR imate pravico do dostopa, popravka, izbrisa, omejitve obdelave, prenosljivosti in ugovora. Zahtevo pošljite na online@casino.si. Casino.si bo odgovoril najkasneje v enem mesecu. Pritožbo lahko vložite tudi pri Informacijskem pooblaščencu RS (ip-rs.si).",
+    "category": "Zasebnost in varstvo podatkov"
+  },
+  {
+    "question": "Komu posredujete moje podatke?",
+    "answer": "Podatki se posredujejo le pogodbenim partnerjem za izvedbo storitev (npr. iDenfy za KYC, ponudniki plačil, ponudniki iger, oblačni shrambeniki, marketinški partnerji), pristojnim organom po zakonu in po izrecnem soglasju uporabnika. Vsi obdelovalci so vezani na pogodbe o varstvu podatkov.",
+    "category": "Zasebnost in varstvo podatkov"
+  },
+  {
+    "question": "Kakšne piškotke uporablja casino.si?",
+    "answer": "Casino.si uporablja potrebne piškotke (vedno omogočeni), funkcionalne, analitične, piškotke uspešnosti in oglaševalske piškotke. Za vse, razen potrebnih, zahtevamo predhodno soglasje. Soglasje lahko kadarkoli umaknete v nastavitvah piškotkov.",
+    "category": "Zasebnost in varstvo podatkov"
+  },
+  {
+    "question": "Kako so moji podatki zavarovani?",
+    "answer": "Strežniki SIS/NIS so v podatkovnem centru Equinix v Sofiji (certifikati ISO 9001, ISO 27001, ISO 22301). Komunikacija je šifrirana, dostop je omejen na pooblaščene osebe, vsi dostopi se beležijo. Casino.si vsako leto izvaja izobraževanja o varstvu podatkov.",
+    "category": "Zasebnost in varstvo podatkov"
+  },
+  {
+    "question": "Kako lahko zahtevam izbris svojega računa?",
+    "answer": "Pošljite zahtevo na online@casino.si. Casino.si bo izbrisal podatke, ki jih ni več obvezan hraniti, druge pa zaklenil za nadaljnjo uporabo. Določene podatke (transakcije, KYC) je po zakonu treba hraniti še 10 let zaradi preprečevanja pranja denarja.",
+    "category": "Zasebnost in varstvo podatkov"
   }
 ]

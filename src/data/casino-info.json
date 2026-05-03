@@ -25,7 +25,9 @@
     "phoneHours": "ponedeljek-nedelja, 8:00 do 24:00 (GMT+02:00)",
     "email": "online@casino.si",
     "liveChatHours": "vsak dan med 8:00 in 24:00",
-    "physicalReception": "Grand Casino Mons Ljubljana, Pot za Brdom 4, 1000 Ljubljana — odprta 24/7"
+    "physicalReception": "Grand Casino Mons Ljubljana, Pot za Brdom 4, 1000 Ljubljana — odprta 24/7",
+    "complaintsEmail": "online@casino.si",
+    "dataProtectionEmail": "online@casino.si"
   },
   "responsibleGamingHelp": [
     {
@@ -49,38 +51,97 @@
       "daily": "500 EUR",
       "weekly": "3.000 EUR",
       "monthly": "5.000 EUR",
-      "note": "Igralec lahko sam nastavi omejitve v profilu. Preklic učinkuje šele po 24 urah od zahteve."
+      "note": "Igralec lahko sam nastavi omejitve v profilu. Zmanjšanje omejitve velja takoj. Povečanje ali preklic učinkuje šele po 24 urah od zahteve. Omejitve so 'drseče' (rolling) — ne ponastavijo se na začetku obdobja, ampak po 1, 7 ali 30 dneh od posameznega pologa."
     },
     "temporaryBlock": ["24 ur", "7 dni", "1 mesec"],
     "selfExclusion": {
       "minDuration": "6 mesecev",
       "maxDuration": "3 leta",
       "irreversible": true,
-      "process": "Prijava → Profil → Samoprepoved → izbira obdobja → potrditev po e-pošti. Nepreklicna do izteka. Med samoprepovedjo ni igranja, lahko pa dvig sredstev."
-    }
+      "process": "Prijava → Profil → Odgovorno igranje → Samoprepoved → izbira obdobja → potrditev po e-pošti in vrnitev podpisanega obrazca, ki ga zahteva regulator. Nepreklicna do izteka. Vpiše se v nacionalni register samoprepovedi (vpliva na vse SLO koncesionarje). Med samoprepovedjo igranje ni mogoče, dvig razpoložljivih sredstev pa je dovoljen."
+    },
+    "wageringRequirement": {
+      "deposit": "1× (vsa vplačana sredstva morajo biti vsaj enkrat odigrana pred dvigom)",
+      "bonus": "določen v pogojih posameznega bonusa, npr. 15× — preverite v razdelku Moje ponudbe"
+    },
+    "maxOneActiveBonus": true,
+    "maxOneAccountPerPerson": true,
+    "inactiveAccountClosure": "po 12 mesecih neaktivnosti se račun samodejno zapre, sredstva se vrnejo v 10 dneh"
   },
   "registration": {
     "minAge": 18,
     "ageVerification": "tehnična/programska preprečitev odprtja računa za osebe mlajše od 18 let",
-    "identityProvider": "iDenfy",
-    "acceptedDocuments": ["osebna izkaznica", "potni list", "vozniško dovoljenje", "dovoljenje za prebivanje (za tujce)"],
-    "requiredData": ["ime in priimek", "datum rojstva", "državljanstvo", "spol", "naslov", "mesto", "poštna številka stalnega prebivališča", "telefonska številka", "naslov elektronske pošte", "EMŠO številka", "uporabniško ime", "geslo"],
-    "biometricVerification": "fotografija obraza (skladno z GDPR)",
+    "identityProvider": "iDenfy (iDenfy UAB, Barsausko 59, Kaunas, 51423, Litva)",
+    "biometricStorage": "AWS Irska (EU); biometrični podatki izbrisani po 10 minutah po zaključeni verifikaciji",
+    "acceptedDocuments": ["osebna izkaznica", "biometrična osebna izkaznica", "potni list", "biometrični potni list", "kartično vozniško dovoljenje", "dovoljenje za prebivanje (za tujce)"],
+    "rejectedDocuments": ["staro papirnato vozniško dovoljenje"],
+    "requiredData": ["ime in priimek", "datum rojstva", "državljanstvo", "spol", "naslov", "mesto", "poštna številka stalnega prebivališča", "telefonska številka", "naslov elektronske pošte", "EMŠO številka", "uporabniško ime", "geslo", "vrsta osebnega dokumenta", "kraj rojstva", "izjava o politični izpostavljenosti (PEP)"],
+    "biometricVerification": "fotografija obraza (Face ID); skladno z ZVOP-2 83. člen in GDPR 9(2)(a)",
     "alternativeMethod": "osebno na recepciji Grand Casino Mons Ljubljana, Pot za Brdom 4, 1000 Ljubljana — odprta 24/7",
-    "oneAccountPerPerson": "preverjanje preko EMŠO — en igralec, en račun"
+    "oneAccountPerPerson": "preverjanje preko EMŠO — en igralec, en račun",
+    "geoRestriction": "dostop dovoljen samo iz ozemlja Republike Slovenije (programska preverba)",
+    "verificationDeadline": "1 mesec od registracije; sicer se račun samodejno zapre",
+    "verificationStatuses": {
+      "IDVERIFIED": "račun popolnoma verificiran, polna funkcionalnost",
+      "PEPBLOCKED": "politično izpostavljena oseba, potrebna dodatna preverba",
+      "BLOCKED": "začasna varnostna blokada (npr. 3× napačno geslo)",
+      "TIME_OUT": "uporabnik je sam zaprl račun za določen čas",
+      "SELF_EXCLUSION": "samoprepoved 6 mesecev do 3 let",
+      "KYC_REGULATION": "potekel veljaven dokument, potrebna ponovna verifikacija",
+      "REVERIFIED": "uporabnik je spremenil podatke (npr. ob poroki), potrebna ponovna verifikacija",
+      "CLOSED": "trajno zaprt račun; ponovna aktivacija samo z novim postopkom registracije"
+    }
   },
   "legalBasis": [
     "Zakon o igrah na srečo (UL RS št. 14/11, 108/12, 40/14)",
     "Pravilnik o prirejanju iger na srečo preko interneta (UL RS št. 42/08, 103/08, 109/12, 113/23)",
-    "Zakon o preprečevanju pranja denarja in financiranja terorizma (ZPPDFT-2)",
-    "Splošna uredba o varstvu podatkov (GDPR) in ZVOP-2"
+    "Zakon o preprečevanju pranja denarja in financiranja terorizma (ZPPDFT-2, UL RS št. 48/22, 145/22, 17/25)",
+    "Splošna uredba o varstvu podatkov (GDPR) in ZVOP-2 (UL RS št. 163/22, 40/25)",
+    "Koncesijska pogodba št. 46110-7/2022/52 z dne 19.01.2023 za Grand Casino Mons Ljubljana s pripadajočimi aneksi"
   ],
   "facts": {
     "fundsAllocation": "Denarna sredstva od iger na srečo so namenjena financiranju invalidskih, humanitarnih in športnih organizacij v Republiki Sloveniji.",
-    "courtJurisdiction": "V sporih med igralcem (potrošnikom) in koncesionarjem je krajevno pristojno sodišče, na območju katerega ima igralec stalno ali začasno prebivališče (51.a člen ZPP).",
-    "selfExclusionRegistry": "Igralci se preverjajo glede uvrstitve na nacionalni seznam oseb s samoprepovedjo igranja iger na srečo."
+    "courtJurisdiction": "V sporih med igralcem (potrošnikom) in koncesionarjem je krajevno pristojno sodišče, na območju katerega ima igralec stalno ali začasno prebivališče (51.a člen ZPP). Tožeča stranka igralec ima alternativno možnost vložitve tožbe pri sodišču splošne krajevne pristojnosti (sedež koncesionarja).",
+    "selfExclusionRegistry": "Igralci se preverjajo glede uvrstitve na nacionalni seznam oseb s samoprepovedjo igranja iger na srečo; evidenca se dnevno posreduje nadzornemu organu.",
+    "complaintsHandling": "Pritožba na online@casino.si; obravnava najkasneje v 14 dneh; transakcijski zahtevki morajo biti vloženi v 5 dneh.",
+    "dataRetention": "Podatki o igralnem računu in transakcijah najmanj 10 let od odprtja računa (ZPPDFT-2). Drugi osebni podatki praviloma do 5 let po prenehanju razmerja.",
+    "winningsPaymentDeadline": "praviloma najkasneje v 10 dneh; lahko +5 dni za dodatno preverjanje",
+    "dataCenter": "Equinix Sofija (Ulica Nedelcho Bonchev 33, 1528 Sofija, Bolgarija); certifikati ISO 9001:2015, ISO/IEC 27001:2013, ISO 22301:2019; 24/7 video nadzor in fizična varnost",
+    "currency": "EUR (transakcije v drugih valutah možne s konverzijo banke uporabnika)"
   },
+  "dataProcessing": {
+    "controller": "CASINO PORTOROŽ, d.d.",
+    "kycProcessor": "iDenfy UAB (Litva)",
+    "userRights": ["dostop", "popravek", "izbris", "omejitev obdelave", "prenosljivost", "ugovor", "preklic privolitve"],
+    "supervisor": "Informacijski pooblaščenec RS (https://www.ip-rs.si)",
+    "responseTime": "najkasneje v 1 mesecu od prejema zahteve"
+  },
+  "cookies": {
+    "categories": {
+      "necessary": "vedno omogočeni; potrebni za osnovno delovanje (navigacija, dostop do varnih območij); ne shranjujejo identifikacijskih podatkov",
+      "functional": "naprednejše funkcije in personalizacija; deljenje vsebine, povratne informacije, tretje strani",
+      "analytics": "razumevanje uporabe spletne strani; metrike obiskov, viri prometa, izboljšave",
+      "performance": "spremljanje učinkovitosti, hitra zaznava in odprava težav",
+      "advertising": "prilagojeni oglasi na podlagi preteklega brskanja, merjenje uspešnosti kampanj"
+    },
+    "consentRequired": "vsi razen potrebnih piškotkov; soglasje je mogoče kadarkoli umakniti v nastavitvah"
+  },
+  "gameProviders": ["Amusnet", "BF Games", "EGT Digital", "ELK Studios", "Greentube", "Play'N GO", "Wazdan"],
   "gameInfoLink": "casino.si → Pomoč in vprašanja → Informacije o igrah",
+  "helpLinks": {
+    "faq": "https://casino.si/help/faq",
+    "termsAndConditions": "https://casino.si/help/termsandconditions",
+    "privacyPolicy": "https://casino.si/help/privacy-policy",
+    "cookiePolicy": "https://casino.si/help/cookie-policy",
+    "legalNotices": "https://casino.si/help/legal-notices",
+    "responsibleGambling": "https://casino.si/help/responsible-gambling",
+    "selfExclusion": "https://casino.si/help/selfexclusion",
+    "findHelp": "https://casino.si/help/findhelp",
+    "contactUs": "https://casino.si/help/contact-us",
+    "companyCredentials": "https://casino.si/help/company-credentials",
+    "gameInformation": "https://casino.si/help/gameinformation",
+    "registration": "https://casino.si/help/registration"
+  },
   "responsibleGamingTips": [
     "Igrajte za zabavo in razvedrilo, ne kot osnovni vir zaslužka.",
     "Zavedajte se, da lahko vsakdo tudi izgubi.",
