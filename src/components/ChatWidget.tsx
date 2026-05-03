@@ -18,8 +18,14 @@ export default function ChatWidget() {
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const [sessionId, setSessionId] = useState<string | null>(null);
+  const sessionIdRef = useRef<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      sessionIdRef.current = sessionStorage.getItem("chat-session-id");
+    }
+  }, []);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -37,12 +43,17 @@ export default function ChatWidget() {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: text, sessionId }),
+        body: JSON.stringify({ message: text, sessionId: sessionIdRef.current }),
       });
 
       const data = await res.json();
 
-      if (data.sessionId) setSessionId(data.sessionId);
+      if (data.sessionId) {
+        sessionIdRef.current = data.sessionId;
+        if (typeof window !== "undefined") {
+          sessionStorage.setItem("chat-session-id", data.sessionId);
+        }
+      }
 
       setMessages((prev) => [
         ...prev,
