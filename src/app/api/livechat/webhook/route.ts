@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { generateReply } from "@/lib/chat";
 import { sendTextMessage } from "@/lib/livechat";
+import { MAX_MESSAGE_LENGTH } from "@/lib/limits";
+import { isSessionRateLimited } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
@@ -78,8 +80,17 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true, ignored: "self" });
   }
 
+  if (event.text.length > MAX_MESSAGE_LENGTH) {
+    return NextResponse.json({ ok: true, ignored: "too-long" });
+  }
+
+  const sessionId = `lc_${chatId}`;
+  if (await isSessionRateLimited(sessionId)) {
+    return NextResponse.json({ ok: true, ignored: "rate-limit" });
+  }
+
   try {
-    const reply = await generateReply(`lc_${chatId}`, event.text);
+    const reply = await generateReply(sessionId, event.text);
     if (reply) {
       await sendTextMessage({ chat_id: chatId, text: reply, bot_agent_id: botAgentId });
     }
