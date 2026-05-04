@@ -7,6 +7,27 @@ interface Message {
   content: string;
 }
 
+const URL_RE = /(https?:\/\/[^\s)]+)/g;
+const URL_RE_TEST = /^https?:\/\//;
+
+function renderContent(text: string) {
+  return text.split(URL_RE).map((part, i) =>
+    URL_RE_TEST.test(part) ? (
+      <a
+        key={i}
+        href={part}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: "#5dbeff", textDecoration: "underline", wordBreak: "break-all" }}
+      >
+        {part}
+      </a>
+    ) : (
+      <span key={i}>{part}</span>
+    )
+  );
+}
+
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
@@ -171,7 +192,7 @@ export default function ChatWidget() {
                         }
                   }
                 >
-                  {msg.content}
+                  <span style={{ whiteSpace: "pre-wrap" }}>{renderContent(msg.content)}</span>
                 </div>
               </div>
             ))}
