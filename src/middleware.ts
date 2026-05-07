@@ -14,19 +14,36 @@ export function middleware(req: NextRequest) {
   const path = req.nextUrl.pathname;
 
   if (path.startsWith("/admin") || path.startsWith("/api/admin")) {
-    const expected = process.env.ADMIN_PASSWORD;
-    if (!expected) {
-      return new NextResponse("Admin not configured (set ADMIN_PASSWORD)", { status: 500 });
+    const usersRaw = process.env.ADMIN_USERS;
+    const fallback = process.env.ADMIN_PASSWORD;
+    if (!usersRaw && !fallback) {
+      return new NextResponse("Admin not configured (set ADMIN_USERS)", { status: 500 });
     }
     const auth = req.headers.get("authorization");
     if (!auth?.startsWith("Basic ")) return unauthorized();
+    let user = "";
     let provided = "";
     try {
-      provided = atob(auth.slice(6)).split(":").slice(1).join(":");
+      const decoded = atob(auth.slice(6));
+      const idx = decoded.indexOf(":");
+      user = idx >= 0 ? decoded.slice(0, idx) : decoded;
+      provided = idx >= 0 ? decoded.slice(idx + 1) : "";
     } catch {
       return unauthorized();
     }
-    if (provided !== expected) return unauthorized();
+    if (usersRaw) {
+      const matched = usersRaw
+        .split(",")
+        .map((pair) => pair.trim())
+        .some((pair) => {
+          const i = pair.indexOf(":");
+          if (i < 0) return false;
+          return pair.slice(0, i) === user && pair.slice(i + 1) === provided;
+        });
+      if (!matched) return unauthorized();
+    } else if (provided !== fallback) {
+      return unauthorized();
+    }
     return NextResponse.next();
   }
 
