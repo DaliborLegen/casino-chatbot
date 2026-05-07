@@ -42,6 +42,3 @@ next-env.d.ts
 
 .vercel
 .env*.local
-
-# Claude Code local settings (personal hooks/permissions)
-.claude/settings.local.json
