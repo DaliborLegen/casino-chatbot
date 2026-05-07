@@ -94,63 +94,52 @@ export default async function AdminPage({
           </div>
         </header>
 
-        <div className="overflow-x-auto rounded-lg border border-zinc-800">
-          <table className="w-full text-sm">
-            <thead className="bg-zinc-900 text-zinc-400 text-left">
-              <tr>
-                <th className="px-3 py-2 font-medium">Vir</th>
-                <th className="px-3 py-2 font-medium">Posodobljeno</th>
-                <th className="px-3 py-2 font-medium">Začelo</th>
-                <th className="px-3 py-2 font-medium text-right">#</th>
-                <th className="px-3 py-2 font-medium">Zadnje vprašanje</th>
-                <th className="px-3 py-2 font-medium">Zadnji odgovor</th>
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map((r) => {
-                const src = source(r.session_id);
-                return (
-                  <tr
-                    key={r.id}
-                    className="border-t border-zinc-800 hover:bg-zinc-900/60"
-                  >
-                    <td className="px-3 py-2 align-top">
-                      <span className={`inline-block px-2 py-0.5 rounded text-xs ${src.cls}`}>
-                        {src.label}
-                      </span>
-                    </td>
-                    <td className="px-3 py-2 align-top whitespace-nowrap text-zinc-300">
-                      {fmt(r.updated_at)}
-                    </td>
-                    <td className="px-3 py-2 align-top whitespace-nowrap text-zinc-500">
-                      {fmt(r.created_at)}
-                    </td>
-                    <td className="px-3 py-2 align-top text-right text-zinc-300">
-                      {r.message_count}
-                    </td>
-                    <td className="px-3 py-2 align-top text-zinc-200 max-w-md">
-                      <Link
-                        href={`/admin/${encodeURIComponent(r.session_id)}`}
-                        className="hover:underline"
-                      >
-                        {truncate(r.last_user, 100)}
-                      </Link>
-                    </td>
-                    <td className="px-3 py-2 align-top text-zinc-400 max-w-md">
-                      {truncate(r.last_assistant, 100)}
-                    </td>
-                  </tr>
-                );
-              })}
-              {rows.length === 0 && (
-                <tr>
-                  <td colSpan={6} className="px-3 py-6 text-center text-zinc-500">
-                    Ni pogovorov.
-                  </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
+        <div className="rounded-lg border border-zinc-800 overflow-hidden">
+          <div className="hidden md:grid grid-cols-[110px_140px_140px_60px_1fr_1fr] gap-3 px-4 py-2 bg-zinc-900 text-xs font-medium text-zinc-400 uppercase tracking-wide">
+            <div>Vir</div>
+            <div>Posodobljeno</div>
+            <div>Začelo</div>
+            <div className="text-right">#</div>
+            <div>Zadnje vprašanje</div>
+            <div>Zadnji odgovor</div>
+          </div>
+          {rows.map((r) => {
+            const src = source(r.session_id);
+            return (
+              <Link
+                key={r.id}
+                href={`/admin/${encodeURIComponent(r.session_id)}`}
+                className="block border-t border-zinc-800 hover:bg-zinc-900/60 transition-colors px-4 py-3 md:py-2 md:grid md:grid-cols-[110px_140px_140px_60px_1fr_1fr] md:gap-3 md:items-start"
+              >
+                <div className="mb-2 md:mb-0">
+                  <span className={`inline-block px-2 py-0.5 rounded text-xs ${src.cls}`}>
+                    {src.label}
+                  </span>
+                </div>
+                <div className="text-sm text-zinc-300 whitespace-nowrap">
+                  <span className="md:hidden text-zinc-500 mr-1">Posodobljeno:</span>
+                  {fmt(r.updated_at)}
+                </div>
+                <div className="text-sm text-zinc-500 whitespace-nowrap">
+                  <span className="md:hidden text-zinc-500 mr-1">Začelo:</span>
+                  {fmt(r.created_at)}
+                </div>
+                <div className="text-sm text-zinc-300 md:text-right">
+                  <span className="md:hidden text-zinc-500 mr-1">Sporočil:</span>
+                  {r.message_count}
+                </div>
+                <div className="text-sm text-zinc-200 mt-1 md:mt-0">
+                  {truncate(r.last_user, 120)}
+                </div>
+                <div className="text-sm text-zinc-400 mt-1 md:mt-0">
+                  {truncate(r.last_assistant, 120)}
+                </div>
+              </Link>
+            );
+          })}
+          {rows.length === 0 && (
+            <div className="px-4 py-6 text-center text-zinc-500">Ni pogovorov.</div>
+          )}
         </div>
 
         <div className="mt-4 text-xs text-zinc-500">
