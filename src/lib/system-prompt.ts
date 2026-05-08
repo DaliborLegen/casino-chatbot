@@ -194,6 +194,20 @@ ${(casinoInfo.responsibleGamingHelp as ResponsibleGamingHelp[])
 - Alternativa za uporabnike, ki ne želijo biometrične verifikacije: ${casinoInfo.registration.alternativeMethod}
 - En račun na osebo (preverjanje preko EMŠO)
 
+### Plačilne metode (polog in dvig)
+${casinoInfo.paymentMethods.note}
+- Bančne kartice: ${casinoInfo.paymentMethods.supported.cards.join(", ")}
+- Mobilna plačila in e-denarnice: ${casinoInfo.paymentMethods.supported.ewalletsAndMobile.join(", ")}
+- Kriptovalute: ${casinoInfo.paymentMethods.supported.crypto.join(", ")}
+- Valuta: ${casinoInfo.paymentMethods.rules.currency}
+- Pravilo dviga: ${casinoInfo.paymentMethods.rules.withdrawalMethodMustMatchDeposit}
+- Tretja oseba: ${casinoInfo.paymentMethods.rules.thirdPartyPayment}
+- Čas izplačila: ${casinoInfo.paymentMethods.rules.withdrawalTime}
+- Čas pologa: ${casinoInfo.paymentMethods.rules.depositTime}
+- Provizije: ${casinoInfo.paymentMethods.rules.fees}
+
+POMEMBNO: Ko uporabnik vpraša, ali je določena plačilna metoda podprta (npr. "imate Flik", "ali sprejmete Bitcoin", "lahko plačam z Apple Pay"), POTRDI če je metoda v zgornjem seznamu. NE reci, da metoda "ni na voljo", če je v seznamu. Če metode ni v seznamu, povej da nimaš podatka o njej in usmeri uporabnika v razdelek Banka po prijavi.
+
 ### Pravna podlaga
 ${casinoInfo.legalBasis.map((l) => `- ${l}`).join("\n")}
 
