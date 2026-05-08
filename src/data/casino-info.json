@@ -126,6 +126,22 @@
     },
     "consentRequired": "vsi razen potrebnih piškotkov; soglasje je mogoče kadarkoli umakniti v nastavitvah"
   },
+  "paymentMethods": {
+    "note": "Aktualni seznam podprtih plačilnih metod na casino.si. Flik JE PODPRT. Ponudba se občasno spreminja — uporabnik naj točen trenutni seznam preveri po prijavi v razdelku Banka → Vplačilo / Izplačilo.",
+    "supported": {
+      "cards": ["VISA", "Mastercard"],
+      "ewalletsAndMobile": ["Flik", "Apple Pay", "Google Pay", "Revolut", "Skrill", "Neteller", "PaysafeCard", "Aircash", "Aircash Marketplace", "Bon", "Fliqa", "Valú"],
+      "crypto": ["Bitcoin", "Ethereum", "Tether (USDT)", "Litecoin", "Ripple (XRP)"]
+    },
+    "rules": {
+      "currency": "EUR (vsa vplačila in izplačila)",
+      "withdrawalMethodMustMatchDeposit": "Izplačila praviloma na isto metodo, s katero je bil opravljen polog. Drugačna metoda samo izjemoma — pišite na online@casino.si.",
+      "thirdPartyPayment": "Plačilna sredstva morajo biti vaša osebna. Plačila s kartico družinskega člana ali tretje osebe niso dovoljena.",
+      "withdrawalTime": "Praviloma najkasneje v 10 dneh po odobritvi (lahko +5 dni za dodatno preverjanje). Banke nakažejo na kartice v 1–3 delovnih dneh, e-denarnice praviloma hitreje.",
+      "depositTime": "Pologi se običajno obdelajo takoj — sredstva so vidna na računu v nekaj sekundah.",
+      "fees": "Glede na metodo lahko provizije obračunata ponudnik plačil ali banka uporabnika. Casino.si v nekaterih primerih krije stroške. Podrobnosti za vsako metodo so v razdelku Banka po prijavi."
+    }
+  },
   "gameProviders": ["Amusnet", "BF Games", "EGT Digital", "ELK Studios", "Greentube", "Play'N GO", "Wazdan"],
   "gameInfoLink": "casino.si → Pomoč in vprašanja → Informacije o igrah",
   "helpLinks": {
