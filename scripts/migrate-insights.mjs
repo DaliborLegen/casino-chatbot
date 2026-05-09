@@ -16,14 +16,16 @@ create table if not exists daily_insights (
 create index if not exists idx_daily_insights_date on daily_insights(report_date desc);
 `;
 
-const url = process.env.POSTGRES_URL_NON_POOLING;
-if (!url) {
+const raw = process.env.POSTGRES_URL_NON_POOLING;
+if (!raw) {
   console.error("POSTGRES_URL_NON_POOLING not set");
   process.exit(1);
 }
 
+const u = new URL(raw);
+u.searchParams.delete("sslmode");
 const client = new pg.Client({
-  connectionString: url,
+  connectionString: u.toString(),
   ssl: { rejectUnauthorized: false },
 });
 await client.connect();
