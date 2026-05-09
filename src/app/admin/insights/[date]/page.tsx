@@ -49,7 +49,18 @@ export default async function InsightDetailPage({
         </Link>
 
         <header className="mt-3 mb-6 pb-4 border-b border-zinc-800">
-          <h1 className="text-xl font-semibold">{fmtDate(report.report_date)}</h1>
+          <h1 className="text-xl font-semibold">
+            {fmtDate(report.report_date)}{" "}
+            <span
+              className={`align-middle ml-1 inline-block px-2 py-0.5 rounded text-xs font-normal ${
+                report.label === "daily"
+                  ? "bg-zinc-700 text-zinc-200"
+                  : "bg-amber-900/40 text-amber-300"
+              }`}
+            >
+              {report.label}
+            </span>
+          </h1>
           <div className="mt-1 text-xs text-zinc-500">
             {report.conversation_count} pogovorov · {report.message_count} sporočil · generirano{" "}
             {fmtDateTime(report.created_at)}
