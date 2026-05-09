@@ -157,17 +157,19 @@ function formatForPrompt(convos: ConversationDump[]): string {
   return lines.join("\n");
 }
 
-export async function generateDailyInsight(now: Date = new Date()): Promise<InsightResult> {
-  const endUtc = now;
-  const startUtc = new Date(endUtc.getTime() - 24 * 60 * 60 * 1000);
-  const reportDate = ljubljanaDateString(endUtc);
+export async function generateDailyInsight(options: InsightOptions = {}): Promise<InsightResult> {
+  const hours = options.hours ?? 24;
+  const endUtc = options.endUtc ?? new Date();
+  const startUtc = new Date(endUtc.getTime() - hours * 60 * 60 * 1000);
+  const reportDate = options.reportDate ?? ljubljanaDateString(endUtc);
+  const label = options.label ?? "daily";
 
   const convos = await loadConversations(startUtc, endUtc);
   const messageCount = convos.reduce((n, c) => n + c.messages.length, 0);
 
   const userContent = convos.length === 0
-    ? "Ni pogovorov v zadnjih 24 urah."
-    : `Obdobje: ${startUtc.toISOString()} do ${endUtc.toISOString()} (UTC)\nDatum poročila: ${reportDate} (Europe/Ljubljana)\nPogovorov: ${convos.length}, sporočil: ${messageCount}\n\n${formatForPrompt(convos)}`;
+    ? `Ni pogovorov v obdobju (${hours}h).`
+    : `Obdobje: ${startUtc.toISOString()} do ${endUtc.toISOString()} (UTC, trajanje ${hours}h)\nDatum poročila: ${reportDate} (Europe/Ljubljana)\nLabel: ${label}\nPogovorov: ${convos.length}, sporočil: ${messageCount}\n\n${formatForPrompt(convos)}`;
 
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY! });
   const response = await client.messages.create({
