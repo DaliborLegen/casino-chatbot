@@ -41,8 +41,9 @@ export default async function InsightsListPage() {
         </header>
 
         <div className="rounded-lg border border-zinc-800 overflow-hidden">
-          <div className="hidden md:grid grid-cols-[180px_1fr_120px_120px_180px] gap-3 px-4 py-2 bg-zinc-900 text-xs font-medium text-zinc-400 uppercase tracking-wide">
+          <div className="hidden md:grid grid-cols-[160px_140px_1fr_110px_110px_160px] gap-3 px-4 py-2 bg-zinc-900 text-xs font-medium text-zinc-400 uppercase tracking-wide">
             <div>Datum</div>
+            <div>Label</div>
             <div></div>
             <div className="text-right">Pogovorov</div>
             <div className="text-right">Sporočil</div>
@@ -50,11 +51,22 @@ export default async function InsightsListPage() {
           </div>
           {rows.map((r) => (
             <Link
-              key={r.report_date}
-              href={`/admin/insights/${r.report_date}`}
-              className="block border-t border-zinc-800 hover:bg-zinc-900/60 transition-colors px-4 py-3 md:py-2 md:grid md:grid-cols-[180px_1fr_120px_120px_180px] md:gap-3 md:items-center"
+              key={`${r.report_date}-${r.label}`}
+              href={`/admin/insights/${r.report_date}${r.label === "daily" ? "" : `?label=${encodeURIComponent(r.label)}`}`}
+              className="block border-t border-zinc-800 hover:bg-zinc-900/60 transition-colors px-4 py-3 md:py-2 md:grid md:grid-cols-[160px_140px_1fr_110px_110px_160px] md:gap-3 md:items-center"
             >
               <div className="text-sm text-zinc-100 font-medium">{fmtDate(r.report_date)}</div>
+              <div>
+                <span
+                  className={`inline-block px-2 py-0.5 rounded text-xs ${
+                    r.label === "daily"
+                      ? "bg-zinc-700 text-zinc-200"
+                      : "bg-amber-900/40 text-amber-300"
+                  }`}
+                >
+                  {r.label}
+                </span>
+              </div>
               <div className="hidden md:block text-xs text-zinc-500 font-mono">{r.report_date}</div>
               <div className="text-sm text-zinc-300 md:text-right">
                 <span className="md:hidden text-zinc-500 mr-1">Pogovorov:</span>
