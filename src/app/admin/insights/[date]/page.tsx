@@ -29,11 +29,14 @@ function fmtDateTime(iso: string) {
 
 export default async function InsightDetailPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ date: string }>;
+  searchParams: Promise<{ label?: string }>;
 }) {
   const { date } = await params;
-  const report = await getInsight(date);
+  const { label = "daily" } = await searchParams;
+  const report = await getInsight(date, label);
   if (!report) notFound();
 
   const html = renderMarkdown(report.markdown);
