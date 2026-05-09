@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Casino.si | Podpora Chat",
-  description: "Virtualni pomočnik za Casino.si — odgovori na vaša vprašanja 24/7.",
+  title: "chat-bot.bet",
+  description: "AI chatbot za Casino.si — odgovori na vaša vprašanja 24/7.",
 };
 
 export default function RootLayout({
