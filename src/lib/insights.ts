@@ -225,20 +225,22 @@ export async function persistInsight(result: InsightResult): Promise<void> {
 }
 
 export async function listInsights(limit = 60): Promise<
-  { report_date: string; conversation_count: number; message_count: number; created_at: string }[]
+  { report_date: string; label: string; conversation_count: number; message_count: number; created_at: string }[]
 > {
   const supabase = getSupabase();
   const { data, error } = await supabase
     .from("daily_insights")
-    .select("report_date, conversation_count, message_count, created_at")
+    .select("report_date, label, conversation_count, message_count, created_at")
     .order("report_date", { ascending: false })
+    .order("label", { ascending: true })
     .limit(limit);
   if (error || !data) return [];
   return data;
 }
 
-export async function getInsight(reportDate: string): Promise<{
+export async function getInsight(reportDate: string, label = "daily"): Promise<{
   report_date: string;
+  label: string;
   markdown: string;
   conversation_count: number;
   message_count: number;
@@ -250,8 +252,9 @@ export async function getInsight(reportDate: string): Promise<{
   const supabase = getSupabase();
   const { data } = await supabase
     .from("daily_insights")
-    .select("report_date, markdown, conversation_count, message_count, model, input_tokens, output_tokens, created_at")
+    .select("report_date, label, markdown, conversation_count, message_count, model, input_tokens, output_tokens, created_at")
     .eq("report_date", reportDate)
+    .eq("label", label)
     .single();
   return data ?? null;
 }
