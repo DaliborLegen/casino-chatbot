@@ -14,8 +14,16 @@ export interface InsightStats {
 
 export interface InsightResult {
   report_date: string;
+  label: string;
   markdown: string;
   stats: InsightStats;
+}
+
+export interface InsightOptions {
+  endUtc?: Date;
+  hours?: number;
+  label?: string;
+  reportDate?: string;
 }
 
 interface ConversationDump {
