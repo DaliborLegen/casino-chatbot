@@ -22,7 +22,10 @@ if (!url) {
   process.exit(1);
 }
 
-const client = new pg.Client({ connectionString: url });
+const client = new pg.Client({
+  connectionString: url,
+  ssl: { rejectUnauthorized: false },
+});
 await client.connect();
 try {
   await client.query(SQL);
