@@ -89,8 +89,11 @@ export default async function AdminPage({
       <div className="max-w-6xl mx-auto">
         <header className="flex items-baseline justify-between mb-6">
           <h1 className="text-2xl font-semibold">Pogovori</h1>
-          <div className="text-sm text-zinc-400">
-            {rows.length} sej · prikazane zadnje
+          <div className="flex items-baseline gap-4 text-sm">
+            <Link href="/admin/insights" className="text-sky-400 hover:text-sky-300 underline">
+              Dnevna analiza
+            </Link>
+            <span className="text-zinc-400">{rows.length} sej · prikazane zadnje</span>
           </div>
         </header>
 
