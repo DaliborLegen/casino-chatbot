@@ -211,6 +211,7 @@ export async function persistInsight(result: InsightResult): Promise<void> {
   const { error } = await supabase.from("daily_insights").upsert(
     {
       report_date: result.report_date,
+      label: result.label,
       markdown: result.markdown,
       conversation_count: result.stats.conversation_count,
       message_count: result.stats.message_count,
@@ -218,7 +219,7 @@ export async function persistInsight(result: InsightResult): Promise<void> {
       input_tokens: result.stats.input_tokens,
       output_tokens: result.stats.output_tokens,
     },
-    { onConflict: "report_date" }
+    { onConflict: "report_date,label" }
   );
   if (error) throw new Error(`Insights: persist failed: ${error.message}`);
 }
