@@ -33,17 +33,19 @@ create trigger conversations_updated_at
   before update on conversations
   for each row execute function update_updated_at();
 
--- Daily insights reports (one per UTC date)
+-- Daily insights reports (one per (report_date, label))
 create table if not exists daily_insights (
   id uuid primary key default gen_random_uuid(),
-  report_date date unique not null,
+  report_date date not null,
+  label text not null default 'daily',
   markdown text not null,
   conversation_count int not null default 0,
   message_count int not null default 0,
   model text,
   input_tokens int,
   output_tokens int,
-  created_at timestamptz default now()
+  created_at timestamptz default now(),
+  unique (report_date, label)
 );
 
-create index if not exists idx_daily_insights_date on daily_insights(report_date desc);
+create index if not exists idx_daily_insights_date_label on daily_insights(report_date desc, label);
