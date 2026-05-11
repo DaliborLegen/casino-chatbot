@@ -225,7 +225,7 @@ ${faqSection}
 ${gamesSection}
 `;
 
-export function buildSystemPrompt(now: Date = new Date()): string {
+export function buildTimeContext(now: Date = new Date()): string {
   const fmt = new Intl.DateTimeFormat("sl-SI", {
     timeZone: "Europe/Ljubljana",
     weekday: "long",
@@ -236,10 +236,12 @@ export function buildSystemPrompt(now: Date = new Date()): string {
     minute: "2-digit",
     hour12: false,
   });
-  return `${baseSystemPrompt}
-## Trenutni kontekst
+  return `## Trenutni kontekst
 - Trenutni čas (Europe/Ljubljana): ${fmt.format(now)}
 `;
 }
 
-export const systemPrompt = buildSystemPrompt();
+export function buildSystemPrompt(now: Date = new Date()): string {
+  return `${baseSystemPrompt}
+${buildTimeContext(now)}`;
+}
