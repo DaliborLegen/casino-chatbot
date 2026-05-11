@@ -114,12 +114,26 @@ export async function generateReply(sessionId: string, userMessage: string): Pro
   const response = await client.messages.create({
     model: "claude-sonnet-4-6",
     max_tokens: 1024,
-    system: buildSystemPrompt(),
+    system: [
+      {
+        type: "text",
+        text: baseSystemPrompt,
+        cache_control: { type: "ephemeral" },
+      },
+      { type: "text", text: buildTimeContext() },
+    ],
     messages,
   });
 
   const textBlock = response.content.find((b) => b.type === "text");
   const reply = textBlock && textBlock.type === "text" ? textBlock.text : "";
+
+  console.log("Claude usage", {
+    input_tokens: response.usage.input_tokens,
+    cache_creation_input_tokens: response.usage.cache_creation_input_tokens,
+    cache_read_input_tokens: response.usage.cache_read_input_tokens,
+    output_tokens: response.usage.output_tokens,
+  });
 
   if (!reply) {
     console.error("Empty Claude reply", {
