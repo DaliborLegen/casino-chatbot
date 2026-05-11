@@ -1,6 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { getSupabase } from "@/lib/supabase";
-import { buildSystemPrompt } from "@/lib/system-prompt";
+import { baseSystemPrompt, buildTimeContext } from "@/lib/system-prompt";
 
 export interface StoredMessage {
   role: "user" | "assistant";
