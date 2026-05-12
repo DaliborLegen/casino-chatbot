@@ -146,7 +146,7 @@
   },
   {
     "question": "Kako lahko aktiviram bonus?",
-    "answer": "Bonuse lahko aktivirate z vnosom bonus kode ob pologu ali na strani Moje ponudbe v vašem profilu.Priporočamo, da pred aktivacijo vedno preverite Splošne pogoje vsake ponudbe, da zagotovite izpolnjevanje vseh zahtev in kar najbolje izkoristite razpoložljive ugodnosti.",
+    "answer": "Bonus kode se vnašajo IZKLJUČNO ob registraciji — to so registracijske kode za nove igralce (npr. mons50, fb100 in podobne). Vnos bonus kode ob pologu NE deluje. Vsi ostali bonusi so dostopni v razdelku Moje ponudbe v vašem profilu: v desnem zgornjem kotu kliknete ikono darila → Moje ponudbe → Casino, kjer bonus ročno aktivirate. Priporočamo, da pred aktivacijo vedno preverite Splošne pogoje vsake ponudbe.",
     "category": "Igre"
   },
   {
@@ -333,10 +333,15 @@
     "answer": "Vse igre na Casino.si zagotavljajo licencirani ponudniki s certifikati ustreznih organov. Izid je pretežno odvisen od naključja in ga določa strežnik igre, ne Casino.si. Casino.si je koncesionar Vlade RS (koncesija št. 46110-7/2022/52).",
     "category": "Igre"
   },
+  {
+    "question": "Katere igre imajo nizko minimalno stavo?",
+    "answer": "Za igranje z nizko minimalno stavo so na Casino.si priporočene igre ponudnikov Greentube in Play'n GO. Pri večini njihovih iger se stava začne pri 0,10 € na vrtljaj ali manj, kar je idealno za igralce, ki želijo igrati z manjšim proračunom. Točno minimalno stavo lahko preverite v vsaki igri pred začetkom.",
+    "category": "Igre"
+  },
 
   {
     "question": "Kakšen bonus dobim ob registraciji?",
-    "answer": "Aktualni registracijski in dobrodošlični bonusi se redno spreminjajo. Točne pogoje (zneske, rollover, veljavnost) vedno preverite v razdelku Promocije na casino.si pred koriščenjem.",
+    "answer": "Ob uspešni registraciji novega računa prejmete 25 brezplačnih vrtljajev (vrednost 0,10 € na vrtljaj, brez pologa). Vrtljaje lahko unovčite izključno na igrah ponudnika EGT Digital: 5 Dazzling Hot, Leprechaun Hot, 10 Burning Heart in 10 Crown Hot. Pogoj stavljenja (wagering) za dobitke iz vrtljajev je 40×, maksimalna stava med aktivnim bonusom je 1 €, maksimalno izplačilo je 300 €, rok za uporabo in izpolnitev pogojev pa 7 dni. Po prvem enotnem pologu vsaj 10 € lahko dodatno aktivirate paket dobrodošlice UL0VI50 — 100 % do 50 €, wagering 40× na depozit+bonus, max stava 1 €, max izplačilo 500 €, enkrat na igralca. Pomembno: polog mora biti enoten — če opravite dva ločena pologa (npr. 5 € + 5 €), se bonus ne dodeli. Avtomati prispevajo 100 %, namizne igre 0 % k izpolnitvi pogojev obrnitev. Bonusa se aktivirata v Moje ponudbe → Casino.",
     "category": "Bonusi in promocije"
   },
   {
@@ -356,7 +361,17 @@
   },
   {
     "question": "Kako se prijavim na promocije?",
-    "answer": "Aktualne promocije so vidne v razdelku Promocije na casino.si. Bonus aktivirate z bonus kodo ob pologu ali neposredno v razdelku Moje ponudbe. Pred aktivacijo vedno preberite pogoje promocije.",
+    "answer": "Aktualne promocije so vidne v razdelku Promocije na casino.si. Bonus kode se vnašajo izključno ob registraciji (za nove igralce — npr. mons50, fb100). Vsi drugi bonusi se aktivirajo v razdelku Moje ponudbe v profilu (ikona darila v desnem zgornjem kotu → Moje ponudbe → Casino). Pred aktivacijo vedno preberite pogoje promocije.",
+    "category": "Bonusi in promocije"
+  },
+  {
+    "question": "Kako deluje promocija Vroči ponedeljek?",
+    "answer": "Vsak ponedeljek se ob prvi prijavi v račun prikaže pojavno okno s štirimi kovančki. Igralec izbere enega izmed kovančkov, pod katerimi se skrivajo brezplačni vrtljaji v razponu od 25 do 50 FS. Nagrada je določena naključno. Razpoložljivi bonusi: VR0CE25 — 25 FS na 0,10 € na igri Power of Gods: Valhalla (vrtljaji se aktivirajo v igri prek gumba 'free rounds 25'); VR0CE30 — 30 FS na 0,10 € na igri Book of Dead; VR0CE40 — 40 FS na 0,05 € na igri 5 Crown Hit; VR0CE50 — 50 FS na 0,05 € na igri 5 Power Hot. Splošni pogoji za vse bonuse: maksimalna stava 1 €, wagering 35× na dobitek iz brezplačnih vrtljajev, maksimalno izplačilo 300 €, izkoristek enkrat na igralca na ponedeljek. Aktivacija: ikona darila v desnem zgornjem kotu Casino.si → Moje ponudbe → Casino. Glede na prejeti bonus se določi tudi igra, v kateri se vrtljaji lahko uporabijo.",
+    "category": "Bonusi in promocije"
+  },
+  {
+    "question": "Kako deluje promocija Pripelji prijatelja?",
+    "answer": "Vsak igralec, ki povabi prijatelja na Casino.si, lahko za vsako uspešno povabilo prejme 30 brezplačnih vrtljajev (0,10 € na vrtljaj) v igrah Mystic Tiger in 27 Wild Shots ponudnika Amusnet Interactive. Wagering za dobitke iz vrtljajev je 25×, rok za uporabo bonusa pa 7 dni od aktivacije. Vsak igralec lahko povabi največ 5 prijateljev in je upravičen do nagrade za največ 5 uspešnih povabil. Osnovni pogoji: tako povabitelj kot povabljeni morata opraviti vsaj 25 € pologa, oba depozita morata biti uspešno izvedena, povabitelj mora biti registriran pred prijateljem (če je prijatelj registriran prej, bonus ne velja), prijatelj še ne sme biti prej povabljen od drugega uporabnika. Ključno pravilo za nadaljnja povabila: povabitelj mora pred vsakim novim povabilom opraviti nov polog 25 € po zadnjem uspešnem povabilu — enako velja za povabljenega prijatelja, če je že prej sodeloval v promociji. Aktivacija: po izpolnjenih pogojih igralec kontaktira live podporo (08:00–24:00) in sporoči svoje uporabniško ime ter ime povabljenega prijatelja, nato bonus prevzame v Moje ponudbe → Casino.",
     "category": "Bonusi in promocije"
   },
 
