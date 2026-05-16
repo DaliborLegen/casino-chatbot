@@ -73,8 +73,8 @@ export async function POST(req: NextRequest) {
   const event = body.payload?.event;
   const chatId = body.payload?.chat_id;
 
-  if (!event || !chatId || event.type !== "message" || !event.text) {
-    return NextResponse.json({ ok: true, ignored: "non-message" });
+  if (!event || !chatId) {
+    return NextResponse.json({ ok: true, ignored: "no-event" });
   }
 
   // Ignore our own messages to prevent loops
@@ -82,11 +82,29 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true, ignored: "self" });
   }
 
+  const sessionId = `lc_${chatId}`;
+
+  if (event.type === "file") {
+    if (await isSessionRateLimited(sessionId)) {
+      return NextResponse.json({ ok: true, ignored: "rate-limit" });
+    }
+    try {
+      await sendTextMessage({ chat_id: chatId, text: ATTACHMENT_REPLY, bot_agent_id: botAgentId });
+    } catch (err) {
+      console.error("LiveChat attachment reply error:", err);
+      return NextResponse.json({ error: "Attachment reply failed" }, { status: 500 });
+    }
+    return NextResponse.json({ ok: true, sent: "attachment-reply" });
+  }
+
+  if (event.type !== "message" || !event.text) {
+    return NextResponse.json({ ok: true, ignored: "non-message" });
+  }
+
   if (event.text.length > MAX_MESSAGE_LENGTH) {
     return NextResponse.json({ ok: true, ignored: "too-long" });
   }
 
-  const sessionId = `lc_${chatId}`;
   if (await isSessionRateLimited(sessionId)) {
     return NextResponse.json({ ok: true, ignored: "rate-limit" });
   }
