@@ -29,6 +29,8 @@ interface LiveChatWebhook {
 const NIGHT_WELCOME =
   "Naša ekipa je dosegljiva vsak dan med 8:00 in 24:00. Do takrat vam lahko pomagam jaz kot AI asistent.";
 
+const ATTACHMENT_REPLY = "Priponke žal ne morem prebrati, prosim opišite svojo težavo.";
+
 export async function POST(req: NextRequest) {
   const expectedSecret = process.env.LIVECHAT_WEBHOOK_SECRET;
   const botAgentId = process.env.LIVECHAT_BOT_AGENT_ID;
