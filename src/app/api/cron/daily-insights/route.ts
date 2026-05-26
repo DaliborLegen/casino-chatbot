@@ -15,6 +15,21 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
+  const isVercelCron = req.headers.get("x-vercel-cron") === "1";
+  const force = req.nextUrl.searchParams.get("force") === "1";
+  if (isVercelCron && !force) {
+    const ljubljanaHour = Number(
+      new Intl.DateTimeFormat("en-GB", {
+        timeZone: "Europe/Ljubljana",
+        hour: "2-digit",
+        hour12: false,
+      }).format(new Date())
+    );
+    if (ljubljanaHour !== 9) {
+      return NextResponse.json({ ok: true, skipped: true, ljubljana_hour: ljubljanaHour });
+    }
+  }
+
   try {
     const params = req.nextUrl.searchParams;
     const hoursParam = params.get("hours");
