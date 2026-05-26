@@ -157,6 +157,10 @@ export async function sendInsightEmail(result: InsightResult): Promise<EmailSend
     ? process.env.INSIGHTS_EMAIL_CC.split(",").map((s) => s.trim()).filter(Boolean)
     : undefined;
 
+  const replyTo = process.env.INSIGHTS_EMAIL_REPLY_TO
+    ? process.env.INSIGHTS_EMAIL_REPLY_TO.split(",").map((s) => s.trim()).filter(Boolean)
+    : undefined;
+
   const adminBase = process.env.INSIGHTS_ADMIN_BASE_URL || "https://chat-bot.bet";
   const adminUrl = `${adminBase}/admin/insights/${result.report_date}`;
 
