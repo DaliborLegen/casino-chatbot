@@ -183,6 +183,7 @@ Model: ${result.stats.model}`;
       from,
       to: to.split(",").map((s) => s.trim()).filter(Boolean),
       cc,
+      replyTo,
       subject,
       html,
       text,
