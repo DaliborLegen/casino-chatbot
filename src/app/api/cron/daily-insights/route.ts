@@ -37,6 +37,24 @@ export async function GET(req: NextRequest) {
 
     const result = await generateDailyInsight({ hours, endUtc, label, reportDate: reportDateParam });
     await persistInsight(result);
+
+    const sendEmail = params.get("email") !== "0";
+    const emailResult = sendEmail
+      ? await sendInsightEmail(result).catch((err) => ({
+          sent: false as const,
+          error: err instanceof Error ? err.message : String(err),
+        }))
+      : { sent: false as const, skippedReason: "email=0 query param" };
+
+    if (!emailResult.sent) {
+      console.warn(
+        "Daily insights email not sent:",
+        "error" in emailResult ? emailResult.error : emailResult.skippedReason
+      );
+    } else {
+      console.log("Daily insights email sent:", emailResult.resendId);
+    }
+
     return NextResponse.json({
       ok: true,
       report_date: result.report_date,
@@ -45,6 +63,7 @@ export async function GET(req: NextRequest) {
       message_count: result.stats.message_count,
       input_tokens: result.stats.input_tokens,
       output_tokens: result.stats.output_tokens,
+      email: emailResult,
     });
   } catch (err) {
     console.error("Daily insights cron failed:", err);
