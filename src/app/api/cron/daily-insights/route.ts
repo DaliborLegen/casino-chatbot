@@ -15,9 +15,15 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const isVercelCron = req.headers.get("x-vercel-cron") === "1";
+  // Two cron entries (0 7 * * * and 0 8 * * *) exist so exactly one fires at
+  // 09:00 Europe/Ljubljana year-round (DST-safe). The other must self-skip.
+  // Auth above already gates this to Vercel cron or a CRON_SECRET-bearing
+  // caller, so apply the hour guard to all non-forced requests — do NOT rely
+  // on the x-vercel-cron header (its value is not a documented contract and
+  // was evaluating false, bypassing the guard and sending the report twice).
+  // Manual runs that must bypass the guard pass ?force=1.
   const force = req.nextUrl.searchParams.get("force") === "1";
-  if (isVercelCron && !force) {
+  if (!force) {
     const ljubljanaHour = Number(
       new Intl.DateTimeFormat("en-GB", {
         timeZone: "Europe/Ljubljana",
