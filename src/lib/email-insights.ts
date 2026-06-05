@@ -196,3 +196,73 @@ Model: ${result.stats.model}`;
     return { sent: false, error: err instanceof Error ? err.message : String(err) };
   }
 }
+
+/**
+ * Fallback alert: notifies us when the daily report fails to generate or send,
+ * so a silent failure (which previously only landed in logs) reaches a human.
+ * Recipient resolves to INSIGHTS_ALERT_TO, else REPLY_TO/CC/TO — so it works
+ * without extra config and lands on a different address than a bounced report.
+ */
+export async function sendInsightAlert(params: {
+  subject: string;
+  reason: string;
+  reportDate?: string;
+}): Promise<EmailSendResult> {
+  const apiKey = process.env.RESEND_API_KEY;
+  const from = process.env.INSIGHTS_EMAIL_FROM;
+  const to =
+    process.env.INSIGHTS_ALERT_TO ||
+    process.env.INSIGHTS_EMAIL_REPLY_TO ||
+    process.env.INSIGHTS_EMAIL_CC ||
+    process.env.INSIGHTS_EMAIL_TO;
+
+  if (!apiKey) return { sent: false, skippedReason: "RESEND_API_KEY not set" };
+  if (!from) return { sent: false, skippedReason: "INSIGHTS_EMAIL_FROM not set" };
+  if (!to) return { sent: false, skippedReason: "no alert recipient configured" };
+
+  const recipients = to.split(",").map((s) => s.trim()).filter(Boolean);
+  const adminBase = process.env.INSIGHTS_ADMIN_BASE_URL || "https://chat-bot.bet";
+  const archiveUrl = params.reportDate
+    ? `${adminBase}/admin/insights/${params.reportDate}`
+    : `${adminBase}/admin/insights`;
+
+  const text = `OPOZORILO: dnevno poročilo Casino.si AI chatbota ${
+    params.reportDate ? `(${params.reportDate}) ` : ""
+}NI bilo uspešno dostavljeno.
+
+Razlog: ${params.reason}
+
+Poročilo (če je bilo generirano) je dostopno v arhivu:
+${archiveUrl}
+
+To je samodejni alert iz crona /api/cron/daily-insights.`;
+
+  const html = `<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.55;color:#222">
+  <p style="margin:0 0 12px 0;font-size:16px;font-weight:600;color:#b00020">⚠️ Dnevno poročilo ni bilo dostavljeno</p>
+  <p style="margin:0 0 12px 0">Dnevno poročilo Casino.si AI chatbota ${
+    params.reportDate ? `<strong>(${escapeHtml(params.reportDate)})</strong> ` : ""
+  }ni bilo uspešno poslano.</p>
+  <p style="margin:0 0 12px 0"><strong>Razlog:</strong> <code style="padding:1px 5px;border-radius:3px;background:#f1f1f1;font-family:Menlo,Consolas,monospace;font-size:13px">${escapeHtml(
+    params.reason
+  )}</code></p>
+  <p style="margin:0 0 12px 0">Arhiv: <a href="${archiveUrl}" style="color:#0b66c2" target="_blank" rel="noopener noreferrer">${archiveUrl}</a></p>
+  <p style="margin:0;font-size:12px;color:#888">Samodejni alert iz crona <code>/api/cron/daily-insights</code>.</p>
+</div>`;
+
+  try {
+    const resend = new Resend(apiKey);
+    const { data, error } = await resend.emails.send({
+      from,
+      to: recipients,
+      subject: params.subject,
+      html,
+      text,
+    });
+    if (error) {
+      return { sent: false, error: error.message || JSON.stringify(error) };
+    }
+    return { sent: true, resendId: data?.id };
+  } catch (err) {
+    return { sent: false, error: err instanceof Error ? err.message : String(err) };
+  }
+}
