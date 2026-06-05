@@ -95,8 +95,8 @@ export async function POST(req: NextRequest) {
     try {
       await sendTextMessage({ chat_id: chatId, text: ATTACHMENT_REPLY, bot_agent_id: botAgentId });
     } catch (err) {
-      console.error("LiveChat attachment reply error:", err);
-      return NextResponse.json({ error: "Attachment reply failed" }, { status: 500 });
+      console.warn("LiveChat attachment reply skipped:", err);
+      return NextResponse.json({ ok: true, skipped: "attachment-reply-failed" });
     }
     return NextResponse.json({ ok: true, sent: "attachment-reply" });
   }
