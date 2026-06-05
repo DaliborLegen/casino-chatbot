@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { generateDailyInsight, persistInsight } from "@/lib/insights";
-import { sendInsightEmail } from "@/lib/email-insights";
+import { sendInsightEmail, sendInsightAlert } from "@/lib/email-insights";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
