@@ -119,8 +119,10 @@ export async function POST(req: NextRequest) {
       await sendTextMessage({ chat_id: chatId, text: reply, bot_agent_id: botAgentId });
     }
   } catch (err) {
+    // Logged for visibility, but still ACK so LiveChat doesn't retry-storm the
+    // webhook on a transient Claude/LiveChat failure (which would trip the 5xx alarm).
     console.error("LiveChat webhook processing error:", err);
-    return NextResponse.json({ error: "Processing failed" }, { status: 500 });
+    return NextResponse.json({ ok: true, skipped: "processing-failed" });
   }
 
   return NextResponse.json({ ok: true });
