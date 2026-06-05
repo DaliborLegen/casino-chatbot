@@ -97,6 +97,12 @@ export async function GET(req: NextRequest) {
     });
   } catch (err) {
     console.error("Daily insights cron failed:", err);
+    // Total failure (e.g. report generation threw) — alert so it isn't silent.
+    const alert = await sendInsightAlert({
+      subject: "⚠️ Casino.si AI chatbot — dnevni cron NEUSPEŠEN",
+      reason: `cron failed before sending: ${err instanceof Error ? err.message : String(err)}`,
+    }).catch((e) => ({ sent: false as const, error: e instanceof Error ? e.message : String(e) }));
+    console.warn("Daily insights cron-failure alert:", alert.sent ? `sent ${alert.resendId}` : alert);
     return NextResponse.json(
       { error: err instanceof Error ? err.message : String(err) },
       { status: 500 }
