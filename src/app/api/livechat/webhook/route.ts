@@ -60,8 +60,12 @@ export async function POST(req: NextRequest) {
     try {
       await sendTextMessage({ chat_id: chatId, text: NIGHT_WELCOME, bot_agent_id: botAgentId });
     } catch (err) {
-      console.error("LiveChat welcome send error:", err);
-      return NextResponse.json({ error: "Welcome failed" }, { status: 500 });
+      // Expected when the bot isn't a member of the chat (a human agent took it)
+      // or the chat already closed. incoming_chat fires for every chat in the
+      // license, so we ACK and skip instead of 500'ing — a 500 makes LiveChat
+      // retry the webhook and trips the 5xx anomaly alarm.
+      console.warn("LiveChat welcome skipped:", err);
+      return NextResponse.json({ ok: true, skipped: "welcome-send-failed" });
     }
     return NextResponse.json({ ok: true, sent: "welcome" });
   }
