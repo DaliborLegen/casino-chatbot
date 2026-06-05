@@ -68,10 +68,19 @@ export async function GET(req: NextRequest) {
       : { sent: false as const, skippedReason: "email=0 query param" };
 
     if (!emailResult.sent) {
-      console.warn(
-        "Daily insights email not sent:",
-        "error" in emailResult ? emailResult.error : emailResult.skippedReason
-      );
+      const reason = "error" in emailResult ? emailResult.error : emailResult.skippedReason;
+      console.warn("Daily insights email not sent:", reason);
+      // Fire a fallback alert — but not when sending was deliberately disabled (email=0).
+      const deliberatelySkipped =
+        "skippedReason" in emailResult && emailResult.skippedReason === "email=0 query param";
+      if (!deliberatelySkipped) {
+        const alert = await sendInsightAlert({
+          subject: `⚠️ Casino.si AI chatbot — dnevno poročilo NI poslano (${result.report_date})`,
+          reason: reason ?? "unknown",
+          reportDate: result.report_date,
+        }).catch((e) => ({ sent: false as const, error: e instanceof Error ? e.message : String(e) }));
+        console.warn("Daily insights fallback alert:", alert.sent ? `sent ${alert.resendId}` : alert);
+      }
     } else {
       console.log("Daily insights email sent:", emailResult.resendId);
     }
