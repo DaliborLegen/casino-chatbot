@@ -374,6 +374,21 @@
     "answer": "Vsak igralec, ki povabi prijatelja na Casino.si, lahko za vsako uspešno povabilo prejme 30 brezplačnih vrtljajev (0,10 € na vrtljaj) v igrah Mystic Tiger in 27 Wild Shots ponudnika Amusnet Interactive. Wagering za dobitke iz vrtljajev je 25×, rok za uporabo bonusa pa 7 dni od aktivacije. Vsak igralec lahko povabi največ 5 prijateljev in je upravičen do nagrade za največ 5 uspešnih povabil. Osnovni pogoji: tako povabitelj kot povabljeni morata opraviti vsaj 25 € pologa, oba depozita morata biti uspešno izvedena, povabitelj mora biti registriran pred prijateljem (če je prijatelj registriran prej, bonus ne velja), prijatelj še ne sme biti prej povabljen od drugega uporabnika. Ključno pravilo za nadaljnja povabila: povabitelj mora pred vsakim novim povabilom opraviti nov polog 25 € po zadnjem uspešnem povabilu — enako velja za povabljenega prijatelja, če je že prej sodeloval v promociji. Aktivacija: po izpolnjenih pogojih igralec kontaktira live podporo (08:00–24:00) in sporoči svoje uporabniško ime ter ime povabljenega prijatelja, nato bonus prevzame v Moje ponudbe → Casino.",
     "category": "Bonusi in promocije"
   },
+  {
+    "question": "Kako deluje rojstnodnevni bonus?",
+    "answer": "Rojstnodnevni bonus se igralcem dodeli samodejno ob rojstnem dnevu — ne dodeljuje ga več podporna ekipa ročno. Če bonusa ob rojstnem dnevu ne prejmete samodejno, se obrnite na podporno ekipo, ki vam bo pomagala. Bonus se aktivira v razdelku Moje ponudbe → Casino.",
+    "category": "Bonusi in promocije"
+  },
+  {
+    "question": "Kako deluje promocija Petkovo kolo sreče?",
+    "answer": "Vsak petek se ob prvi prijavi v račun prikaže pojavno okno s kolesom sreče. Igralec zavrti kolo in prejme bonus na polju, kjer se kolo ustavi — nagrada je določena naključno. Možni bonusi: KOLO1 — 30 FS na 0,40 € na igri Lucky Lady's Charm Deluxe (Greentube), min. polog 30 €; KOLO2 — 10 FS na 0,10 € na igri Magic Spins (Wazdan), brez pologa; KOLO3 — 20 FS na 0,05 € na igri 5 Dazzling Cash (EGT), brez pologa; KOLO4 — 50 FS na 0,05 € na igri Bulky Fruits (Amusnet), brez pologa; KOLO5 — 35 FS na 0,50 € na igri Tome of Madness (Play'n GO), min. polog 40 €; KOLO6 — 50 % bonus do 50 €, min. polog 30 €; KOLO7 — 100 % bonus do 25 €, min. polog 30 €. Splošni pogoji za vse bonuse: wagering 35× na dobitek iz vrtljajev (pri KOLO6 in KOLO7 velja 40× na depozit+bonus), maksimalna stava 1 €, maksimalno izplačilo 200 €, izkoristek enkrat na igralca na petek. Aktivacija: ikona darila v desnem zgornjem kotu → Moje ponudbe → Casino.",
+    "category": "Bonusi in promocije"
+  },
+  {
+    "question": "Kako deluje koda IGRALEC30 ob registraciji?",
+    "answer": "IGRALEC30 je ekskluzivna registracijska koda za nove igralce, ki še nimajo računa na Casino.si — kodo pridobijo z reševanjem kviza na eni od medijskih strani. Ob registraciji jo vnesete v polje za promocijsko kodo in prejmete 30 brezplačnih vrtljajev (0,10 € na vrtljaj) na igri Grace of Cleopatra (Amusnet). Pogoji: brez minimalnega pologa, wagering 30× na dobitek iz vrtljajev, maksimalno izplačilo 300 €, izkoristek enkrat na igralca. Pomembno: vsak igralec lahko ob registraciji izkoristi le eno kodo. Če vnesete IGRALEC30, ne prejmete standardne ponudbe ob registraciji; če kode ne vnesete, prejmete standardni registracijski bonus. Bonus kode se vnašajo izključno ob registraciji.",
+    "category": "Bonusi in promocije"
+  },
 
   {
     "question": "Kakšne omejitve igranja lahko nastavim?",
