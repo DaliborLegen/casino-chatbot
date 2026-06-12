@@ -49,3 +49,22 @@ create table if not exists daily_insights (
 );
 
 create index if not exists idx_daily_insights_date_label on daily_insights(report_date desc, label);
+
+-- Dynamic knowledge entries (promos/rules added by casino.si via /admin/pravila).
+-- Approval-gated: status starts as 'pending', goes 'active' only after operator approval,
+-- and only 'active' rows are injected into the bot's system prompt at runtime.
+create table if not exists bot_knowledge (
+  id uuid primary key default gen_random_uuid(),
+  type text not null default 'promocija',          -- promocija | pravilo | faq
+  title text not null,
+  body text not null,                               -- normalized text the bot reads
+  special_instructions text,                        -- e.g. "ne omenjaj proaktivno"
+  raw_input text,                                   -- original submission, for audit
+  status text not null default 'pending' check (status in ('pending','active','rejected')),
+  submitted_by text,
+  created_at timestamptz default now(),
+  decided_at timestamptz,
+  decided_by text
+);
+
+create index if not exists idx_bot_knowledge_status on bot_knowledge(status, created_at desc);
