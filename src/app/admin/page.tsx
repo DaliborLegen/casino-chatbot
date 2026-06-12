@@ -90,6 +90,9 @@ export default async function AdminPage({
         <header className="flex items-baseline justify-between mb-6">
           <h1 className="text-2xl font-semibold">Pogovori</h1>
           <div className="flex items-baseline gap-4 text-sm">
+            <Link href="/admin/pravila" className="text-sky-400 hover:text-sky-300 underline">
+              Pravila in promocije
+            </Link>
             <Link href="/admin/insights" className="text-sky-400 hover:text-sky-300 underline">
               Dnevna analiza
             </Link>
