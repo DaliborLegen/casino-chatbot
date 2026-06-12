@@ -81,19 +81,17 @@ export default async function ConversationPage({
           {messages.map((m) => (
             <div
               key={m.id}
-              className={
+              className={m.role === "user" ? "ml-12 rounded-lg p-3" : "mr-12 rounded-lg p-3"}
+              style={
                 m.role === "user"
-                  ? "ml-12 rounded-lg bg-sky-900/30 border border-sky-900/50 p-3"
-                  : "mr-12 rounded-lg bg-zinc-900 border border-zinc-800 p-3"
+                  ? { background: "#27272a", border: "1px solid #3f3f46" }
+                  : { background: "rgba(255,40,40,0.10)", border: "1px solid rgba(255,60,60,0.35)" }
               }
             >
               <div className="flex items-baseline justify-between mb-1">
                 <span
-                  className={
-                    m.role === "user"
-                      ? "text-xs font-medium text-sky-300"
-                      : "text-xs font-medium text-zinc-400"
-                  }
+                  className="text-xs font-medium"
+                  style={m.role === "user" ? { color: "#d4d4d8" } : { color: "#ff6b6b" }}
                 >
                   {m.role === "user" ? "Uporabnik" : "Bot"}
                 </span>
