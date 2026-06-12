@@ -61,7 +61,7 @@ export default function SubmitForm() {
           <select
             value={type}
             onChange={(e) => setType(e.target.value)}
-            className="w-full rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 focus:border-sky-500 focus:outline-none"
+            className="w-full rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 focus:border-red-500 focus:outline-none"
           >
             {TYPES.map((t) => (
               <option key={t.value} value={t.value}>
@@ -78,7 +78,7 @@ export default function SubmitForm() {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="npr. Vikend bonus"
-            className="w-full rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder:text-zinc-600 focus:border-sky-500 focus:outline-none"
+            className="w-full rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder:text-zinc-600 focus:border-red-500 focus:outline-none"
           />
         </div>
       </div>
@@ -93,7 +93,7 @@ export default function SubmitForm() {
           rows={6}
           required
           placeholder="Vsak vikend igralci ob prvi prijavi prejmejo ... Koda: ... Bonus: ... Wagering: ... Max izplačilo: ..."
-          className="w-full rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder:text-zinc-600 focus:border-sky-500 focus:outline-none resize-y"
+          className="w-full rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder:text-zinc-600 focus:border-red-500 focus:outline-none resize-y"
         />
       </div>
 
@@ -105,7 +105,7 @@ export default function SubmitForm() {
           value={special}
           onChange={(e) => setSpecial(e.target.value)}
           placeholder="npr. ne omenjaj proaktivno; usmeri na podporo; ekskluzivno"
-          className="w-full rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder:text-zinc-600 focus:border-sky-500 focus:outline-none"
+          className="w-full rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder:text-zinc-600 focus:border-red-500 focus:outline-none"
         />
       </div>
 
