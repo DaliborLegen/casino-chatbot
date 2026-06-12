@@ -1,0 +1,39 @@
+import { NextRequest, NextResponse } from "next/server";
+import { decideEntry } from "@/lib/knowledge";
+
+export const runtime = "nodejs";
+
+function basicAuthUser(req: NextRequest): string | null {
+  const auth = req.headers.get("authorization");
+  if (!auth?.startsWith("Basic ")) return null;
+  try {
+    const decoded = atob(auth.slice(6));
+    const idx = decoded.indexOf(":");
+    return idx >= 0 ? decoded.slice(0, idx) : decoded;
+  } catch {
+    return null;
+  }
+}
+
+export async function POST(req: NextRequest) {
+  let payload: { id?: string; action?: string };
+  try {
+    payload = await req.json();
+  } catch {
+    return NextResponse.json({ error: "Neveljaven JSON." }, { status: 400 });
+  }
+
+  const id = (payload.id || "").trim();
+  const action = payload.action;
+  if (!id || (action !== "approve" && action !== "reject")) {
+    return NextResponse.json({ error: "Manjka id ali veljavna akcija." }, { status: 400 });
+  }
+
+  const status = action === "approve" ? "active" : "rejected";
+  const { entry, alreadyDecided } = await decideEntry(id, status, basicAuthUser(req) || "admin");
+
+  if (!entry) {
+    return NextResponse.json({ error: "Vnos ne obstaja." }, { status: 404 });
+  }
+  return NextResponse.json({ ok: true, status: entry.status, alreadyDecided });
+}
