@@ -111,6 +111,10 @@ export async function generateReply(sessionId: string, userMessage: string): Pro
     ? await getMessagesFromSupabase(sessionId, userMessage)
     : getMessagesFromMemory(sessionId, userMessage);
 
+  // Active, operator-approved promos/rules added via /admin/pravila. Appended to
+  // the cached system block — the cache rebuilds only when knowledge changes (rare).
+  const knowledgeSection = await getActiveKnowledgeSection();
+
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY! });
   const response = await client.messages.create({
     model: "claude-sonnet-4-6",
@@ -118,7 +122,7 @@ export async function generateReply(sessionId: string, userMessage: string): Pro
     system: [
       {
         type: "text",
-        text: baseSystemPrompt,
+        text: baseSystemPrompt + knowledgeSection,
         cache_control: { type: "ephemeral" },
       },
       { type: "text", text: buildTimeContext() },
