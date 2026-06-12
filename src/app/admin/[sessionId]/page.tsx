@@ -60,9 +60,9 @@ export default async function ConversationPage({
     : "Widget";
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-100 p-6">
+    <div className="text-zinc-100 px-4 sm:px-5 py-6">
       <div className="max-w-3xl mx-auto">
-        <Link href="/admin" className="text-sm text-zinc-400 hover:text-zinc-100">
+        <Link href="/admin" className="text-sm hover:text-white" style={{ color: "#ffe22e" }}>
           ← Vsi pogovori
         </Link>
 
