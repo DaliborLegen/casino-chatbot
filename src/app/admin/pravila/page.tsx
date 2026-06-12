@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { listEntries, type KnowledgeEntry } from "@/lib/knowledge";
 import SubmitForm from "./SubmitForm";
 import DecideButtons from "./DecideButtons";
