@@ -1,6 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { getSupabase } from "@/lib/supabase";
 import { baseSystemPrompt, buildTimeContext } from "@/lib/system-prompt";
+import { getActiveKnowledgeSection } from "@/lib/knowledge";
 
 export interface StoredMessage {
   role: "user" | "assistant";
