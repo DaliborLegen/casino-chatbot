@@ -29,14 +29,13 @@ export default async function InsightsListPage() {
   const rows = await listInsights(60);
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-100 p-6">
+    <div className="text-zinc-100 px-4 sm:px-5 py-6">
       <div className="max-w-4xl mx-auto">
-        <Link href="/admin" className="text-sm text-zinc-400 hover:text-zinc-100">
-          ← Vsi pogovori
-        </Link>
-
-        <header className="mt-3 mb-6 flex items-baseline justify-between">
-          <h1 className="text-2xl font-semibold">Dnevna analiza</h1>
+        <header className="mb-6 flex items-baseline justify-between">
+          <h1 className="text-2xl font-semibold">
+            Dnevna analiza
+            <span className="ml-3 align-middle inline-block h-1 w-10 rounded-full" style={{ background: "#ff0000" }} />
+          </h1>
           <div className="text-sm text-zinc-400">{rows.length} poročil</div>
         </header>
 
