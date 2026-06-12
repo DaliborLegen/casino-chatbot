@@ -85,19 +85,14 @@ export default async function AdminPage({
   const rows = await loadConversations(limit);
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-100 p-6">
+    <div className="text-zinc-100 px-4 sm:px-5 py-6">
       <div className="max-w-6xl mx-auto">
         <header className="flex items-baseline justify-between mb-6">
-          <h1 className="text-2xl font-semibold">Pogovori</h1>
-          <div className="flex items-baseline gap-4 text-sm">
-            <Link href="/admin/pravila" className="text-sky-400 hover:text-sky-300 underline">
-              Pravila in promocije
-            </Link>
-            <Link href="/admin/insights" className="text-sky-400 hover:text-sky-300 underline">
-              Dnevna analiza
-            </Link>
-            <span className="text-zinc-400">{rows.length} sej · prikazane zadnje</span>
-          </div>
+          <h1 className="text-2xl font-semibold">
+            Pogovori
+            <span className="ml-3 align-middle inline-block h-1 w-10 rounded-full" style={{ background: "#ff0000" }} />
+          </h1>
+          <span className="text-sm text-zinc-400">{rows.length} sej · prikazane zadnje</span>
         </header>
 
         <div className="rounded-lg border border-zinc-800 overflow-hidden">
