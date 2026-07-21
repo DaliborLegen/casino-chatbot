@@ -68,3 +68,19 @@ create table if not exists bot_knowledge (
 );
 
 create index if not exists idx_bot_knowledge_status on bot_knowledge(status, created_at desc);
+
+-- ---------------------------------------------------------------------------
+-- Multi-tenant (2026-07): one deployment serves multiple casinos.
+-- tenant: 'casino' (casino.si) | 'supercasino' (supercasino.si)
+-- Applied to production 2026-07-21.
+-- ---------------------------------------------------------------------------
+alter table conversations add column if not exists tenant text not null default 'casino';
+alter table bot_knowledge add column if not exists tenant text not null default 'casino';
+alter table daily_insights add column if not exists tenant text not null default 'casino';
+
+create index if not exists idx_conversations_tenant on conversations(tenant, updated_at desc);
+create index if not exists idx_bot_knowledge_tenant on bot_knowledge(tenant, status, created_at desc);
+
+-- daily_insights uniqueness now includes tenant (one report per date+label+tenant)
+alter table daily_insights drop constraint if exists daily_insights_report_date_label_key;
+create unique index if not exists idx_daily_insights_unique on daily_insights(report_date, label, tenant);
