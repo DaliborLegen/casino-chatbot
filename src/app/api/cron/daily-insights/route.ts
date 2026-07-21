@@ -61,7 +61,13 @@ export async function GET(req: NextRequest) {
       }
     }
 
-    const result = await generateDailyInsight({ hours, endUtc, label, reportDate: reportDateParam });
+    const result = await generateDailyInsight({
+      hours,
+      endUtc,
+      label,
+      reportDate: reportDateParam,
+      tenant: tenantParam && isTenantId(tenantParam) ? tenantParam : undefined,
+    });
     await persistInsight(result);
 
     const sendEmail = params.get("email") !== "0";
