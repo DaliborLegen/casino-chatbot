@@ -37,7 +37,8 @@ export default async function InsightDetailPage({
 }) {
   const { date } = await params;
   const { label = "daily" } = await searchParams;
-  const report = await getInsight(date, label);
+  const tenant = await getAdminTenant();
+  const report = await getInsight(date, label, tenant.id);
   if (!report) notFound();
 
   const html = renderMarkdown(report.markdown);
