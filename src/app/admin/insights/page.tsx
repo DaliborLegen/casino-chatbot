@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { listInsights } from "@/lib/insights";
+import { getAdminTenant } from "@/lib/admin-tenant";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
