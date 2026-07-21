@@ -36,9 +36,9 @@ export default async function InsightsListPage() {
         <header className="mb-6 flex items-baseline justify-between">
           <h1 className="text-2xl font-semibold">
             Dnevna analiza
-            <span className="ml-3 align-middle inline-block h-1 w-10 rounded-full" style={{ background: "#ff0000" }} />
+            <span className="ml-3 align-middle inline-block h-1 w-10 rounded-full" style={{ background: "var(--accent)" }} />
           </h1>
-          <div className="text-sm text-zinc-400">{rows.length} poročil</div>
+          <div className="text-sm text-zinc-400">{tenant.name} · {rows.length} poročil</div>
         </header>
 
         <div className="rounded-lg border border-zinc-800 overflow-hidden">
