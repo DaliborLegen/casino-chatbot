@@ -218,6 +218,7 @@ export async function persistInsight(result: InsightResult): Promise<void> {
     {
       report_date: result.report_date,
       label: result.label,
+      tenant: result.tenant,
       markdown: result.markdown,
       conversation_count: result.stats.conversation_count,
       message_count: result.stats.message_count,
@@ -225,7 +226,7 @@ export async function persistInsight(result: InsightResult): Promise<void> {
       input_tokens: result.stats.input_tokens,
       output_tokens: result.stats.output_tokens,
     },
-    { onConflict: "report_date,label" }
+    { onConflict: "report_date,label,tenant" }
   );
   if (error) throw new Error(`Insights: persist failed: ${error.message}`);
 }
