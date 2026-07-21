@@ -16,6 +16,7 @@ export interface InsightStats {
 export interface InsightResult {
   report_date: string;
   label: string;
+  tenant: TenantId;
   markdown: string;
   stats: InsightStats;
 }
@@ -25,6 +26,7 @@ export interface InsightOptions {
   hours?: number;
   label?: string;
   reportDate?: string;
+  tenant?: TenantId;
 }
 
 interface ConversationDump {
