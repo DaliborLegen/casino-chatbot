@@ -231,13 +231,14 @@ export async function persistInsight(result: InsightResult): Promise<void> {
   if (error) throw new Error(`Insights: persist failed: ${error.message}`);
 }
 
-export async function listInsights(limit = 60): Promise<
+export async function listInsights(limit = 60, tenant: TenantId = DEFAULT_TENANT): Promise<
   { report_date: string; label: string; conversation_count: number; message_count: number; created_at: string }[]
 > {
   const supabase = getSupabase();
   const { data, error } = await supabase
     .from("daily_insights")
     .select("report_date, label, conversation_count, message_count, created_at")
+    .eq("tenant", tenant)
     .order("report_date", { ascending: false })
     .order("label", { ascending: true })
     .limit(limit);
