@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getInsight } from "@/lib/insights";
+import { getAdminTenant } from "@/lib/admin-tenant";
 import { renderMarkdown } from "@/lib/markdown";
 
 export const dynamic = "force-dynamic";
