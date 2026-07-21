@@ -42,6 +42,10 @@ export async function GET(req: NextRequest) {
     const endParam = params.get("end");
     const label = params.get("label") || undefined;
     const reportDateParam = params.get("date") || undefined;
+    const tenantParam = params.get("tenant");
+    if (tenantParam && !isTenantId(tenantParam)) {
+      return NextResponse.json({ error: "invalid tenant" }, { status: 400 });
+    }
 
     const hours = hoursParam ? Number(hoursParam) : undefined;
     if (hours !== undefined && (!Number.isFinite(hours) || hours <= 0 || hours > 168)) {
