@@ -27,7 +27,8 @@ function fmtDateTime(iso: string) {
 }
 
 export default async function InsightsListPage() {
-  const rows = await listInsights(60);
+  const tenant = await getAdminTenant();
+  const rows = await listInsights(60, tenant.id);
 
   return (
     <div className="text-zinc-100 px-4 sm:px-5 py-6">
