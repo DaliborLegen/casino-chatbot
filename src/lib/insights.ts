@@ -200,6 +200,7 @@ export async function generateDailyInsight(options: InsightOptions = {}): Promis
   return {
     report_date: reportDate,
     label,
+    tenant,
     markdown,
     stats: {
       conversation_count: convos.length,
