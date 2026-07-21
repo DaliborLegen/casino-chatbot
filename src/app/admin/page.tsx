@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { getSupabase } from "@/lib/supabase";
+import { getAdminTenant } from "@/lib/admin-tenant";
+import type { TenantId } from "@/lib/tenants";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
@@ -14,11 +16,12 @@ interface Row {
   last_assistant: string | null;
 }
 
-async function loadConversations(limit: number): Promise<Row[]> {
+async function loadConversations(limit: number, tenant: TenantId): Promise<Row[]> {
   const supabase = getSupabase();
   const { data: convos, error } = await supabase
     .from("conversations")
     .select("id, session_id, created_at, updated_at")
+    .eq("tenant", tenant)
     .order("updated_at", { ascending: false })
     .limit(limit);
   if (error || !convos) return [];
@@ -82,7 +85,8 @@ export default async function AdminPage({
 }) {
   const params = await searchParams;
   const limit = Math.min(Number(params.limit) || 100, 500);
-  const rows = await loadConversations(limit);
+  const tenant = await getAdminTenant();
+  const rows = await loadConversations(limit, tenant.id);
 
   return (
     <div className="text-zinc-100 px-4 sm:px-5 py-6">
@@ -90,9 +94,9 @@ export default async function AdminPage({
         <header className="flex items-baseline justify-between mb-6">
           <h1 className="text-2xl font-semibold">
             Pogovori
-            <span className="ml-3 align-middle inline-block h-1 w-10 rounded-full" style={{ background: "#ff0000" }} />
+            <span className="ml-3 align-middle inline-block h-1 w-10 rounded-full" style={{ background: "var(--accent)" }} />
           </h1>
-          <span className="text-sm text-zinc-400">{rows.length} sej · prikazane zadnje</span>
+          <span className="text-sm text-zinc-400">{tenant.name} · {rows.length} sej · prikazane zadnje</span>
         </header>
 
         <div className="rounded-lg border border-zinc-800 overflow-hidden">

@@ -1,6 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import crypto from "crypto";
 import { getSupabase } from "@/lib/supabase";
+import { DEFAULT_TENANT, type TenantId } from "@/lib/tenants";
 
 const NORMALIZE_MODEL = "claude-haiku-4-5-20251001";
 
@@ -9,6 +10,7 @@ export type KnowledgeStatus = "pending" | "active" | "rejected";
 
 export interface KnowledgeEntry {
   id: string;
+  tenant: TenantId;
   type: KnowledgeType;
   title: string;
   body: string;
@@ -22,6 +24,7 @@ export interface KnowledgeEntry {
 }
 
 export interface SubmissionInput {
+  tenant?: TenantId;
   type: KnowledgeType;
   title: string;
   rawInput: string;
@@ -100,6 +103,7 @@ export async function insertPending(
   const { data, error } = await supabase
     .from("bot_knowledge")
     .insert({
+      tenant: input.tenant || DEFAULT_TENANT,
       type: input.type,
       title: normalized.title,
       body: normalized.body,
@@ -120,11 +124,12 @@ export async function getById(id: string): Promise<KnowledgeEntry | null> {
   return (data as KnowledgeEntry) ?? null;
 }
 
-export async function listEntries(limit = 100): Promise<KnowledgeEntry[]> {
+export async function listEntries(limit = 100, tenant: TenantId = DEFAULT_TENANT): Promise<KnowledgeEntry[]> {
   const supabase = getSupabase();
   const { data, error } = await supabase
     .from("bot_knowledge")
     .select("*")
+    .eq("tenant", tenant)
     .order("created_at", { ascending: false })
     .limit(limit);
   if (error || !data) return [];
@@ -167,10 +172,10 @@ export async function decideEntry(
 // ---------------------------------------------------------------------------
 
 const CACHE_TTL_MS = 60 * 1000;
-let activeCache: { section: string; expiresAt: number } | null = null;
+const activeCache = new Map<TenantId, { section: string; expiresAt: number }>();
 
 export function invalidateActiveCache(): void {
-  activeCache = null;
+  activeCache.clear();
 }
 
 function formatSection(entries: KnowledgeEntry[]): string {
@@ -182,7 +187,7 @@ function formatSection(entries: KnowledgeEntry[]): string {
     }
     return lines.join("\n");
   });
-  return `\n\n## Dodatne promocije in pravila (potrjeno s strani casino.si)
+  return `\n\n## Dodatne promocije in pravila (potrjeno s strani operaterja)
 Te informacije so del uradne baze znanja in imajo enako veljavo kot FAQ zgoraj. Če ima vnos POSEBNO NAVODILO, ga obvezno upoštevaj (npr. "ne omenjaj proaktivno" pomeni, da o tem govoriš le, če uporabnik sam načne temo).
 ${blocks.join("\n\n")}`;
 }
@@ -192,10 +197,11 @@ ${blocks.join("\n\n")}`;
  * Non-fatal: any error (no Supabase, query failure) yields an empty section so
  * the bot keeps working on its static knowledge base.
  */
-export async function getActiveKnowledgeSection(): Promise<string> {
+export async function getActiveKnowledgeSection(tenant: TenantId = DEFAULT_TENANT): Promise<string> {
   if (!hasSupabase()) return "";
   const now = Date.now();
-  if (activeCache && activeCache.expiresAt > now) return activeCache.section;
+  const cached = activeCache.get(tenant);
+  if (cached && cached.expiresAt > now) return cached.section;
 
   try {
     const supabase = getSupabase();
@@ -203,17 +209,18 @@ export async function getActiveKnowledgeSection(): Promise<string> {
       .from("bot_knowledge")
       .select("*")
       .eq("status", "active")
+      .eq("tenant", tenant)
       .order("created_at", { ascending: true });
     if (error) {
       console.error("Knowledge active query failed:", error.message);
-      return activeCache?.section ?? "";
+      return cached?.section ?? "";
     }
     const section = formatSection((data as KnowledgeEntry[]) || []);
-    activeCache = { section, expiresAt: now + CACHE_TTL_MS };
+    activeCache.set(tenant, { section, expiresAt: now + CACHE_TTL_MS });
     return section;
   } catch (err) {
     console.error("Knowledge active load failed:", err);
-    return activeCache?.section ?? "";
+    return cached?.section ?? "";
   }
 }
 

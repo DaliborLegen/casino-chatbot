@@ -1,5 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { getSupabase } from "@/lib/supabase";
+import { DEFAULT_TENANT, type TenantId } from "@/lib/tenants";
 
 const ANALYSIS_MODEL = "claude-haiku-4-5-20251001";
 const TZ = "Europe/Ljubljana";

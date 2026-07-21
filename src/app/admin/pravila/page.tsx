@@ -1,4 +1,5 @@
 import { listEntries, type KnowledgeEntry } from "@/lib/knowledge";
+import { getAdminTenant } from "@/lib/admin-tenant";
 import SubmitForm from "./SubmitForm";
 import DecideButtons from "./DecideButtons";
 
@@ -87,7 +88,8 @@ function Section({
 }
 
 export default async function PravilaPage() {
-  const all = await listEntries(200);
+  const tenant = await getAdminTenant();
+  const all = await listEntries(200, tenant.id);
   const pending = all.filter((e) => e.status === "pending");
   const active = all.filter((e) => e.status === "active");
   const rejected = all.filter((e) => e.status === "rejected");
@@ -98,11 +100,11 @@ export default async function PravilaPage() {
         <header className="mb-6">
           <h1 className="text-2xl font-semibold">
             Pravila in promocije
-            <span className="ml-3 align-middle inline-block h-1 w-10 rounded-full" style={{ background: "#ff0000" }} />
+            <span className="ml-3 align-middle inline-block h-1 w-10 rounded-full" style={{ background: "var(--accent)" }} />
           </h1>
           <p className="mt-1 text-sm text-zinc-400">
-            Vnesite novo promocijo ali spremembo pravila. Vnos gre botu v živo šele po potrditvi —
-            potrdite ga lahko tu ali prek emaila. Brez novega deploya.
+            {tenant.name}: vnesite novo promocijo ali spremembo pravila. Vnos gre botu v živo šele po
+            potrditvi — potrdite ga lahko tu ali prek emaila. Brez novega deploya.
           </p>
         </header>
 

@@ -6,6 +6,7 @@ import {
   type SubmissionInput,
 } from "@/lib/knowledge";
 import { sendApprovalEmail } from "@/lib/email-knowledge";
+import { getTenant, TENANT_COOKIE } from "@/lib/tenants";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -49,7 +50,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Vsebina vnosa je predolga (max 8000 znakov)." }, { status: 400 });
   }
 
+  const tenant = getTenant(req.cookies.get(TENANT_COOKIE)?.value);
   const input: SubmissionInput = {
+    tenant: tenant.id,
     type,
     title: (payload.title || "").trim(),
     rawInput,

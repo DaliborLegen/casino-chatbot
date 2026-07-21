@@ -62,7 +62,7 @@ export default async function ConversationPage({
   return (
     <div className="text-zinc-100 px-4 sm:px-5 py-6">
       <div className="max-w-3xl mx-auto">
-        <Link href="/admin" className="text-sm hover:text-white" style={{ color: "#ffe22e" }}>
+        <Link href="/admin" className="text-sm hover:text-white" style={{ color: "var(--nav-active)" }}>
           ← Vsi pogovori
         </Link>
 
@@ -85,13 +85,13 @@ export default async function ConversationPage({
               style={
                 m.role === "user"
                   ? { background: "#27272a", border: "1px solid #3f3f46" }
-                  : { background: "rgba(255,40,40,0.10)", border: "1px solid rgba(255,60,60,0.35)" }
+                  : { background: "var(--bot-bubble-bg)", border: "1px solid var(--bot-bubble-border)" }
               }
             >
               <div className="flex items-baseline justify-between mb-1">
                 <span
                   className="text-xs font-medium"
-                  style={m.role === "user" ? { color: "#d4d4d8" } : { color: "#ff6b6b" }}
+                  style={m.role === "user" ? { color: "#d4d4d8" } : { color: "var(--bot-label)" }}
                 >
                   {m.role === "user" ? "Uporabnik" : "Bot"}
                 </span>

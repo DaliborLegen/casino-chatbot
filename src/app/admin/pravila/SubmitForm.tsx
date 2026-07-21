@@ -126,7 +126,7 @@ export default function SubmitForm() {
           type="submit"
           disabled={busy}
           className="rounded-md px-4 py-2 text-sm font-medium text-white hover:brightness-110 transition disabled:opacity-50 disabled:cursor-not-allowed"
-          style={{ background: "#ff0000" }}
+          style={{ background: "var(--accent)", color: "var(--accent-contrast)" }}
         >
           {busy ? "Pošiljam…" : "Pošlji v potrditev"}
         </button>
