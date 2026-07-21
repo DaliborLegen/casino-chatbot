@@ -246,7 +246,7 @@ export async function listInsights(limit = 60, tenant: TenantId = DEFAULT_TENANT
   return data;
 }
 
-export async function getInsight(reportDate: string, label = "daily"): Promise<{
+export async function getInsight(reportDate: string, label = "daily", tenant: TenantId = DEFAULT_TENANT): Promise<{
   report_date: string;
   label: string;
   markdown: string;
