@@ -263,6 +263,7 @@ export async function getInsight(reportDate: string, label = "daily", tenant: Te
     .select("report_date, label, markdown, conversation_count, message_count, model, input_tokens, output_tokens, created_at")
     .eq("report_date", reportDate)
     .eq("label", label)
+    .eq("tenant", tenant)
     .single();
   return data ?? null;
 }
