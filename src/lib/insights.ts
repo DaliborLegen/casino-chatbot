@@ -104,12 +104,13 @@ Pravila:
 - Bodi konkreten, ne pavšalen — vsak predlog mora biti takoj izvedljiv brez dodatnega spraševanja
 - Če vhod prazen, vrni samo "## Povzetek\nNi pogovorov v tem obdobju."`;
 
-async function loadConversations(startUtc: Date, endUtc: Date): Promise<ConversationDump[]> {
+async function loadConversations(startUtc: Date, endUtc: Date, tenant: TenantId): Promise<ConversationDump[]> {
   const supabase = getSupabase();
 
   const { data: convos, error } = await supabase
     .from("conversations")
     .select("id, session_id, created_at, updated_at")
+    .eq("tenant", tenant)
     .gte("updated_at", startUtc.toISOString())
     .lt("updated_at", endUtc.toISOString())
     .order("updated_at", { ascending: false });
