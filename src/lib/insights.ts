@@ -167,8 +167,9 @@ export async function generateDailyInsight(options: InsightOptions = {}): Promis
   const startUtc = new Date(endUtc.getTime() - hours * 60 * 60 * 1000);
   const reportDate = options.reportDate ?? ljubljanaDateString(endUtc);
   const label = options.label ?? "daily";
+  const tenant = options.tenant ?? DEFAULT_TENANT;
 
-  const convos = await loadConversations(startUtc, endUtc);
+  const convos = await loadConversations(startUtc, endUtc, tenant);
   const messageCount = convos.reduce((n, c) => n + c.messages.length, 0);
 
   const userContent = convos.length === 0
