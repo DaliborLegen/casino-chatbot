@@ -1,7 +1,9 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { getSupabase } from "@/lib/supabase";
 import { baseSystemPrompt, buildTimeContext } from "@/lib/system-prompt";
+import { supercasinoSystemPrompt } from "@/lib/system-prompt-supercasino";
 import { getActiveKnowledgeSection } from "@/lib/knowledge";
+import { DEFAULT_TENANT, isTenantId, type TenantId } from "@/lib/tenants";
 
 export interface StoredMessage {
   role: "user" | "assistant";
