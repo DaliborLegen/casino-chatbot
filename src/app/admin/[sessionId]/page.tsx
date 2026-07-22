@@ -14,14 +14,18 @@ interface Message {
   created_at: string;
 }
 
-async function loadConversation(sessionId: string) {
+async function loadConversation(sessionId: string, tenant: TenantId) {
   const supabase = getSupabase();
   const { data: convo } = await supabase
     .from("conversations")
-    .select("id, session_id, created_at, updated_at")
+    .select("id, session_id, created_at, updated_at, tenant")
     .eq("session_id", sessionId)
     .single();
   if (!convo) return null;
+  // Strict tenant isolation: a conversation is only visible under its own
+  // casino. Switching the tenant while viewing a conversation must not leak
+  // it into the other casino's dashboard.
+  if ((convo.tenant || "casino") !== tenant) return "wrong-tenant" as const;
 
   const { data: msgs } = await supabase
     .from("messages")
