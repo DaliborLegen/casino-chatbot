@@ -77,6 +77,14 @@ export async function POST(req: NextRequest) {
     if (!chatId) {
       return NextResponse.json({ ok: true, ignored: "no-chat-id" });
     }
+    // Record the chat's tenant now — incoming_event payloads don't carry group
+    // ids, so the conversation row is the source of truth for later messages.
+    const tenant = tenantForGroups(body.payload?.chat?.access?.group_ids);
+    try {
+      await ensureConversation(`lc_${chatId}`, tenant);
+    } catch (err) {
+      console.warn("LiveChat ensureConversation failed:", err);
+    }
     try {
       await sendTextMessage({ chat_id: chatId, text: NIGHT_WELCOME, bot_agent_id: botAgentId });
     } catch (err) {
