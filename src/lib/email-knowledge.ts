@@ -1,5 +1,6 @@
 import { Resend } from "resend";
 import type { KnowledgeEntry } from "@/lib/knowledge";
+import { getTenant } from "@/lib/tenants";
 import { signDecisionToken } from "@/lib/knowledge";
 
 function escapeHtml(s: string): string {
@@ -115,7 +116,7 @@ Nadzorna plošča: ${dashboardUrl}`;
     const { data, error } = await resend.emails.send({
       from,
       to,
-      subject: `Casino.si chatbot — v potrditev: ${entry.title}`,
+      subject: `${getTenant(entry.tenant).name} chatbot — v potrditev: ${entry.title}`,
       html,
       text,
     });
