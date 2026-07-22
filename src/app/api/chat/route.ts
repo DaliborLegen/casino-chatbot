@@ -3,10 +3,31 @@ import { generateReply } from "@/lib/chat";
 import { stripMarkdown } from "@/lib/format";
 import { MAX_MESSAGE_LENGTH } from "@/lib/limits";
 import { isSessionRateLimited } from "@/lib/rate-limit";
+import { isTenantId, type TenantId } from "@/lib/tenants";
+
+// Tenants with a live bot (system prompt + knowledge base). casino777 joins
+// once its prompt is built.
+const BOT_TENANTS: TenantId[] = ["casino", "supercasino"];
+
+const SUPPORT_EMAIL: Record<string, string> = {
+  casino: "online@casino.si",
+  supercasino: "online@supercasino.si",
+};
 
 export async function POST(req: NextRequest) {
+  // Deployment-level default (separate Vercel project per casino), overridable
+  // per request for shared deployments.
+  const envTenant = process.env.BOT_TENANT;
+  let tenant: TenantId = isTenantId(envTenant) ? envTenant : "casino";
   try {
-    const { message, sessionId } = await req.json();
+    const { message, sessionId, tenant: bodyTenant } = await req.json();
+
+    if (typeof bodyTenant === "string" && isTenantId(bodyTenant)) {
+      tenant = bodyTenant;
+    }
+    if (!BOT_TENANTS.includes(tenant)) {
+      return NextResponse.json({ error: "Bot za to igralnico še ni na voljo." }, { status: 400 });
+    }
 
     if (!message || typeof message !== "string" || !message.trim()) {
       return NextResponse.json({ error: "Message is required." }, { status: 400 });
