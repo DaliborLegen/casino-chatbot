@@ -1,0 +1,171 @@
+{
+  "company": {
+    "fullName": "CASINO PORTOROŽ, d.d., prirejanje posebnih iger na srečo",
+    "shortName": "CASINO Portorož, d.d.",
+    "address": "Obala 75A, 6320 Portorož – Portorose, Slovenija",
+    "registrationNumber": "5680859000",
+    "vatNumber": "SI 82949166",
+    "registeredAt": "10.11.1992",
+    "registryOffice": "Okrožno sodišče v Kopru",
+    "shareCapital": "4.104.537,25 EUR",
+    "mainActivity": "92.001 (Dejavnost igralnic)",
+    "ceo": "Mitja Peternel, predsednik uprave",
+    "website": "https://supercasino.si"
+  },
+  "license": {
+    "number": "471-26-98",
+    "issuedDate": "05.07.1999",
+    "validUntil": "30.06.2029",
+    "issuedBy": "Vlada Republike Slovenije",
+    "casino": "Grand Casino Lipica",
+    "casinoAddress": "Lipica 5, 6210 Sežana"
+  },
+  "contact": {
+    "phone": "+386 30 300 300",
+    "phoneHours": "ponedeljek-nedelja, 8:00 do 24:00 (GMT+02:00)",
+    "email": "online@supercasino.si",
+    "liveChatHours": "vsak dan med 8:00 in 24:00",
+    "physicalReception": "Grand Casino Lipica, Lipica 5, 6210 Sežana — odprta pon–ned 10:00–04:00",
+    "complaintsEmail": "online@supercasino.si (ali po pošti: CASINO Portorož, d.d., Skapinova 2a, 1000 Ljubljana)",
+    "dataProtectionEmail": "dpo@casino.si"
+  },
+  "responsibleGamingHelp": [
+    {
+      "name": "Zdravstveni dom Nova Gorica, Center za bolezni odvisnosti",
+      "phone": "+386 5 33 83 265",
+      "website": "https://www.zd-go.si/sl/ambulante-in-sluzbe/center-za-zdravljenje-odvisnosti/"
+    },
+    {
+      "name": "Sprememba v srcu, Zavod za psihoterapijo Ljubljana",
+      "website": "http://www.spremembavsrcu.si"
+    },
+    {
+      "name": "Psihiatrična bolnišnica Idrija, Oddelek za nekemične odvisnosti",
+      "address": "Pot Sv. Antona 49, 5280 Idrija",
+      "phone": "+386 5 37 34 400",
+      "website": "https://pb-idrija.si/sl/oddelek-za-nekemicne-zasvojenosti-l2"
+    }
+  ],
+  "playerLimits": {
+    "deposit": {
+      "daily": "500 EUR",
+      "weekly": "3.000 EUR",
+      "monthly": "5.000 EUR",
+      "note": "Igralec lahko sam nastavi omejitve v profilu (Odgovorno igranje → Omejitve). Zmanjšanje omejitve velja takoj. Povečanje ali odstranitev učinkuje šele po 24 urah od zahteve. Omejitve so 'drseče' (rolling) — ne ponastavijo se na začetku obdobja, ampak po 1, 7 ali 30 dneh od posameznega pologa."
+    },
+    "temporaryBlock": ["1 dan", "1 teden", "1 mesec"],
+    "selfExclusion": {
+      "minDuration": "6 mesecev",
+      "maxDuration": "3 leta",
+      "irreversible": true,
+      "process": "Prijava → Profil → Odgovorno igranje → Samoprepoved → izbira obdobja v koledarju → potrditvena e-pošta z obrazcem regulatorja, ki ga je treba izpolniti in potrditi. Nepreklicna do izteka. Velja za posebne igre na srečo v Republiki Sloveniji (nacionalni register). Med samoprepovedjo igranje ni mogoče, dvig razpoložljivih sredstev pa je dovoljen."
+    },
+    "wageringRequirement": {
+      "deposit": "1× (vsi pologi so predmet 1-kratnega stavnega pogoja po AML politiki — pred dvigom morate staviti vsaj vplačani znesek)",
+      "bonus": "določen v pogojih posameznega bonusa — preverite v razdelku Moje ponudbe"
+    },
+    "maxOneActiveBonus": true,
+    "maxOneAccountPerPerson": true
+  },
+  "registration": {
+    "minAge": 18,
+    "ageVerification": "tehnična/programska preprečitev odprtja računa za osebe mlajše od 18 let",
+    "identityProvider": "iDenfy (iDenfy UAB, Barsausko 59, Kaunas, 51423, Litva)",
+    "biometricStorage": "AWS Irska (EU); biometrični podatki izbrisani do 10 minut po zaključeni verifikaciji",
+    "acceptedDocuments": ["osebna izkaznica", "biometrična osebna izkaznica", "potni list", "biometrični potni list", "kartično vozniško dovoljenje"],
+    "rejectedDocuments": ["staro papirnato vozniško dovoljenje"],
+    "requiredData": ["ime in priimek", "datum rojstva", "državljanstvo", "spol", "naslov, mesto in poštna številka stalnega prebivališča", "telefonska številka", "naslov elektronske pošte", "EMŠO številka", "uporabniško ime", "geslo", "vrsta osebnega dokumenta", "kraj rojstva", "izjava o politični izpostavljenosti (PEP)"],
+    "biometricVerification": "fotografija obraza (Face ID); skladno z ZVOP-2 83. člen in GDPR 9(2)(a)",
+    "alternativeMethod": "osebno na recepciji Grand Casino Lipica, Lipica 5, 6210 Sežana — odprta pon–ned 10:00–04:00",
+    "oneAccountPerPerson": "preverjanje preko EMŠO — en igralec, en račun",
+    "geoRestriction": "dostop dovoljen samo iz ozemlja Republike Slovenije (programska preverba)",
+    "verificationDeadline": "1 mesec od registracije; sicer se račun samodejno zapre",
+    "verificationStatuses": {
+      "IDVERIFIED": "račun popolnoma verificiran, polna funkcionalnost",
+      "PEPBLOCKED": "politično izpostavljena oseba, potrebna dodatna preverba",
+      "BLOCKED": "začasna varnostna blokada (npr. 3× napačno geslo)",
+      "TIME_OUT": "uporabnik je sam zaprl račun za določen čas",
+      "SELF_EXCLUSION": "samoprepoved 6 mesecev do 3 let",
+      "KYC_REGULATION": "potekel veljaven dokument, potrebna ponovna verifikacija",
+      "REVERIFIED": "uporabnik je spremenil podatke (npr. ob poroki), potrebna ponovna verifikacija",
+      "CLOSED": "trajno zaprt račun; ponovna aktivacija samo z novim postopkom registracije"
+    }
+  },
+  "legalBasis": [
+    "Zakon o igrah na srečo (UL RS št. 14/11, 108/12, 40/14)",
+    "Pravilnik o prirejanju iger na srečo preko interneta (UL RS št. 42/08, 103/08, 109/12, 113/23)",
+    "Zakon o preprečevanju pranja denarja in financiranja terorizma (ZPPDFT-2, UL RS št. 48/22, 145/22, 17/25)",
+    "Splošna uredba o varstvu podatkov (GDPR) in ZVOP-2 (UL RS št. 163/22, 40/25)",
+    "Koncesijska pogodba št. 471-26-98 z dne 05.07.1999 za igralnico Grand Casino Lipica s pripadajočimi aneksi (Aneks št. 24, 13.01.2026 — spletne igre)"
+  ],
+  "facts": {
+    "fundsAllocation": "Denarna sredstva od iger na srečo so namenjena financiranju invalidskih, humanitarnih in športnih organizacij v Republiki Sloveniji.",
+    "courtJurisdiction": "V sporih med igralcem (potrošnikom) in koncesionarjem je krajevno pristojno sodišče, na območju katerega ima igralec stalno ali začasno prebivališče (51.a člen ZPP). Tožeča stranka igralec ima alternativno možnost vložitve tožbe pri sodišču splošne krajevne pristojnosti (sedež koncesionarja).",
+    "selfExclusionRegistry": "Igralci se preverjajo glede uvrstitve na nacionalni seznam oseb s samoprepovedjo; evidenca se dnevno posreduje nadzornemu organu.",
+    "complaintsHandling": "Pritožba na online@supercasino.si ali po pošti (Skapinova 2a, 1000 Ljubljana); rok za vložitev 5 dni od dogodka/napake; odločitev Komisije za pritožbe najkasneje v 14 dneh; odločitev je dokončna.",
+    "dataRetention": "Podatki o igralnem računu in transakcijah 10 let (ZPPDFT-2). Drugi osebni podatki praviloma do 5 let po prenehanju razmerja.",
+    "dataCenter": "Equinix Sofija (Bolgarija); platforma EGT Digital; certifikati ISO 9001:2015, ISO/IEC 27001:2013, ISO 22301:2019",
+    "currency": "EUR (transakcije v drugih valutah možne s konverzijo banke uporabnika)",
+    "mobileApp": "Mobilne aplikacije ni; stran je popolnoma prilagojena mobilnim brskalnikom.",
+    "languages": "Vmesnik je na voljo v slovenščini in angleščini (nastavitev v razdelku Nastavitve)."
+  },
+  "dataProcessing": {
+    "controller": "CASINO PORTOROŽ, d.d.",
+    "kycProcessor": "iDenfy UAB (Litva)",
+    "userRights": ["dostop", "popravek", "izbris", "omejitev obdelave", "prenosljivost", "ugovor", "preklic privolitve"],
+    "supervisor": "Informacijski pooblaščenec RS (https://www.ip-rs.si)",
+    "responseTime": "najkasneje v 1 mesecu od prejema zahteve"
+  },
+  "paymentMethods": {
+    "note": "Aktualni seznam podprtih plačilnih metod na supercasino.si. Ponudba se občasno spreminja — uporabnik naj točen trenutni seznam preveri po prijavi v razdelku Banka → Vplačilo / Izplačilo.",
+    "supported": {
+      "cards": ["VISA (Credit, Debit, Electron, V PAY)", "Mastercard (Credit, Debit)", "Maestro", "American Express", "Diners Club", "Discover", "JCB", "UnionPay"],
+      "ewalletsAndMobile": ["Google Pay", "Apple Pay", "PayPal", "Skrill", "Neteller", "Paysafecard", "Aircash", "FLIK", "Fliqua", "VALÚ"],
+      "crypto": ["Bitcoin", "Ethereum", "Tether (USDT)", "Ripple (XRP)", "Tron", "USD Coin", "Litecoin", "Bitcoin Cash", "Algorand"]
+    },
+    "rules": {
+      "currency": "EUR (vsa vplačila in izplačila)",
+      "withdrawalMethodMustMatchDeposit": "Dvigi so dovoljeni samo na e-denarnice ali bančne kartice, s katerimi je bil opravljen vsaj en predhodni polog.",
+      "thirdPartyPayment": "Plačilna sredstva morajo biti vaša osebna. Plačila s kartico družinskega člana ali tretje osebe niso dovoljena.",
+      "withdrawalTime": "Dvigi na bančne kartice se pri bankah obdelajo v 1–3 delovnih dneh. Dokler je dvig 'v obdelavi', ga lahko prekličete v razdelku Banka → Dvig sredstev.",
+      "depositTime": "Pologi se običajno obdelajo takoj.",
+      "fees": "Glede na metodo lahko provizije obračunata ponudnik plačil ali banka uporabnika (npr. konverzija valute). Podrobnosti v razdelku Banka po prijavi."
+    }
+  },
+  "gameProviders": ["Amusnet", "BF Games", "EGT Digital", "ELK Studios", "Greentube", "Play'N GO", "Wazdan"],
+  "gameInfoLink": "supercasino.si → Pomoč in vprašanja → Informacije o igrah",
+  "helpLinks": {
+    "faq": "https://supercasino.si/help/faq",
+    "termsAndConditions": "https://supercasino.si/help/termsandconditions",
+    "privacyPolicy": "https://supercasino.si/help/privacy-policy",
+    "cookiePolicy": "https://supercasino.si/help/cookie-policy",
+    "legalNotices": "https://supercasino.si/help/legal-notices",
+    "responsibleGambling": "https://supercasino.si/help/responsible-gambling",
+    "selfExclusion": "https://supercasino.si/help/selfexclusion",
+    "findHelp": "https://supercasino.si/help/findhelp",
+    "contactUs": "https://supercasino.si/help/contact-us",
+    "companyCredentials": "https://supercasino.si/help/company-credentials",
+    "gameInformation": "https://supercasino.si/help/gameinformation",
+    "registration": "https://supercasino.si/help/registration",
+    "payments": "https://supercasino.si/help/bonusrules"
+  },
+  "bonuses": {
+    "generalRules": [
+      "Bonusi so na voljo samo registriranim igralcem s stalnim prebivališčem v Sloveniji, 18+.",
+      "En bonus na osebo, gospodinjstvo, IP naslov, e-naslov, številko kartice in napravo.",
+      "Naenkrat je lahko aktiven samo en igralniški bonus.",
+      "Največja stava z bonus sredstvi: 5 € na vrtljaj (če ni drugače določeno).",
+      "Bonusi potečejo 7 dni po aktivaciji (če ni drugače določeno).",
+      "Pri igranju se najprej črpa realni denar, nato bonusni.",
+      "Pogoji stavljenja se izpolnijo samo z igralnimi avtomati; igre v živo, namizne igre, rulete in scratch cards ne štejejo.",
+      "Preklic bonusa pred izpolnitvijo pogojev odstrani bonus sredstva in povezane dobitke."
+    ],
+    "verified": {
+      "registracija": "50 brezplačnih vrtljajev ob registraciji (0,10 €/vrtljaj), brez pologa; pripisujejo se po 10 na dan za vsakih 5 prijav; na vnaprej določenih igrah; bonus poteče po 24 urah, če ni uporabljen.",
+      "dobrodoslica": "Paket dobrodošlice: 100 % prvega pologa do 100 € (minimalni polog 20 €, polog je treba enkrat obrniti na avtomatih). Aktivacija v razdelku Moje ponudbe.",
+      "rojstnodnevni": "Rojstnodnevni bonus: 10 € bonus denarja na rojstni dan (račun mora biti verificiran in aktiven).",
+      "cashback": "24-urni cashback: vračilo odstotka neto izgube zadnjih 24 ur kot bonus; minimalna neto izguba 25 €; ročna dodelitev v denarnico, ko je stanje 5 € ali manj."
+    },
+    "activation": "Bonusi se aktivirajo z vnosom bonus kode ob pologu ali v razdelku Moje ponudbe v profilu (ikona profila → Moje ponudbe). Napredek pri pogojih stavljenja se spremlja v Moje ponudbe."
+  }
+}
