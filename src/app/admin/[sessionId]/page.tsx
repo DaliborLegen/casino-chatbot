@@ -1,6 +1,8 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { getSupabase } from "@/lib/supabase";
+import { getAdminTenant } from "@/lib/admin-tenant";
+import type { TenantId } from "@/lib/tenants";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
