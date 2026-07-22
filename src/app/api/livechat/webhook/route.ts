@@ -1,8 +1,25 @@
 import { NextRequest, NextResponse } from "next/server";
-import { generateReply } from "@/lib/chat";
+import { generateReply, getConversationTenant, ensureConversation } from "@/lib/chat";
 import { sendTextMessage } from "@/lib/livechat";
 import { MAX_MESSAGE_LENGTH } from "@/lib/limits";
 import { isSessionRateLimited } from "@/lib/rate-limit";
+import type { TenantId } from "@/lib/tenants";
+
+// One LiveChat license serves all three casinos; groups route chats to the
+// right brand. Group 1 = casino.si, group 3 = supercasino.si (verified from
+// each site's LiveChat snippet). Unknown groups fall back to casino.
+const GROUP_TENANT: Record<number, TenantId> = {
+  1: "casino",
+  3: "supercasino",
+};
+
+function tenantForGroups(groupIds: number[] | undefined): TenantId {
+  for (const g of groupIds || []) {
+    const t = GROUP_TENANT[g];
+    if (t !== undefined) return t;
+  }
+  return "casino";
+}
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
