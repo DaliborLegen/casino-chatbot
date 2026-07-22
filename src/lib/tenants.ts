@@ -3,7 +3,7 @@
 // rows are scoped via the `tenant` column on conversations / bot_knowledge /
 // daily_insights.
 
-export type TenantId = "casino" | "supercasino";
+export type TenantId = "casino" | "supercasino" | "casino777";
 
 export interface TenantTheme {
   /** Header bar gradient (brand nav). */
@@ -68,13 +68,30 @@ export const TENANTS: Record<TenantId, Tenant> = {
       botLabel: "#6ba3ff",
     },
   },
+  casino777: {
+    id: "casino777",
+    name: "777casino.si",
+    shortName: "777casino",
+    siteUrl: "https://777casino.si",
+    logoUrl: "https://b7sicdn.kubdev.com/common-content/brand/app-logo--desktop.svg",
+    theme: {
+      headerGradient: "linear-gradient(90deg, #14562d 0%, #1e7a3f 50%, #14562d 100%)",
+      accent: "#1e7a3f",
+      accentContrast: "#ffffff",
+      navActive: "#fff30f",
+      orbGradient: "linear-gradient(135deg, #2eb45f, #14562d)",
+      botBubbleBg: "rgba(46,180,95,0.12)",
+      botBubbleBorder: "rgba(60,200,120,0.38)",
+      botLabel: "#4ade80",
+    },
+  },
 };
 
 export const DEFAULT_TENANT: TenantId = "casino";
 export const TENANT_COOKIE = "admin_tenant";
 
 export function isTenantId(v: string | null | undefined): v is TenantId {
-  return v === "casino" || v === "supercasino";
+  return v === "casino" || v === "supercasino" || v === "casino777";
 }
 
 export function getTenant(id: string | null | undefined): Tenant {
