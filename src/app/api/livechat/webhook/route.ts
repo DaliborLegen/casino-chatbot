@@ -142,7 +142,8 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const reply = await generateReply(sessionId, event.text);
+    const tenant = (await getConversationTenant(sessionId)) ?? "casino";
+    const reply = await generateReply(sessionId, event.text, tenant);
     if (reply) {
       await sendTextMessage({ chat_id: chatId, text: reply, bot_agent_id: botAgentId });
     }
