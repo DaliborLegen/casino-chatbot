@@ -104,8 +104,40 @@ function saveReplyToMemory(sid: string, reply: string) {
   if (session) session.messages.push({ role: "assistant", content: reply });
 }
 
-export async function generateReply(sessionId: string, userMessage: string): Promise<string> {
+function systemPromptFor(tenant: TenantId): string {
+  return tenant === "supercasino" ? supercasinoSystemPrompt : baseSystemPrompt;
+}
+
+/** Returns the tenant a stored conversation belongs to, or null if unknown. */
+export async function getConversationTenant(sessionId: string): Promise<TenantId | null> {
+  if (!hasSupabase()) return null;
+  const supabase = getSupabase();
+  const { data } = await supabase
+    .from("conversations")
+    .select("tenant")
+    .eq("session_id", sessionId)
+    .single();
+  if (!data) return null;
+  return isTenantId(data.tenant) ? data.tenant : "casino";
+}
+
+/** Creates the conversation row up front with the correct tenant (idempotent). */
+export async function ensureConversation(sessionId: string, tenant: TenantId): Promise<void> {
+  if (!hasSupabase()) return;
+  const supabase = getSupabase();
+  await supabase
+    .from("conversations")
+    .upsert({ session_id: sessionId, tenant }, { onConflict: "session_id", ignoreDuplicates: true });
+}
+
+export async function generateReply(
+  sessionId: string,
+  userMessage: string,
+  tenant: TenantId = DEFAULT_TENANT
+): Promise<string> {
   const useSupabase = hasSupabase();
+
+  if (useSupabase) await ensureConversation(sessionId, tenant);
 
   const messages = useSupabase
     ? await getMessagesFromSupabase(sessionId, userMessage)
@@ -113,7 +145,7 @@ export async function generateReply(sessionId: string, userMessage: string): Pro
 
   // Active, operator-approved promos/rules added via /admin/pravila. Appended to
   // the cached system block — the cache rebuilds only when knowledge changes (rare).
-  const knowledgeSection = await getActiveKnowledgeSection();
+  const knowledgeSection = await getActiveKnowledgeSection(tenant);
 
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY! });
   const response = await client.messages.create({
@@ -122,7 +154,7 @@ export async function generateReply(sessionId: string, userMessage: string): Pro
     system: [
       {
         type: "text",
-        text: baseSystemPrompt + knowledgeSection,
+        text: systemPromptFor(tenant) + knowledgeSection,
         cache_control: { type: "ephemeral" },
       },
       { type: "text", text: buildTimeContext() },
