@@ -55,7 +55,9 @@ export default async function ConversationPage({
 }) {
   const { sessionId } = await params;
   const decoded = decodeURIComponent(sessionId);
-  const data = await loadConversation(decoded);
+  const tenant = await getAdminTenant();
+  const data = await loadConversation(decoded, tenant.id);
+  if (data === "wrong-tenant") redirect("/admin");
   if (!data) notFound();
 
   const { convo, messages } = data;
