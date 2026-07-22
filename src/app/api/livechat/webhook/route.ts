@@ -33,6 +33,9 @@ interface LiveChatWebhook {
     thread_id?: string;
     chat?: {
       id?: string;
+      access?: {
+        group_ids?: number[];
+      };
     };
     event?: {
       id?: string;
