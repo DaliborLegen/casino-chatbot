@@ -48,14 +48,14 @@ export async function POST(req: NextRequest) {
     }
 
     const sid = sessionId || crypto.randomUUID();
-    const reply = await generateReply(sid, message.trim());
+    const reply = await generateReply(sid, message.trim(), tenant);
 
     return NextResponse.json({ reply: stripMarkdown(reply), sessionId: sid });
   } catch (err) {
     console.error("Chat API error:", err);
     return NextResponse.json(
       {
-        error: "Prišlo je do napake. Prosimo, poskusite znova ali nas kontaktirajte na online@casino.si.",
+        error: `Prišlo je do napake. Prosimo, poskusite znova ali nas kontaktirajte na ${SUPPORT_EMAIL[tenant] || "online@casino.si"}.`,
       },
       { status: 500 }
     );
