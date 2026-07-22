@@ -30,6 +30,20 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Manjka id ali veljavna akcija." }, { status: 400 });
   }
 
+  // Strict tenant isolation: an entry may only be decided from the dashboard
+  // of the casino it belongs to.
+  const tenant = getTenant(req.cookies.get(TENANT_COOKIE)?.value);
+  const existing = await getById(id);
+  if (!existing) {
+    return NextResponse.json({ error: "Vnos ne obstaja." }, { status: 404 });
+  }
+  if ((existing.tenant || "casino") !== tenant.id) {
+    return NextResponse.json(
+      { error: "Vnos pripada drugi igralnici — preklopite na pravo igralnico." },
+      { status: 403 }
+    );
+  }
+
   const status = action === "approve" ? "active" : "rejected";
   const { entry, alreadyDecided } = await decideEntry(id, status, basicAuthUser(req) || "admin");
 
