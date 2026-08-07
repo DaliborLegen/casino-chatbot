@@ -51,15 +51,18 @@ async function loadConversations(limit: number, tenant: TenantId): Promise<Row[]
     }
   }
 
-  return convos.map((c) => ({
-    id: c.id,
-    session_id: c.session_id,
-    created_at: c.created_at,
-    updated_at: c.updated_at,
-    message_count: counts.get(c.id) || 0,
-    last_user: lastUser.get(c.id) || null,
-    last_assistant: lastAssistant.get(c.id) || null,
-  }));
+  return convos
+    .map((c) => ({
+      id: c.id,
+      session_id: c.session_id,
+      created_at: c.created_at,
+      updated_at: c.updated_at,
+      message_count: counts.get(c.id) || 0,
+      last_user: lastUser.get(c.id) || null,
+      last_assistant: lastAssistant.get(c.id) || null,
+    }))
+    .filter((r) => r.message_count > 0)
+    .slice(0, limit);
 }
 
 function fmt(d: string) {
