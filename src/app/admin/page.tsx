@@ -18,12 +18,18 @@ interface Row {
 
 async function loadConversations(limit: number, tenant: TenantId): Promise<Row[]> {
   const supabase = getSupabase();
+  // The webhook creates a conversation row for every LiveChat chat in the
+  // shared license (incoming_chat), including daytime chats human agents handle
+  // and the bot never answers — those stay at 0 messages. We hide them below so
+  // the dashboard shows only real conversations. Over-fetch candidates to keep
+  // the page full after filtering.
+  const candidateLimit = Math.min(limit * 2, 500);
   const { data: convos, error } = await supabase
     .from("conversations")
     .select("id, session_id, created_at, updated_at")
     .eq("tenant", tenant)
     .order("updated_at", { ascending: false })
-    .limit(limit);
+    .limit(candidateLimit);
   if (error || !convos) return [];
 
   const ids = convos.map((c) => c.id);
