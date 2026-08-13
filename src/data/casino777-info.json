@@ -1,0 +1,199 @@
+{
+  "company": {
+    "fullName": "CASINO PORTOROŽ, d.d., prirejanje posebnih iger na srečo",
+    "shortName": "CASINO Portorož, d.d.",
+    "address": "Obala 75A, 6320 Portorož – Portorose, Slovenija",
+    "registrationNumber": "5680859000",
+    "vatNumber": "SI 82949166",
+    "registeredAt": "10.11.1992",
+    "registryOffice": "Okrožno sodišče v Kopru",
+    "shareCapital": "4.104.537,25 EUR",
+    "mainActivity": "92.001 (Dejavnost igralnic)",
+    "ceo": "Mitja Peternel, predsednik uprave",
+    "website": "https://777casino.si"
+  },
+  "license": {
+    "number": "471-26-98",
+    "issuedDate": "05.07.1999",
+    "validUntil": "30.06.2029",
+    "issuedBy": "Vlada Republike Slovenije",
+    "casino": "Grand Casino Portorož",
+    "casinoAddress": "Obala 75A, 6320 Portorož"
+  },
+  "contact": {
+    "phone": "+386 40 900 700",
+    "phoneHours": "ponedeljek-nedelja, 8:00 do 24:00 (GMT+02:00)",
+    "email": "online@777casino.si",
+    "liveChatHours": "vsak dan med 8:00 in 24:00",
+    "physicalReception": "recepcija Grand Casino Portorož, Obala 75A, 6320 Portorož",
+    "complaintsEmail": "online@777casino.si (ali po pošti: CASINO Portorož, d.d., Skapinova 2a, 1000 Ljubljana)",
+    "dataProtectionEmail": "dpo@casino.si"
+  },
+  "responsibleGamingHelp": [
+    {
+      "name": "Zdravstveni dom Nova Gorica, Center za bolezni odvisnosti",
+      "phone": "+386 5 33 83 265",
+      "website": "https://www.zd-go.si/sl/ambulante-in-sluzbe/center-za-zdravljenje-odvisnosti/"
+    },
+    {
+      "name": "Sprememba v srcu, Zavod za psihoterapijo Ljubljana",
+      "website": "http://www.spremembavsrcu.si"
+    },
+    {
+      "name": "Psihiatrična bolnišnica Idrija, Oddelek za nekemične odvisnosti",
+      "address": "Pot Sv. Antona 49, 5280 Idrija",
+      "phone": "+386 5 37 34 400",
+      "website": "https://pb-idrija.si/sl/oddelek-za-nekemicne-zasvojenosti-l2"
+    }
+  ],
+  "playerLimits": {
+    "deposit": {
+      "daily": "500 EUR",
+      "weekly": "3.000 EUR",
+      "monthly": "5.000 EUR",
+      "note": "Igralec lahko sam nastavi omejitve v profilu (Odgovorno igranje → Omejitve). Zmanjšanje omejitve velja takoj. Povečanje ali odstranitev učinkuje šele po 24 urah od zahteve. Omejitve so 'drseče' (rolling) — ne ponastavijo se na začetku obdobja, ampak po 1, 7 ali 30 dneh od posameznega pologa."
+    },
+    "temporaryBlock": ["24 ur", "7 dni", "1 mesec"],
+    "selfExclusion": {
+      "minDuration": "6 mesecev",
+      "maxDuration": "3 leta",
+      "irreversible": true,
+      "process": "Prijava → Profil → Odgovorno igranje → Samoprepoved → izbira obdobja v koledarju → potrditvena e-pošta z obrazcem regulatorja, ki ga je treba potrditi. Nepreklicna do izteka. Velja za posebne igre na srečo v Republiki Sloveniji (nacionalni register). Med samoprepovedjo igranje ni mogoče, dvig razpoložljivih sredstev pa je dovoljen."
+    },
+    "wageringRequirement": {
+      "deposit": "1× (vsi pologi so predmet 1-kratnega stavnega pogoja po AML politiki — pred dvigom morate staviti vsaj vplačani znesek)",
+      "bonus": "določen v pogojih posameznega bonusa — preverite v razdelku Moje ponudbe"
+    },
+    "maxOneActiveBonus": true,
+    "maxOneAccountPerPerson": true
+  },
+  "registration": {
+    "minAge": 18,
+    "ageVerification": "tehnična/programska preprečitev odprtja računa za osebe mlajše od 18 let",
+    "identityProvider": "iDenfy (iDenfy UAB, Barsausko 59, Kaunas, 51423, Litva)",
+    "biometricStorage": "AWS Irska (EU); biometrični podatki izbrisani do 10 minut po zaključeni verifikaciji",
+    "acceptedDocuments": ["osebna izkaznica", "biometrična osebna izkaznica", "potni list", "biometrični potni list", "kartično vozniško dovoljenje"],
+    "rejectedDocuments": ["staro papirnato vozniško dovoljenje"],
+    "requiredData": ["ime in priimek", "datum rojstva", "državljanstvo", "spol", "naslov, mesto in poštna številka stalnega prebivališča", "telefonska številka", "naslov elektronske pošte", "EMŠO številka", "uporabniško ime", "geslo", "vrsta osebnega dokumenta", "kraj rojstva", "izjava o politični izpostavljenosti (PEP)"],
+    "biometricVerification": "fotografija obraza (Face ID); skladno z ZVOP-2 83. člen in GDPR 9(2)(a)",
+    "alternativeMethod": "osebno na recepciji Grand Casino Portorož, Obala 75A, 6320 Portorož",
+    "oneAccountPerPerson": "preverjanje preko EMŠO — en igralec, en račun",
+    "geoRestriction": "dostop in igranje dovoljena samo z ozemlja Republike Slovenije (geo-blokada tujih IP naslovov)",
+    "playBeforeVerification": "Do zaključene verifikacije igranje za denar ter vplačila in izplačila niso mogoči.",
+    "verificationStatuses": {
+      "IDVERIFIED": "račun popolnoma verificiran, polna funkcionalnost",
+      "PEPBLOCKED": "politično izpostavljena oseba, potrebna dodatna preverba",
+      "BLOCKED": "začasna varnostna blokada (npr. 3× napačno geslo)",
+      "TIME_OUT": "uporabnik je sam zaprl račun za določen čas",
+      "SELF_EXCLUSION": "samoprepoved 6 mesecev do 3 let",
+      "KYC_REGULATION": "potekel veljaven dokument, potrebna ponovna verifikacija",
+      "REVERIFIED": "uporabnik je spremenil podatke (npr. ob poroki), potrebna ponovna verifikacija",
+      "CLOSED": "trajno zaprt račun; ponovna aktivacija samo z novim postopkom registracije"
+    }
+  },
+  "legalBasis": [
+    "Zakon o igrah na srečo (UL RS št. 14/11, 108/12, 40/14)",
+    "Pravilnik o prirejanju iger na srečo preko interneta (UL RS št. 42/08, 103/08, 109/12, 113/23)",
+    "Zakon o preprečevanju pranja denarja in financiranja terorizma (ZPPDFT-2, UL RS št. 48/22, 145/22, 17/25)",
+    "Splošna uredba o varstvu podatkov (GDPR) in ZVOP-2 (UL RS št. 163/22, 40/25)",
+    "Koncesijska pogodba št. 471-26-98 z dne 05.07.1999 za igralnico Grand Casino Portorož s pripadajočimi aneksi (Aneks št. 20, 14.01.2026 — spletne igre)"
+  ],
+  "facts": {
+    "fundsAllocation": "Denarna sredstva od iger na srečo so namenjena financiranju invalidskih, humanitarnih in športnih organizacij v Republiki Sloveniji.",
+    "courtJurisdiction": "V sporih med igralcem (potrošnikom) in koncesionarjem je krajevno pristojno sodišče, na območju katerega ima igralec stalno ali začasno prebivališče (51.a člen ZPP). Tožeča stranka igralec ima alternativno možnost vložitve tožbe pri sodišču splošne krajevne pristojnosti (sedež koncesionarja).",
+    "selfExclusionRegistry": "Igralci se preverjajo glede uvrstitve na nacionalni seznam oseb s samoprepovedjo; evidenca se dnevno posreduje nadzornemu organu.",
+    "complaintsHandling": "Pritožba na online@777casino.si ali po pošti (Skapinova 2a, 1000 Ljubljana); rok za vložitev 5 dni od dogodka/napake; odločitev najkasneje v 14 dneh.",
+    "dataRetention": "Podatki o igralnem računu in transakcijah 10 let (ZPPDFT-2). Drugi osebni podatki praviloma do 5 let po prenehanju razmerja.",
+    "dataCenter": "Equinix Sofija (Bolgarija); platforma EGT Digital; certifikati ISO 9001:2015, ISO/IEC 27001:2013, ISO 22301:2019",
+    "currency": "EUR (transakcije v drugih valutah možne s konverzijo banke uporabnika)",
+    "mobileApp": "Mobilne aplikacije ni; stran je popolnoma prilagojena mobilnim brskalnikom.",
+    "languages": "Vmesnik je na voljo v slovenščini in angleščini (nastavitev v razdelku Nastavitve).",
+    "gameHistory": "Statistika igranja in zgodovina sta na voljo za najmanj 90 dni.",
+    "inactiveAccount": "Račun brez prijave 12 zaporednih mesecev se zapre (obvestilo po 11 mesecih), sredstva se nakažejo v 10 dneh.",
+    "payoutDeadline": "Dobitki se nakažejo predvidoma najkasneje v 10 dneh (dodatnih 5 dni, če je potrebno preverjanje pri ponudniku programske opreme).",
+    "languagePrecedence": "Pri razlikah med jezikovnimi različicami pravil bonusov prevlada ANGLEŠKA različica; pri splošnih pravnih dokumentih slovenska."
+  },
+  "dataProcessing": {
+    "controller": "CASINO PORTOROŽ, d.d.",
+    "kycProcessor": "iDenfy UAB (Litva)",
+    "userRights": ["dostop", "popravek", "izbris", "omejitev obdelave", "prenosljivost", "ugovor", "preklic privolitve"],
+    "supervisor": "Informacijski pooblaščenec RS (https://www.ip-rs.si)",
+    "responseTime": "najkasneje v 1 mesecu od prejema zahteve"
+  },
+  "paymentMethods": {
+    "note": "Aktualni seznam podprtih plačilnih metod na 777casino.si. Ponudba se občasno spreminja — uporabnik naj točen trenutni seznam preveri po prijavi v razdelku Banka → Vplačilo / Izplačilo.",
+    "deposits": [
+      { "method": "Flik", "min": "5 €", "max": "brez omejitve", "time": "instantno", "fee": "brez provizije" },
+      { "method": "Aircash", "min": "5 €", "max": "1.000 €", "time": "instantno", "fee": "5,75 %" },
+      { "method": "Abon", "min": "5 €", "max": "50 €", "time": "instantno", "fee": "5,8 %" },
+      { "method": "Paysafecard", "min": "5 €", "max": "brez omejitve", "time": "instantno", "fee": "9 %" },
+      { "method": "Neteller", "min": "5 €", "max": "brez omejitve", "time": "instantno", "fee": "brez provizije" },
+      { "method": "Skrill", "min": "5 €", "max": "brez omejitve", "time": "instantno", "fee": "brez provizije" },
+      { "method": "Kreditna kartica", "min": "5 €", "max": "brez omejitve", "time": "instantno", "fee": "brez provizije" },
+      { "method": "Apple Pay", "min": "5 €", "max": "brez omejitve", "time": "instantno", "fee": "brez provizije" },
+      { "method": "Fliqua", "min": "5 €", "max": "brez omejitve", "time": "instantno", "fee": "brez provizije" },
+      { "method": "VALÚ", "min": "5 €", "max": "brez omejitve", "time": "instantno", "fee": "brez provizije" },
+      { "method": "Marketplace", "min": "5 €", "max": "1.000 €", "time": "instantno", "fee": "brez provizije" },
+      { "method": "Kripto", "min": "10 €", "max": "brez omejitve", "time": "odvisno od omrežja", "fee": "brez provizije" }
+    ],
+    "withdrawals": [
+      { "method": "Flik", "min": "10 €", "time": "instantno" },
+      { "method": "Aircash", "min": "10 €", "time": "instantno" },
+      { "method": "Skrill", "min": "10 €", "time": "instantno" },
+      { "method": "Neteller", "min": "10 €", "time": "instantno" },
+      { "method": "Paysafecard", "min": "10 €", "time": "instantno" },
+      { "method": "Kreditna kartica", "min": "10 €", "time": "1–3 delovni dnevi" },
+      { "method": "Apple Pay", "min": "10 €", "time": "1–3 delovni dnevi" },
+      { "method": "Bančno nakazilo", "min": "5 €", "time": "1–3 delovni dnevi" },
+      { "method": "Kripto", "min": "25 €", "time": "odvisno od omrežja" }
+    ],
+    "rules": {
+      "currency": "EUR (vsa vplačila in izplačila)",
+      "withdrawalMethodMustMatchDeposit": "Dvigi so dovoljeni samo na e-denarnice ali bančne kartice, s katerimi je bil opravljen vsaj en predhodni polog.",
+      "thirdPartyPayment": "Plačilna sredstva morajo biti vaša osebna. Plačila s kartico družinskega člana ali tretje osebe niso dovoljena.",
+      "withdrawalApproval": "Vsi zahtevki za izplačilo so predmet predhodne odobritve s strani 777casino.si.",
+      "withdrawalCancel": "Dokler je dvig 'v obdelavi', ga lahko prekličete v razdelku Banka → Dvig sredstev; znesek se takoj vrne na stanje računa.",
+      "fees": "Provizije obračunajo ponudniki plačil (Aircash 5,75 %, Abon 5,8 %, Paysafecard 9 %); banka uporabnika lahko obračuna konverzijo valute."
+    }
+  },
+  "gameProviders": ["Amusnet", "BF Games", "EGT Digital", "ELK Studios", "Greentube", "Play'N GO", "Wazdan"],
+  "gameCategories": ["Lobby", "Popularne igre", "Bell Link", "Clover Chance Jackpot", "Nove igre", "Top igre", "Bonus Nakup", "Progressive Jackpots"],
+  "gameInfoLink": "777casino.si → Pomoč in vprašanja → Informacije o igrah",
+  "helpLinks": {
+    "faq": "https://777casino.si/help/faq",
+    "termsAndConditions": "https://777casino.si/help/termsandconditions",
+    "privacyPolicy": "https://777casino.si/help/privacy-policy",
+    "cookiePolicy": "https://777casino.si/help/cookie-policy",
+    "legalNotices": "https://777casino.si/help/legal-notices",
+    "responsibleGambling": "https://777casino.si/help/responsible-gambling",
+    "selfExclusion": "https://777casino.si/help/selfexclusion",
+    "findHelp": "https://777casino.si/help/findhelp",
+    "contactUs": "https://777casino.si/help/contact-us",
+    "companyCredentials": "https://777casino.si/help/company-credentials",
+    "gameInformation": "https://777casino.si/help/gameinformation",
+    "registration": "https://777casino.si/help/registration",
+    "payments": "https://777casino.si/help/payments",
+    "bonusRules": "https://777casino.si/help/bonusrules"
+  },
+  "bonuses": {
+    "generalRules": [
+      "Bonusi so na voljo samo registriranim igralcem s stalnim prebivališčem v Sloveniji, 18+.",
+      "En bonus na osebo, gospodinjstvo, IP naslov, e-naslov, številko kartice in napravo.",
+      "Minimalni polog za pridobitev bonusa je 25 €, če ni drugače navedeno.",
+      "Največja stava z bonus sredstvi: 5 € na vrtljaj.",
+      "Bonusi potečejo 7 dni po aktivaciji, če ni drugače navedeno.",
+      "Pri igranju se najprej črpa realni denar, nato bonusni.",
+      "Pogoji stavljenja se izpolnijo samo z igralnimi avtomati; igre v živo, namizne igre, rulete in scratch cards ne štejejo.",
+      "Ob aktivnem bonusu je igranje omejeno na igralne avtomate.",
+      "Preklic bonusa pred izpolnitvijo pogojev odstrani bonus sredstva in povezane dobitke.",
+      "Znesek nad največjim dovoljenim izplačilom se prekliče ob odobritvi izplačila."
+    ],
+    "verified": {
+      "registracija": "25 brezplačnih vrtljajev ob registraciji (0,10 €/vrtljaj), brez pologa, na vnaprej določenih igrah; dobitki omejeni na 20 € in se knjižijo kot bonus sredstva; bonus poteče po 24 urah, če ni uporabljen.",
+      "dobrodoslica": "Paket dobrodošlice: 100 % prvega pologa do 50 € (minimalni polog 10 €; polog je treba v celoti obrniti enkrat isti dan do polnoči, samo na slot igrah). Aktivacija v razdelku Moje ponudbe.",
+      "rojstnodnevni": "Rojstnodnevni bonus (dvodelni): 30 brezplačnih vrtljajev (0,10 €/vrtljaj) brez pogojev stavljenja, dobitki kot realni denar, veljavnost 24 ur; ter depozitni bonus 25 % do 200 € ob minimalnem pologu 25 €. Račun mora biti verificiran in aktiven.",
+      "povabiPrijatelja": "Povabi prijatelja: ko se povabljeni registrira in vplača najmanj 25 €, oba prejmeta po 50 brezplačnih vrtljajev (0,10 €/vrtljaj) brez pogojev stavljenja; dobitki se knjižijo kot realni denar, vrtljaji potečejo po 24 urah."
+    },
+    "activation": "Bonusi se aktivirajo z vnosom bonus kode ob pologu ali v razdelku Moje ponudbe v profilu (ikona profila → Moje ponudbe). Napredek pri pogojih stavljenja se spremlja v Moje ponudbe."
+  }
+}

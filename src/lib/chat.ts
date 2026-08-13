@@ -2,6 +2,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { getSupabase } from "@/lib/supabase";
 import { baseSystemPrompt, buildTimeContext } from "@/lib/system-prompt";
 import { supercasinoSystemPrompt } from "@/lib/system-prompt-supercasino";
+import { casino777SystemPrompt } from "@/lib/system-prompt-777";
 import { getActiveKnowledgeSection } from "@/lib/knowledge";
 import { DEFAULT_TENANT, isTenantId, type TenantId } from "@/lib/tenants";
 
@@ -107,7 +108,9 @@ function saveReplyToMemory(sid: string, reply: string) {
 }
 
 function systemPromptFor(tenant: TenantId): string {
-  return tenant === "supercasino" ? supercasinoSystemPrompt : baseSystemPrompt;
+  if (tenant === "supercasino") return supercasinoSystemPrompt;
+  if (tenant === "casino777") return casino777SystemPrompt;
+  return baseSystemPrompt;
 }
 
 /** Returns the tenant a stored conversation belongs to, or null if unknown. */

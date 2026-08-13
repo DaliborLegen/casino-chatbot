@@ -5,13 +5,13 @@ import { MAX_MESSAGE_LENGTH } from "@/lib/limits";
 import { isSessionRateLimited } from "@/lib/rate-limit";
 import { isTenantId, type TenantId } from "@/lib/tenants";
 
-// Tenants with a live bot (system prompt + knowledge base). casino777 joins
-// once its prompt is built.
-const BOT_TENANTS: TenantId[] = ["casino", "supercasino"];
+// Tenants with a live bot (system prompt + knowledge base).
+const BOT_TENANTS: TenantId[] = ["casino", "supercasino", "casino777"];
 
 const SUPPORT_EMAIL: Record<string, string> = {
   casino: "online@casino.si",
   supercasino: "online@supercasino.si",
+  casino777: "online@777casino.si",
 };
 
 export async function POST(req: NextRequest) {
