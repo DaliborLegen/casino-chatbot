@@ -59,6 +59,7 @@ export async function POST(req: NextRequest) {
     rawInput,
     specialInstructions: (payload.specialInstructions || "").trim() || undefined,
     submittedBy: basicAuthUser(req) || undefined,
+    expiresAt: endOfDayInSupportZone(payload.expiresOn),
   };
 
   try {
