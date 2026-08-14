@@ -170,6 +170,7 @@ async function loadConversations(
       last_assistant: lastAssistant.get(c.id) || null,
     }))
     .filter((r) => r.message_count > 0)
+    .filter((r) => !filters.source || sourceOf(r.session_id) === filters.source)
     .slice(0, limit);
 }
 
