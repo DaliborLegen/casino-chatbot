@@ -258,18 +258,21 @@ export async function generateReply(
     output_tokens: response.usage.output_tokens,
   });
 
+  // An empty completion used to be stored and sent as nothing at all; the guest
+  // saw silence. Fall back to the same message as an outright failure.
   if (!reply) {
     console.error("Empty Claude reply", {
       stop_reason: response.stop_reason,
       content_types: response.content.map((b) => b.type),
     });
   }
+  const finalReply = reply || fallbackReply(tenant);
 
   if (useSupabase) {
-    await saveReplyToSupabase(sessionId, reply);
+    await saveReplyToSupabase(sessionId, finalReply);
   } else {
-    saveReplyToMemory(sessionId, reply);
+    saveReplyToMemory(sessionId, finalReply);
   }
 
-  return reply;
+  return finalReply;
 }
