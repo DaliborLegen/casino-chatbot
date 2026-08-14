@@ -175,7 +175,7 @@ async function handleUserMessage(cfg: ZendeskConfig, event: ZendeskEvent): Promi
     // generateReply handles Claude failures itself, so this is the store failing.
     // Outside support hours nobody else answers, so still say something.
     console.error("Zendesk reply generation error:", err);
-    reply = fallbackReply(tenant());
+    reply = fallbackReply(tenant);
   }
   if (!reply) return;
 
