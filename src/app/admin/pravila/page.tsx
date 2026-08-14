@@ -1,4 +1,4 @@
-import { listEntries, type KnowledgeEntry } from "@/lib/knowledge";
+import { isExpired, listEntries, type KnowledgeEntry } from "@/lib/knowledge";
 import { getAdminTenant } from "@/lib/admin-tenant";
 import SubmitForm from "./SubmitForm";
 import DecideButtons from "./DecideButtons";
