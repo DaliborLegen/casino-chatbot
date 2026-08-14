@@ -5,6 +5,7 @@ import { isSessionRateLimited } from "@/lib/rate-limit";
 import { isSupportOpen } from "@/lib/support-hours";
 import { isTenantId, type TenantId } from "@/lib/tenants";
 import {
+  describeSignatureHeaders,
   getActiveSwitchboardId,
   getZendeskConfig,
   passControlToAgent,
