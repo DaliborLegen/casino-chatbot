@@ -152,8 +152,26 @@ export default async function PravilaPage() {
           emptyText="Še ni aktivnih dinamičnih vnosov. Jedrna pravila in FAQ ostajajo v kodi."
         />
 
+        {expired.length > 0 && (
+          <Section
+            title="Poteklo"
+            hint="rok veljavnosti je mimo, bot tega ne uporablja več"
+            entries={expired}
+            emptyText="Nič poteklega."
+          />
+        )}
+
+        {inactive.length > 0 && (
+          <Section
+            title="Izklopljeno"
+            hint="ročno izklopljeno, lahko se vklopi nazaj"
+            entries={inactive}
+            emptyText="Nič izklopljenega."
+          />
+        )}
+
         {rejected.length > 0 && (
-          <Section title="Zavrnjeno" entries={rejected} emptyText="—" />
+          <Section title="Zavrnjeno" entries={rejected} emptyText="brez" />
         )}
       </div>
     </div>
