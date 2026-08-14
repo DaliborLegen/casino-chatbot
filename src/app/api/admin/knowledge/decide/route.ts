@@ -26,7 +26,8 @@ export async function POST(req: NextRequest) {
 
   const id = (payload.id || "").trim();
   const action = payload.action;
-  if (!id || (action !== "approve" && action !== "reject")) {
+  const ACTIONS = ["approve", "reject", "deactivate", "activate"];
+  if (!id || !action || !ACTIONS.includes(action)) {
     return NextResponse.json({ error: "Manjka id ali veljavna akcija." }, { status: 400 });
   }
 
