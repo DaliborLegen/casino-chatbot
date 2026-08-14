@@ -40,20 +40,46 @@ async function zendeskFetch(
   path: string,
   init: { method: "GET" | "POST"; body?: unknown }
 ): Promise<unknown> {
-  const res = await fetch(`${apiBase(cfg)}${path}`, {
-    method: init.method,
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: authHeader(cfg),
-    },
-    body: init.body === undefined ? undefined : JSON.stringify(init.body),
-  });
+  // One retry on a transient failure: a dropped passControl would leave the
+  // guest waiting for an agent who never gets the conversation. Both calls we
+  // make are safe to repeat (passControl to the same target is idempotent in
+  // effect, and a duplicate is rejected rather than doubling anything).
+  let lastError: Error | null = null;
 
-  const text = await res.text();
-  if (!res.ok) {
-    throw new Error(`Zendesk API ${init.method} ${path} failed: ${res.status} ${text}`);
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    let res: Response;
+    try {
+      res = await fetch(`${apiBase(cfg)}${path}`, {
+        method: init.method,
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: authHeader(cfg),
+        },
+        body: init.body === undefined ? undefined : JSON.stringify(init.body),
+      });
+    } catch (err) {
+      lastError = err instanceof Error ? err : new Error(String(err));
+      if (attempt === 1) {
+        await new Promise((r) => setTimeout(r, 700));
+        continue;
+      }
+      throw lastError;
+    }
+
+    const text = await res.text();
+    if (res.ok) return text ? JSON.parse(text) : {};
+
+    lastError = new Error(`Zendesk API ${init.method} ${path} failed: ${res.status} ${text}`);
+    const transient = res.status === 429 || res.status >= 500;
+    if (attempt === 1 && transient) {
+      console.warn("Zendesk API transient failure, retrying", { path, status: res.status });
+      await new Promise((r) => setTimeout(r, 700));
+      continue;
+    }
+    throw lastError;
   }
-  return text ? JSON.parse(text) : {};
+
+  throw lastError ?? new Error(`Zendesk API ${init.method} ${path} failed`);
 }
 
 /** Posts a bot reply into the conversation. */
