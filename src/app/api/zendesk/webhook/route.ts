@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { ensureConversation, generateReply } from "@/lib/chat";
+import { ensureConversation, fallbackReply, generateReply } from "@/lib/chat";
 import { MAX_MESSAGE_LENGTH } from "@/lib/limits";
 import { isSessionRateLimited } from "@/lib/rate-limit";
 import { isSupportOpen } from "@/lib/support-hours";
