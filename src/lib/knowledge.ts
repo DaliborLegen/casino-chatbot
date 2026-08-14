@@ -116,6 +116,7 @@ export async function insertPending(
       raw_input: input.rawInput.trim(),
       status: "pending",
       submitted_by: input.submittedBy || null,
+      expires_at: input.expiresAt || null,
     })
     .select("*")
     .single();
