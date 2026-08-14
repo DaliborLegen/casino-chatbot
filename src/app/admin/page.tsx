@@ -363,13 +363,20 @@ export default async function AdminPage({
             );
           })}
           {rows.length === 0 && (
-            <div className="px-4 py-6 text-center text-zinc-500">Ni pogovorov.</div>
+            <div className="px-4 py-6 text-center text-zinc-500">
+              {filtered ? "Ni pogovorov, ki bi ustrezali filtru." : "Ni pogovorov."}
+            </div>
           )}
         </div>
 
         <div className="mt-4 text-xs text-zinc-500">
           <Link
-            href={`?limit=${Math.min(limit + 100, 500)}`}
+            href={`?${new URLSearchParams({
+              limit: String(Math.min(limit + 100, 500)),
+              ...(filters.q ? { q: filters.q } : {}),
+              ...(filters.source ? { vir: filters.source } : {}),
+              ...(filters.days ? { dni: String(filters.days) } : {}),
+            })}`}
             className="underline hover:text-zinc-300"
           >
             Naloži več (max 500)
