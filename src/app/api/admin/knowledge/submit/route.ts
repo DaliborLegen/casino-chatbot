@@ -6,6 +6,7 @@ import {
   type SubmissionInput,
 } from "@/lib/knowledge";
 import { sendApprovalEmail } from "@/lib/email-knowledge";
+import { endOfDayInSupportZone } from "@/lib/support-hours";
 import { getTenant, TENANT_COOKIE } from "@/lib/tenants";
 
 export const runtime = "nodejs";
