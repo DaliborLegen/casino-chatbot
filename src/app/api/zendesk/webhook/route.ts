@@ -69,6 +69,8 @@ interface ZendeskEvent {
       _id?: string;
       author?: { type?: string };
       content?: { type?: string; text?: string };
+      /** Which channel integration the message came in through (one per brand). */
+      source?: { type?: string; integrationId?: string };
     };
   };
 }
