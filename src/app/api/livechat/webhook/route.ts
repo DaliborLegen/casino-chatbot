@@ -141,28 +141,28 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true, ignored: "rate-limit" });
   }
 
+  let tenant: TenantId = "casino";
+  let reply: string;
   try {
-    const tenant = (await getConversationTenant(sessionId)) ?? "casino";
-    const reply = await generateReply(sessionId, event.text, tenant);
+    tenant = (await getConversationTenant(sessionId)) ?? "casino";
+    reply = await generateReply(sessionId, event.text, tenant);
+  } catch (err) {
+    // generateReply already handles Claude failures itself, so this is the store
+    // failing. At night nobody else answers the guest, so send the fallback
+    // rather than leaving the chat silent.
+    console.error("LiveChat reply generation error:", err);
+    reply = fallbackReply(tenant);
+  }
+
+  try {
     if (reply) {
       await sendTextMessage({ chat_id: chatId, text: reply, bot_agent_id: botAgentId });
     }
   } catch (err) {
     // Logged for visibility, but still ACK so LiveChat doesn't retry-storm the
-    // webhook on a transient Claude/LiveChat failure (which would trip the 5xx alarm).
-    console.error("LiveChat webhook processing error:", err);
-    // generateReply already falls back on Claude failures; getting here means the
-    // store failed. At night nobody else answers, so still say something.
-    try {
-      const tenant = (await getConversationTenant(sessionId)) ?? "casino";
-      await sendTextMessage({
-        chat_id: chatId,
-        text: fallbackReply(tenant),
-        bot_agent_id: botAgentId,
-      });
-    } catch (sendErr) {
-      console.error("LiveChat fallback send failed:", sendErr);
-    }
+    // webhook on a transient failure (which would trip the 5xx alarm). Expected
+    // during the day, when a human agent owns the chat and the bot isn't a member.
+    console.error("LiveChat webhook send error:", err);
     return NextResponse.json({ ok: true, skipped: "processing-failed" });
   }
 
