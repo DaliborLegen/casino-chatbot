@@ -42,6 +42,7 @@ export const TENANTS: Record<TenantId, Tenant> = {
     shortName: "Casino.si",
     siteUrl: "https://casino.si",
     logoUrl: "https://cnsicdn.kubdev.com/common-content/brand/app-logo--desktop.svg",
+    supportEmail: "online@casino.si",
     theme: {
       headerGradient: "linear-gradient(90deg, #aa0000 0%, #ff0000 50%, #aa0000 100%)",
       accent: "#ff0000",
