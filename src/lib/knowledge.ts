@@ -216,6 +216,8 @@ export async function getActiveKnowledgeSection(tenant: TenantId = DEFAULT_TENAN
       .select("*")
       .eq("status", "active")
       .eq("tenant", tenant)
+      // An expired promo stays visible in the dashboard but the bot stops using it.
+      .or(`expires_at.is.null,expires_at.gt.${new Date().toISOString()}`)
       .order("created_at", { ascending: true });
     if (error) {
       console.error("Knowledge active query failed:", error.message);
