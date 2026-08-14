@@ -76,6 +76,32 @@ export function localTime(now: Date = new Date()): LocalTime {
   };
 }
 
+/** UTC offset of the support timezone at a given instant, in minutes. */
+function zoneOffsetMinutes(at: Date): number {
+  const timeZone = process.env.SUPPORT_TIMEZONE || DEFAULT_TIMEZONE;
+  const name = new Intl.DateTimeFormat("en-US", { timeZone, timeZoneName: "longOffset" })
+    .formatToParts(at)
+    .find((p) => p.type === "timeZoneName")?.value;
+  const m = name ? /GMT([+-])(\d{2}):(\d{2})/.exec(name) : null;
+  if (!m) return 0;
+  return (m[1] === "-" ? -1 : 1) * (Number(m[2]) * 60 + Number(m[3]));
+}
+
+/**
+ * "2026-08-20" -> ISO instant for that day's 23:59:59.999 local time, so an end
+ * date entered in the dashboard means "valid through that whole day here".
+ * Returns null for empty or malformed input.
+ */
+export function endOfDayInSupportZone(dateStr?: string | null): string | null {
+  const m = dateStr ? /^(\d{4})-(\d{2})-(\d{2})$/.exec(dateStr.trim()) : null;
+  if (!m) return null;
+  const [, y, mo, d] = m;
+  // Probe at midday so a DST switch (which happens at night) can't flip the offset.
+  const offset = zoneOffsetMinutes(new Date(`${y}-${mo}-${d}T12:00:00Z`));
+  const utcMs = Date.UTC(Number(y), Number(mo) - 1, Number(d), 23, 59, 59, 999) - offset * 60_000;
+  return new Date(utcMs).toISOString();
+}
+
 /** True when human agents are on duty (default 08:00–24:00, every day). */
 export function isSupportOpen(now: Date = new Date()): boolean {
   const { hour, date, weekday } = localTime(now);
