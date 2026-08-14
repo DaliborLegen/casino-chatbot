@@ -49,7 +49,7 @@ export async function POST(req: NextRequest) {
     console.error("Chat API error:", err);
     return NextResponse.json(
       {
-        error: `Prišlo je do napake. Prosimo, poskusite znova ali nas kontaktirajte na ${SUPPORT_EMAIL[tenant] || "online@casino.si"}.`,
+        error: `Prišlo je do napake. Prosimo, poskusite znova ali nas kontaktirajte na ${getTenant(tenant).supportEmail}.`,
       },
       { status: 500 }
     );
