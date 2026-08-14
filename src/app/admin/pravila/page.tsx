@@ -53,11 +53,24 @@ function EntryCard({ entry }: { entry: KnowledgeEntry }) {
             {entry.submitted_by ? `Vnesel ${entry.submitted_by} · ` : ""}
             {fmt(entry.created_at)}
             {entry.decided_at ? ` · obravnavano ${fmt(entry.decided_at)}${entry.decided_by ? ` (${entry.decided_by})` : ""}` : ""}
+            {entry.expires_at
+              ? ` · ${isExpired(entry) ? "poteklo" : "velja do"} ${fmtDay(entry.expires_at)}`
+              : ""}
           </div>
         </div>
         {entry.status === "pending" && (
           <div className="shrink-0 w-28">
             <DecideButtons id={entry.id} />
+          </div>
+        )}
+        {entry.status === "active" && (
+          <div className="shrink-0 w-28">
+            <DecideButtons id={entry.id} actions={["deactivate"]} />
+          </div>
+        )}
+        {entry.status === "inactive" && (
+          <div className="shrink-0 w-28">
+            <DecideButtons id={entry.id} actions={["activate"]} />
           </div>
         )}
       </div>
