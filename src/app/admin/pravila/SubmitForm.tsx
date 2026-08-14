@@ -15,6 +15,7 @@ export default function SubmitForm() {
   const [title, setTitle] = useState("");
   const [rawInput, setRawInput] = useState("");
   const [special, setSpecial] = useState("");
+  const [expiresOn, setExpiresOn] = useState("");
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState<{ kind: "ok" | "err"; text: string } | null>(null);
 
