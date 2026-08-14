@@ -120,9 +120,8 @@ const RETRY_DEADLINE_MS = 15_000;
 const RETRY_STATUSES = new Set([408, 409, 429, 500, 502, 503, 504, 529]);
 
 function isRetryable(err: unknown): boolean {
-  if (err instanceof Anthropic.APIConnectionError || err instanceof Anthropic.APIConnectionTimeoutError) {
-    return true;
-  }
+  // Covers timeouts too (APIConnectionTimeoutError extends APIConnectionError).
+  if (err instanceof Anthropic.APIConnectionError) return true;
   if (err instanceof Anthropic.APIError && typeof err.status === "number") {
     return RETRY_STATUSES.has(err.status);
   }
