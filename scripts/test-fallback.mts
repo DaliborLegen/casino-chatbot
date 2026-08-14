@@ -1,6 +1,6 @@
 // Test za retry + fallback v src/lib/chat.ts.
 // Zažene lažen Anthropic strežnik in preusmeri SDK nanj prek ANTHROPIC_BASE_URL.
-// Zagon: npx tsx test-fallback.mts
+// Zagon: npx tsx scripts/test-fallback.mts
 import http from "node:http";
 
 type Mode = "ok" | "529-then-ok" | "always-529" | "400" | "empty";
