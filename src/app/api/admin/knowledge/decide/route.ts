@@ -45,8 +45,23 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  const by = basicAuthUser(req) || "admin";
+
+  // Switching a live entry off (or back on) is a different transition than
+  // approving a pending one, so it has its own guard.
+  if (action === "deactivate" || action === "activate") {
+    const updated = await setEntryActive(id, action === "activate", by);
+    if (!updated) {
+      return NextResponse.json(
+        { error: "Vnos ni v pravem stanju za to dejanje." },
+        { status: 409 }
+      );
+    }
+    return NextResponse.json({ ok: true, status: updated.status });
+  }
+
   const status = action === "approve" ? "active" : "rejected";
-  const { entry, alreadyDecided } = await decideEntry(id, status, basicAuthUser(req) || "admin");
+  const { entry, alreadyDecided } = await decideEntry(id, status, by);
 
   if (!entry) {
     return NextResponse.json({ error: "Vnos ne obstaja." }, { status: 404 });
