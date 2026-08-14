@@ -171,6 +171,37 @@ export async function decideEntry(
   return { entry: data as KnowledgeEntry, alreadyDecided: false };
 }
 
+/** True when the entry has an end date that has already passed. */
+export function isExpired(entry: KnowledgeEntry, now: Date = new Date()): boolean {
+  return !!entry.expires_at && new Date(entry.expires_at) <= now;
+}
+
+/**
+ * Switches a live entry off (or a switched-off one back on). Approval moves
+ * pending -> active; this is the other direction, for promos that ended or
+ * rules that were superseded.
+ */
+export async function setEntryActive(
+  id: string,
+  active: boolean,
+  decidedBy: string
+): Promise<KnowledgeEntry | null> {
+  const supabase = getSupabase();
+  const from: KnowledgeStatus = active ? "inactive" : "active";
+  const to: KnowledgeStatus = active ? "active" : "inactive";
+  const { data } = await supabase
+    .from("bot_knowledge")
+    .update({ status: to, decided_at: new Date().toISOString(), decided_by: decidedBy })
+    .eq("id", id)
+    .eq("status", from)
+    .select("*")
+    .single();
+
+  if (!data) return null;
+  invalidateActiveCache();
+  return data as KnowledgeEntry;
+}
+
 // ---------------------------------------------------------------------------
 // Runtime injection into the bot prompt — only 'active' entries.
 // Cached in-memory per serverless instance with a short TTL to avoid a DB hit
