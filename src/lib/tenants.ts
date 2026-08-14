@@ -60,6 +60,7 @@ export const TENANTS: Record<TenantId, Tenant> = {
     shortName: "SuperCasino",
     siteUrl: "https://supercasino.si",
     logoUrl: "https://spsicdn.kubdev.com/common-content/brand/app-logo--desktop.svg",
+    supportEmail: "online@supercasino.si",
     theme: {
       headerGradient: "linear-gradient(90deg, #0645ad 0%, #0d63e8 50%, #0645ad 100%)",
       accent: "#0d63e8",
