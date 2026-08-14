@@ -151,25 +151,32 @@ async function createMessageWithRetry(
   params: Anthropic.MessageCreateParamsNonStreaming
 ): Promise<Anthropic.Message> {
   const startedAt = Date.now();
+  const remaining = () => TOTAL_BUDGET_MS - (Date.now() - startedAt);
   let lastError: unknown;
 
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
     try {
-      return await client.messages.create(params);
+      // Per-attempt timeout comes out of the shared budget, so a slow first
+      // attempt can't push a retry past the function's own deadline.
+      return await client.messages.create(params, {
+        timeout: Math.min(ATTEMPT_TIMEOUT_MS, Math.max(remaining(), 1_000)),
+      });
     } catch (err) {
       lastError = err;
-      const elapsed = Date.now() - startedAt;
+      const backoff = attempt * 800;
       const canRetry =
-        attempt < MAX_ATTEMPTS && isRetryable(err) && elapsed < RETRY_DEADLINE_MS;
+        attempt < MAX_ATTEMPTS &&
+        isRetryable(err) &&
+        remaining() - backoff > MIN_RETRY_BUDGET_MS;
       console.error("Claude call failed", {
         attempt,
-        elapsed,
+        elapsedMs: Date.now() - startedAt,
         retrying: canRetry,
         status: err instanceof Anthropic.APIError ? err.status : undefined,
         message: err instanceof Error ? err.message : String(err),
       });
       if (!canRetry) break;
-      await sleep(attempt * 800);
+      await sleep(backoff);
     }
   }
 
