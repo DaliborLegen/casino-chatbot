@@ -187,8 +187,19 @@ function fmt(d: string) {
 
 function source(sid: string) {
   if (sid.startsWith("lc_")) return { label: "LiveChat", cls: "bg-emerald-900/40 text-emerald-300" };
+  if (sid.startsWith("zd_")) return { label: "Zendesk", cls: "bg-violet-900/40 text-violet-300" };
   if (sid.startsWith("smoke-test-")) return { label: "Smoke", cls: "bg-zinc-700 text-zinc-300" };
   return { label: "Widget", cls: "bg-sky-900/40 text-sky-300" };
+}
+
+function StatTile({ label, value, hint }: { label: string; value: string; hint?: string }) {
+  return (
+    <div className="rounded-lg border border-zinc-800 bg-zinc-900/30 px-4 py-3">
+      <div className="text-xs uppercase tracking-wide text-zinc-500">{label}</div>
+      <div className="mt-1 text-xl font-semibold text-zinc-100">{value}</div>
+      {hint && <div className="text-xs text-zinc-600">{hint}</div>}
+    </div>
+  );
 }
 
 function truncate(s: string | null, n: number) {
