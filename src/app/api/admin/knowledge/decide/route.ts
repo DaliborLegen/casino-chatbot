@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { decideEntry, getById } from "@/lib/knowledge";
+import { decideEntry, getById, setEntryActive } from "@/lib/knowledge";
 import { getTenant, TENANT_COOKIE } from "@/lib/tenants";
 
 export const runtime = "nodejs";
