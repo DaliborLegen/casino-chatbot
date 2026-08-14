@@ -4,7 +4,7 @@ import { baseSystemPrompt, buildTimeContext } from "@/lib/system-prompt";
 import { supercasinoSystemPrompt } from "@/lib/system-prompt-supercasino";
 import { casino777SystemPrompt } from "@/lib/system-prompt-777";
 import { getActiveKnowledgeSection } from "@/lib/knowledge";
-import { DEFAULT_TENANT, isTenantId, type TenantId } from "@/lib/tenants";
+import { DEFAULT_TENANT, getTenant, isTenantId, type TenantId } from "@/lib/tenants";
 
 export interface StoredMessage {
   role: "user" | "assistant";
