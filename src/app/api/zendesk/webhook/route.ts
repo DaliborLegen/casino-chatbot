@@ -164,8 +164,13 @@ export async function POST(req: NextRequest) {
   const rawBody = await req.text();
 
   if (!verifyWebhookSignature(rawBody, req.headers)) {
-    console.warn("Zendesk webhook: signature verification failed");
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    // Nothing is processed, but ACK anyway: a 4xx makes Zendesk retry and can
+    // get the webhook disabled, and until the first live delivery we can't be
+    // sure which signature scheme they use. The header names tell us that.
+    console.warn("Zendesk webhook: signature verification failed", {
+      signatureHeaders: describeSignatureHeaders(req.headers),
+    });
+    return NextResponse.json({ ok: true, skipped: "bad-signature" });
   }
 
   const cfg = getZendeskConfig();
