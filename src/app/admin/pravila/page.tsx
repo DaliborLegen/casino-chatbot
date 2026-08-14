@@ -17,6 +17,15 @@ function fmt(d: string) {
   }).format(new Date(d));
 }
 
+function fmtDay(d: string) {
+  return new Intl.DateTimeFormat("sl-SI", {
+    timeZone: "Europe/Ljubljana",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(new Date(d));
+}
+
 const TYPE_LABEL: Record<string, string> = {
   promocija: "Promocija",
   pravilo: "Pravilo",
