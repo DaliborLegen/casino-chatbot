@@ -30,6 +30,8 @@ export interface Tenant {
   shortName: string;
   siteUrl: string;
   logoUrl: string;
+  /** Where a guest is sent when the bot cannot answer. */
+  supportEmail: string;
   theme: TenantTheme;
 }
 
