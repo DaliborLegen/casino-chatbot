@@ -235,8 +235,89 @@ export default async function AdminPage({
             Pogovori
             <span className="ml-3 align-middle inline-block h-1 w-10 rounded-full" style={{ background: "var(--accent)" }} />
           </h1>
-          <span className="text-sm text-zinc-400">{tenant.name} · {rows.length} sej · prikazane zadnje</span>
+          <span className="text-sm text-zinc-400">
+            {tenant.name} · {rows.length} sej{filtered ? " (filtrirano)" : " · prikazane zadnje"}
+          </span>
         </header>
+
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-5">
+          <StatTile label="Danes" value={String(stats.today)} hint="pogovorov" />
+          <StatTile label="7 dni" value={String(stats.week)} hint="pogovorov" />
+          <StatTile label="30 dni" value={String(stats.month)} hint="pogovorov" />
+          <StatTile
+            label="Povprečno"
+            value={stats.avgMessages === null ? "—" : String(stats.avgMessages)}
+            hint="sporočil na pogovor (7 dni)"
+          />
+          <StatTile
+            label="Vir (7 dni)"
+            value={`${stats.bySource.livechat} / ${stats.bySource.widget}${
+              stats.bySource.zendesk ? ` / ${stats.bySource.zendesk}` : ""
+            }`}
+            hint={`LiveChat / Widget${stats.bySource.zendesk ? " / Zendesk" : ""}`}
+          />
+        </div>
+
+        <form
+          method="get"
+          className="mb-5 flex flex-wrap items-end gap-3 rounded-lg border border-zinc-800 bg-zinc-900/30 p-4"
+        >
+          <div className="min-w-[220px] flex-1">
+            <label className="block text-xs font-medium text-zinc-400 uppercase tracking-wide mb-1.5">
+              Iskanje po vsebini
+            </label>
+            <input
+              name="q"
+              defaultValue={filters.q}
+              placeholder="npr. izplačilo, bonus, iDenfy"
+              className="w-full rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder:text-zinc-600 focus:outline-none"
+              style={{ borderColor: filters.q ? "var(--accent)" : undefined }}
+            />
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-zinc-400 uppercase tracking-wide mb-1.5">
+              Vir
+            </label>
+            <select
+              name="vir"
+              defaultValue={filters.source}
+              className="rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 focus:outline-none"
+            >
+              <option value="">Vsi</option>
+              <option value="lc">LiveChat</option>
+              <option value="widget">Widget</option>
+              <option value="zd">Zendesk</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-zinc-400 uppercase tracking-wide mb-1.5">
+              Obdobje
+            </label>
+            <select
+              name="dni"
+              defaultValue={String(filters.days)}
+              className="rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 focus:outline-none"
+            >
+              <option value="0">Vse</option>
+              <option value="1">Zadnji dan</option>
+              <option value="7">Zadnjih 7 dni</option>
+              <option value="30">Zadnjih 30 dni</option>
+              <option value="90">Zadnjih 90 dni</option>
+            </select>
+          </div>
+          <button
+            type="submit"
+            className="rounded-md px-4 py-2 text-sm font-medium hover:brightness-110 transition"
+            style={{ background: "var(--accent)", color: "var(--accent-contrast)" }}
+          >
+            Uporabi
+          </button>
+          {filtered && (
+            <Link href="/admin" className="text-sm text-zinc-400 underline hover:text-zinc-200">
+              Počisti
+            </Link>
+          )}
+        </form>
 
         <div className="rounded-lg border border-zinc-800 overflow-hidden">
           <div className="hidden md:grid grid-cols-[110px_140px_140px_60px_1fr_1fr] gap-3 px-4 py-2 bg-zinc-900 text-xs font-medium text-zinc-400 uppercase tracking-wide">
