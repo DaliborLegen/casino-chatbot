@@ -130,6 +130,16 @@ function timingSafeEqual(a: string, b: string): boolean {
  * without a code change; if no secret is configured, verification is skipped
  * and that is logged loudly.
  */
+export function describeSignatureHeaders(headers: Headers): string[] {
+  // Header names only, never values: enough to tell which scheme Zendesk uses
+  // on the first real delivery, without writing a secret into the logs.
+  const names: string[] = [];
+  headers.forEach((_value, name) => {
+    if (/signature|api-key|hmac|webhook|zendesk|sunshine|smooch/i.test(name)) names.push(name);
+  });
+  return names;
+}
+
 export function verifyWebhookSignature(rawBody: string, headers: Headers): boolean {
   const secret = process.env.ZENDESK_WEBHOOK_SECRET;
   if (!secret) {
