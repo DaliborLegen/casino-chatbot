@@ -87,9 +87,34 @@ function messageIdOf(event: ZendeskEvent): string | undefined {
   return event.payload?.message?.id ?? event.payload?.message?._id;
 }
 
-function tenant(): TenantId {
+function defaultTenant(): TenantId {
   const configured = process.env.ZENDESK_TENANT;
   return isTenantId(configured) ? configured : "casino777";
+}
+
+/**
+ * All three casinos share one Sunshine Conversations app, one web integration
+ * per brand, so the integration the message arrived on decides which bot answers.
+ * Format: "<integrationId>:<tenant>,<integrationId>:<tenant>".
+ */
+function tenantByIntegration(): Record<string, TenantId> {
+  const raw = process.env.ZENDESK_TENANT_BY_INTEGRATION;
+  if (!raw) return {};
+  const map: Record<string, TenantId> = {};
+  for (const pair of raw.split(",")) {
+    const [id, name] = pair.split(":").map((s) => s.trim());
+    if (id && isTenantId(name)) map[id] = name;
+  }
+  return map;
+}
+
+function tenantFor(event: ZendeskEvent): TenantId {
+  const integrationId = event.payload?.message?.source?.integrationId;
+  const mapped = integrationId ? tenantByIntegration()[integrationId] : undefined;
+  if (!mapped && integrationId) {
+    console.warn("Zendesk: unmapped source integration, using default tenant", { integrationId });
+  }
+  return mapped ?? defaultTenant();
 }
 
 /** True when our integration currently holds control of the conversation. */
