@@ -115,8 +115,16 @@ function saveReplyToMemory(sid: string, reply: string) {
 // ---------------------------------------------------------------------------
 
 const MAX_ATTEMPTS = 3;
-/** Stop retrying past this point so we stay inside the webhooks' maxDuration = 30s. */
-const RETRY_DEADLINE_MS = 15_000;
+/**
+ * Total wall-clock budget for all attempts. The webhooks run with
+ * maxDuration = 30s and still have to send the reply afterwards, so the whole
+ * retry sequence has to finish well inside that.
+ */
+const TOTAL_BUDGET_MS = 24_000;
+/** Longest a single attempt may run; a full 1024-token answer fits comfortably. */
+const ATTEMPT_TIMEOUT_MS = 20_000;
+/** Don't start another attempt with less than this left in the budget. */
+const MIN_RETRY_BUDGET_MS = 6_000;
 const RETRY_STATUSES = new Set([408, 409, 429, 500, 502, 503, 504, 529]);
 
 function isRetryable(err: unknown): boolean {
