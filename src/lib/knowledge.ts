@@ -22,6 +22,8 @@ export interface KnowledgeEntry {
   created_at: string;
   decided_at: string | null;
   decided_by: string | null;
+  /** ISO timestamp after which the bot stops using the entry; null = no end date. */
+  expires_at: string | null;
 }
 
 export interface SubmissionInput {
