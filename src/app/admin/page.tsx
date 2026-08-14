@@ -16,7 +16,95 @@ interface Row {
   last_assistant: string | null;
 }
 
-async function loadConversations(limit: number, tenant: TenantId): Promise<Row[]> {
+interface Filters {
+  /** Free text searched in message contents (and the session id). */
+  q: string;
+  /** "" = all, otherwise a session-id prefix group. */
+  source: "" | "lc" | "zd" | "widget";
+  /** How many days back to include, 0 = no limit. */
+  days: number;
+}
+
+interface Stats {
+  today: number;
+  week: number;
+  month: number;
+  avgMessages: number | null;
+  bySource: { livechat: number; zendesk: number; widget: number };
+}
+
+function daysAgoIso(days: number): string {
+  return new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString();
+}
+
+function sourceOf(sessionId: string): "lc" | "zd" | "widget" {
+  if (sessionId.startsWith("lc_")) return "lc";
+  if (sessionId.startsWith("zd_")) return "zd";
+  return "widget";
+}
+
+/**
+ * Conversation counts and averages for the header strip. Kept to cheap COUNT
+ * queries plus one message count, so it doesn't slow the list down.
+ */
+async function loadStats(tenant: TenantId): Promise<Stats> {
+  const supabase = getSupabase();
+  const startOfToday = new Date();
+  startOfToday.setHours(0, 0, 0, 0);
+
+  const countSince = async (sinceIso: string) => {
+    const { count } = await supabase
+      .from("conversations")
+      .select("id", { count: "exact", head: true })
+      .eq("tenant", tenant)
+      .gte("updated_at", sinceIso);
+    return count ?? 0;
+  };
+
+  const [today, week, month] = await Promise.all([
+    countSince(startOfToday.toISOString()),
+    countSince(daysAgoIso(7)),
+    countSince(daysAgoIso(30)),
+  ]);
+
+  // Average length over the last 7 days, and the source split over the same window.
+  const { data: recent } = await supabase
+    .from("conversations")
+    .select("id, session_id")
+    .eq("tenant", tenant)
+    .gte("updated_at", daysAgoIso(7))
+    .limit(1000);
+
+  const bySource = { livechat: 0, zendesk: 0, widget: 0 };
+  for (const c of recent || []) {
+    const s = sourceOf(c.session_id);
+    if (s === "lc") bySource.livechat++;
+    else if (s === "zd") bySource.zendesk++;
+    else bySource.widget++;
+  }
+
+  let avgMessages: number | null = null;
+  if (recent && recent.length > 0) {
+    const { count } = await supabase
+      .from("messages")
+      .select("id", { count: "exact", head: true })
+      .in(
+        "conversation_id",
+        recent.map((c) => c.id)
+      );
+    if (count !== null && count !== undefined) {
+      avgMessages = Math.round((count / recent.length) * 10) / 10;
+    }
+  }
+
+  return { today, week, month, avgMessages, bySource };
+}
+
+async function loadConversations(
+  limit: number,
+  tenant: TenantId,
+  filters: Filters
+): Promise<Row[]> {
   const supabase = getSupabase();
   // The webhook creates a conversation row for every LiveChat chat in the
   // shared license (incoming_chat), including daytime chats human agents handle
