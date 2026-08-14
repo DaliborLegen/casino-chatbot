@@ -31,6 +31,7 @@ export async function POST(req: NextRequest) {
     title?: string;
     rawInput?: string;
     specialInstructions?: string;
+    expiresOn?: string;
   };
   try {
     payload = await req.json();
