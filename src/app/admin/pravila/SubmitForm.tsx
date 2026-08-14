@@ -99,16 +99,30 @@ export default function SubmitForm() {
         />
       </div>
 
-      <div>
-        <label className="block text-xs font-medium text-zinc-400 uppercase tracking-wide mb-1.5">
-          Posebna navodila botu (neobvezno)
-        </label>
-        <input
-          value={special}
-          onChange={(e) => setSpecial(e.target.value)}
-          placeholder="npr. ne omenjaj proaktivno; usmeri na podporo; ekskluzivno"
-          className="w-full rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder:text-zinc-600 focus:border-red-500 focus:outline-none"
-        />
+      <div className="grid gap-4 md:grid-cols-[1fr_200px]">
+        <div>
+          <label className="block text-xs font-medium text-zinc-400 uppercase tracking-wide mb-1.5">
+            Posebna navodila botu (neobvezno)
+          </label>
+          <input
+            value={special}
+            onChange={(e) => setSpecial(e.target.value)}
+            placeholder="npr. ne omenjaj proaktivno; usmeri na podporo; ekskluzivno"
+            className="w-full rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder:text-zinc-600 focus:border-red-500 focus:outline-none"
+          />
+        </div>
+        <div>
+          <label className="block text-xs font-medium text-zinc-400 uppercase tracking-wide mb-1.5">
+            Velja do (neobvezno)
+          </label>
+          <input
+            type="date"
+            value={expiresOn}
+            onChange={(e) => setExpiresOn(e.target.value)}
+            className="w-full rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 focus:border-red-500 focus:outline-none"
+          />
+          <p className="mt-1 text-xs text-zinc-600">Bot vnos neha uporabljati po tem dnevu.</p>
+        </div>
       </div>
 
       {msg && (
