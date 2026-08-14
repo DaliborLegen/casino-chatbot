@@ -27,7 +27,7 @@ export default function SubmitForm() {
       const res = await fetch("/api/admin/knowledge/submit", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ type, title, rawInput, specialInstructions: special }),
+        body: JSON.stringify({ type, title, rawInput, specialInstructions: special, expiresOn }),
       });
       const data = await res.json();
       if (!res.ok) {
