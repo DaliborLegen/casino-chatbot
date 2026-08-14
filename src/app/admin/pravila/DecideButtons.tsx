@@ -3,12 +3,34 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function DecideButtons({ id }: { id: string }) {
+type Action = "approve" | "reject" | "deactivate" | "activate";
+
+const LABELS: Record<Action, string> = {
+  approve: "✅ Potrdi",
+  reject: "❌ Zavrni",
+  deactivate: "Izklopi",
+  activate: "Vklopi nazaj",
+};
+
+const STYLES: Record<Action, string> = {
+  approve: "bg-emerald-700 hover:bg-emerald-600",
+  reject: "bg-red-800 hover:bg-red-700",
+  deactivate: "bg-zinc-700 hover:bg-zinc-600",
+  activate: "bg-emerald-700 hover:bg-emerald-600",
+};
+
+export default function DecideButtons({
+  id,
+  actions = ["approve", "reject"],
+}: {
+  id: string;
+  actions?: Action[];
+}) {
   const router = useRouter();
-  const [busy, setBusy] = useState<"approve" | "reject" | null>(null);
+  const [busy, setBusy] = useState<Action | null>(null);
   const [err, setErr] = useState<string | null>(null);
 
-  async function decide(action: "approve" | "reject") {
+  async function decide(action: Action) {
     setBusy(action);
     setErr(null);
     try {
@@ -32,20 +54,16 @@ export default function DecideButtons({ id }: { id: string }) {
 
   return (
     <div className="flex flex-col items-stretch gap-2">
-      <button
-        onClick={() => decide("approve")}
-        disabled={busy !== null}
-        className="rounded-md bg-emerald-700 px-3 py-1.5 text-sm font-medium text-white hover:bg-emerald-600 disabled:opacity-50"
-      >
-        {busy === "approve" ? "…" : "✅ Potrdi"}
-      </button>
-      <button
-        onClick={() => decide("reject")}
-        disabled={busy !== null}
-        className="rounded-md bg-red-800 px-3 py-1.5 text-sm font-medium text-white hover:bg-red-700 disabled:opacity-50"
-      >
-        {busy === "reject" ? "…" : "❌ Zavrni"}
-      </button>
+      {actions.map((action) => (
+        <button
+          key={action}
+          onClick={() => decide(action)}
+          disabled={busy !== null}
+          className={`rounded-md px-3 py-1.5 text-sm font-medium text-white disabled:opacity-50 ${STYLES[action]}`}
+        >
+          {busy === action ? "…" : LABELS[action]}
+        </button>
+      ))}
       {err && <span className="text-xs text-red-400">{err}</span>}
     </div>
   );
