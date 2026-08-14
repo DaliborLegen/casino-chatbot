@@ -151,6 +151,18 @@ export async function POST(req: NextRequest) {
     // Logged for visibility, but still ACK so LiveChat doesn't retry-storm the
     // webhook on a transient Claude/LiveChat failure (which would trip the 5xx alarm).
     console.error("LiveChat webhook processing error:", err);
+    // generateReply already falls back on Claude failures; getting here means the
+    // store failed. At night nobody else answers, so still say something.
+    try {
+      const tenant = (await getConversationTenant(sessionId)) ?? "casino";
+      await sendTextMessage({
+        chat_id: chatId,
+        text: fallbackReply(tenant),
+        bot_agent_id: botAgentId,
+      });
+    } catch (sendErr) {
+      console.error("LiveChat fallback send failed:", sendErr);
+    }
     return NextResponse.json({ ok: true, skipped: "processing-failed" });
   }
 
