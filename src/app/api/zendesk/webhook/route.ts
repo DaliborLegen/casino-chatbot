@@ -166,10 +166,11 @@ async function handleUserMessage(cfg: ZendeskConfig, event: ZendeskEvent): Promi
   if (text.length > MAX_MESSAGE_LENGTH) return;
   if (await isSessionRateLimited(sessionId)) return;
 
+  const tenant = tenantFor(event);
   let reply: string;
   try {
-    await ensureConversation(sessionId, tenant());
-    reply = await generateReply(sessionId, text, tenant());
+    await ensureConversation(sessionId, tenant);
+    reply = await generateReply(sessionId, text, tenant);
   } catch (err) {
     // generateReply handles Claude failures itself, so this is the store failing.
     // Outside support hours nobody else answers, so still say something.
