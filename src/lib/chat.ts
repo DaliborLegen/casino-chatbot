@@ -228,7 +228,10 @@ export async function generateReply(
   // the cached system block — the cache rebuilds only when knowledge changes (rare).
   const knowledgeSection = await getActiveKnowledgeSection(tenant);
 
-  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY! });
+  // maxRetries: 0 — retries are handled by createMessageWithRetry, which keeps
+  // the whole sequence inside the webhooks' time budget. Leaving the SDK's own
+  // retries on would multiply the attempts and blow past maxDuration.
+  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY!, maxRetries: 0 });
 
   let response: Anthropic.Message;
   try {
