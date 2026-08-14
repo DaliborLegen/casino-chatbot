@@ -46,7 +46,7 @@ process.env.ANTHROPIC_API_KEY = "sk-test";
 delete process.env.NEXT_PUBLIC_SUPABASE_URL;
 delete process.env.SUPABASE_SERVICE_ROLE_KEY;
 
-const { generateReply, fallbackReply } = await import("./src/lib/chat.ts");
+const { generateReply, fallbackReply } = await import("../src/lib/chat.ts");
 
 let failures = 0;
 function check(name: string, actual: unknown, expected: unknown) {
