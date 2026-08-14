@@ -40,6 +40,7 @@ export default function SubmitForm() {
         setTitle("");
         setRawInput("");
         setSpecial("");
+        setExpiresOn("");
         router.refresh();
       }
     } catch {
