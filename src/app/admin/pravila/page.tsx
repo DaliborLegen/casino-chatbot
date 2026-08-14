@@ -113,7 +113,11 @@ export default async function PravilaPage() {
   const tenant = await getAdminTenant();
   const all = await listEntries(200, tenant.id);
   const pending = all.filter((e) => e.status === "pending");
-  const active = all.filter((e) => e.status === "active");
+  // An expired entry is still "active" in the database but the bot ignores it,
+  // so show it apart from what is genuinely live.
+  const active = all.filter((e) => e.status === "active" && !isExpired(e));
+  const expired = all.filter((e) => e.status === "active" && isExpired(e));
+  const inactive = all.filter((e) => e.status === "inactive");
   const rejected = all.filter((e) => e.status === "rejected");
 
   return (
