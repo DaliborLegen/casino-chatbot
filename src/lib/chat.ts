@@ -107,6 +107,68 @@ function saveReplyToMemory(sid: string, reply: string) {
   if (session) session.messages.push({ role: "assistant", content: reply });
 }
 
+// ---------------------------------------------------------------------------
+// Resilience. A failing Claude call used to surface as silence in LiveChat (the
+// webhook logs and ACKs), which between 00:00 and 08:00 means nobody answers the
+// guest at all. Transient failures are retried; a final failure returns a plain
+// fallback so the guest always gets something and knows where to write.
+// ---------------------------------------------------------------------------
+
+const MAX_ATTEMPTS = 3;
+/** Stop retrying past this point so we stay inside the webhooks' maxDuration = 30s. */
+const RETRY_DEADLINE_MS = 15_000;
+const RETRY_STATUSES = new Set([408, 409, 429, 500, 502, 503, 504, 529]);
+
+function isRetryable(err: unknown): boolean {
+  if (err instanceof Anthropic.APIConnectionError || err instanceof Anthropic.APIConnectionTimeoutError) {
+    return true;
+  }
+  if (err instanceof Anthropic.APIError && typeof err.status === "number") {
+    return RETRY_STATUSES.has(err.status);
+  }
+  return false;
+}
+
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+/** Message the guest sees when Claude is unreachable (rate limit, outage, timeout). */
+export function fallbackReply(tenant: TenantId): string {
+  const email = getTenant(tenant).supportEmail;
+  return `Oprostite, trenutno imam tehnično težavo in vam ne morem odgovoriti. Prosimo, poskusite čez nekaj minut ali nam pišite na ${email}.`;
+}
+
+async function createMessageWithRetry(
+  client: Anthropic,
+  params: Anthropic.MessageCreateParamsNonStreaming
+): Promise<Anthropic.Message> {
+  const startedAt = Date.now();
+  let lastError: unknown;
+
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    try {
+      return await client.messages.create(params);
+    } catch (err) {
+      lastError = err;
+      const elapsed = Date.now() - startedAt;
+      const canRetry =
+        attempt < MAX_ATTEMPTS && isRetryable(err) && elapsed < RETRY_DEADLINE_MS;
+      console.error("Claude call failed", {
+        attempt,
+        elapsed,
+        retrying: canRetry,
+        status: err instanceof Anthropic.APIError ? err.status : undefined,
+        message: err instanceof Error ? err.message : String(err),
+      });
+      if (!canRetry) break;
+      await sleep(attempt * 800);
+    }
+  }
+
+  throw lastError;
+}
+
 function systemPromptFor(tenant: TenantId): string {
   if (tenant === "supercasino") return supercasinoSystemPrompt;
   if (tenant === "casino777") return casino777SystemPrompt;
