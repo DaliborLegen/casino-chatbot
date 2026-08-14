@@ -112,12 +112,32 @@ async function loadConversations(
   // the dashboard shows only real conversations. Over-fetch candidates to keep
   // the page full after filtering.
   const candidateLimit = Math.min(limit * 2, 500);
-  const { data: convos, error } = await supabase
+
+  // Text search runs over messages first, then narrows the conversation list to
+  // the sessions that actually contain the phrase.
+  let matchedIds: string[] | null = null;
+  if (filters.q) {
+    const pattern = `%${filters.q.replace(/[%_]/g, (c) => `\\${c}`)}%`;
+    const { data: hits } = await supabase
+      .from("messages")
+      .select("conversation_id")
+      .ilike("content", pattern)
+      .limit(3000);
+    matchedIds = [...new Set((hits || []).map((h) => h.conversation_id as string))];
+    if (matchedIds.length === 0) return [];
+  }
+
+  let query = supabase
     .from("conversations")
     .select("id, session_id, created_at, updated_at")
     .eq("tenant", tenant)
     .order("updated_at", { ascending: false })
     .limit(candidateLimit);
+
+  if (matchedIds) query = query.in("id", matchedIds);
+  if (filters.days > 0) query = query.gte("updated_at", daysAgoIso(filters.days));
+
+  const { data: convos, error } = await query;
   if (error || !convos) return [];
 
   const ids = convos.map((c) => c.id);
