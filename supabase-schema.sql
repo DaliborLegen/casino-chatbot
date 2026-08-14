@@ -60,14 +60,16 @@ create table if not exists bot_knowledge (
   body text not null,                               -- normalized text the bot reads
   special_instructions text,                        -- e.g. "ne omenjaj proaktivno"
   raw_input text,                                   -- original submission, for audit
-  status text not null default 'pending' check (status in ('pending','active','rejected')),
+  status text not null default 'pending' check (status in ('pending','active','rejected','inactive')),
   submitted_by text,
   created_at timestamptz default now(),
   decided_at timestamptz,
-  decided_by text
+  decided_by text,
+  expires_at timestamptz                            -- optional: bot ignores the entry after this
 );
 
 create index if not exists idx_bot_knowledge_status on bot_knowledge(status, created_at desc);
+create index if not exists idx_bot_knowledge_expires on bot_knowledge(expires_at);
 
 -- ---------------------------------------------------------------------------
 -- Multi-tenant (2026-07): one deployment serves multiple casinos.
