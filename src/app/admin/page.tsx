@@ -210,12 +210,22 @@ function truncate(s: string | null, n: number) {
 export default async function AdminPage({
   searchParams,
 }: {
-  searchParams: Promise<{ limit?: string }>;
+  searchParams: Promise<{ limit?: string; q?: string; vir?: string; dni?: string }>;
 }) {
   const params = await searchParams;
   const limit = Math.min(Number(params.limit) || 100, 500);
+  const rawSource = params.vir === "lc" || params.vir === "zd" || params.vir === "widget" ? params.vir : "";
+  const filters: Filters = {
+    q: (params.q || "").trim().slice(0, 120),
+    source: rawSource,
+    days: Math.min(Math.max(Number(params.dni) || 0, 0), 365),
+  };
   const tenant = await getAdminTenant();
-  const rows = await loadConversations(limit, tenant.id);
+  const [rows, stats] = await Promise.all([
+    loadConversations(limit, tenant.id, filters),
+    loadStats(tenant.id),
+  ]);
+  const filtered = !!(filters.q || filters.source || filters.days);
 
   return (
     <div className="text-zinc-100 px-4 sm:px-5 py-6">
