@@ -6,7 +6,8 @@ import { DEFAULT_TENANT, type TenantId } from "@/lib/tenants";
 const NORMALIZE_MODEL = "claude-haiku-4-5-20251001";
 
 export type KnowledgeType = "promocija" | "pravilo" | "faq";
-export type KnowledgeStatus = "pending" | "active" | "rejected";
+/** `inactive` = was live, then switched off (expired promo, superseded rule). */
+export type KnowledgeStatus = "pending" | "active" | "rejected" | "inactive";
 
 export interface KnowledgeEntry {
   id: string;
