@@ -215,19 +215,38 @@ export async function generateReply(
   const knowledgeSection = await getActiveKnowledgeSection(tenant);
 
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY! });
-  const response = await client.messages.create({
-    model: "claude-sonnet-4-6",
-    max_tokens: 1024,
-    system: [
-      {
-        type: "text",
-        text: systemPromptFor(tenant) + knowledgeSection,
-        cache_control: { type: "ephemeral" },
-      },
-      { type: "text", text: buildTimeContext() },
-    ],
-    messages,
-  });
+
+  let response: Anthropic.Message;
+  try {
+    response = await createMessageWithRetry(client, {
+      model: "claude-sonnet-4-6",
+      max_tokens: 1024,
+      system: [
+        {
+          type: "text",
+          text: systemPromptFor(tenant) + knowledgeSection,
+          cache_control: { type: "ephemeral" },
+        },
+        { type: "text", text: buildTimeContext() },
+      ],
+      messages,
+    });
+  } catch (err) {
+    // Store the fallback too, so the transcript in /admin (and the daily
+    // analysis) shows exactly what the guest was told.
+    console.error("Claude unavailable, sending fallback reply", {
+      sessionId,
+      tenant,
+      message: err instanceof Error ? err.message : String(err),
+    });
+    const fallback = fallbackReply(tenant);
+    if (useSupabase) {
+      await saveReplyToSupabase(sessionId, fallback);
+    } else {
+      saveReplyToMemory(sessionId, fallback);
+    }
+    return fallback;
+  }
 
   const textBlock = response.content.find((b) => b.type === "text");
   const reply = textBlock && textBlock.type === "text" ? textBlock.text : "";
