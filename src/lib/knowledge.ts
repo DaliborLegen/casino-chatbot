@@ -33,6 +33,8 @@ export interface SubmissionInput {
   rawInput: string;
   specialInstructions?: string;
   submittedBy?: string;
+  /** ISO timestamp; the entry stops being used after it. */
+  expiresAt?: string | null;
 }
 
 function hasSupabase(): boolean {
