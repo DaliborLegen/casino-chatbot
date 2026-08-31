@@ -176,7 +176,14 @@ async function handleUserMessage(cfg: ZendeskConfig, event: ZendeskEvent): Promi
       integrationId,
     });
     const fallback = process.env.ZENDESK_FALLBACK_SWITCHBOARD || "zd-answerBot";
-    await passControlToIntegration(cfg, conversationId, fallback);
+    try {
+      await passControlToIntegration(cfg, conversationId, fallback);
+    } catch (err) {
+      // The conversation must never stay parked on us: we do not answer for
+      // this brand, so nobody would. Agent Workspace is the safe landing spot.
+      console.error("Zendesk handback failed, passing to agents instead:", err);
+      await passControlToAgent(cfg, conversationId, messageIdOf(event));
+    }
     return;
   }
 
