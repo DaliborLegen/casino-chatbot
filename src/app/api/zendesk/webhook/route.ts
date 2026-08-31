@@ -9,6 +9,7 @@ import {
   getActiveSwitchboardId,
   getZendeskConfig,
   passControlToAgent,
+  passControlToIntegration,
   postBusinessMessage,
   verifyWebhookSignature,
   type ZendeskConfig,
@@ -117,6 +118,31 @@ function tenantFor(event: ZendeskEvent): TenantId {
   return mapped ?? defaultTenant();
 }
 
+/**
+ * Which web integrations (brands) our bot actually serves. The switchboard's
+ * default answerer is set per app, not per integration, so with all three
+ * casinos in one Sunshine app every conversation reaches us first. Anything
+ * outside this list is handed straight back to Zendesk's own answerBot, so the
+ * brands we have not gone live with behave exactly as before.
+ *
+ * Empty or unset means: serve everything.
+ */
+function servedIntegrations(): string[] {
+  return (process.env.ZENDESK_ONLY_INTEGRATIONS ?? "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+}
+
+function servesIntegration(integrationId: string | undefined): boolean {
+  const allowed = servedIntegrations();
+  if (allowed.length === 0) return true;
+  // An unknown integration is not ours to answer for: better silent handback
+  // than the wrong brand's bot replying.
+  if (!integrationId) return false;
+  return allowed.includes(integrationId);
+}
+
 /** True when our integration currently holds control of the conversation. */
 async function botHasControl(
   cfg: ZendeskConfig,
@@ -140,6 +166,17 @@ async function handleUserMessage(cfg: ZendeskConfig, event: ZendeskEvent): Promi
   const activeFromPayload = event.payload?.conversation?.activeSwitchboardIntegration?.id;
   if (!(await botHasControl(cfg, conversationId, activeFromPayload))) {
     console.log("Zendesk: agent holds control, skipping", { conversationId });
+    return;
+  }
+
+  const integrationId = message?.source?.integrationId;
+  if (!servesIntegration(integrationId)) {
+    console.log("Zendesk: brand not served by the bot, handing back", {
+      conversationId,
+      integrationId,
+    });
+    const fallback = process.env.ZENDESK_FALLBACK_SWITCHBOARD || "zd-answerBot";
+    await passControlToIntegration(cfg, conversationId, fallback);
     return;
   }
 

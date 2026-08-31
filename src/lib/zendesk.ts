@@ -98,6 +98,21 @@ export async function postBusinessMessage(
 }
 
 /**
+ * Hands the conversation to a named switchboard integration, e.g. back to
+ * Zendesk's own answerBot for brands our bot does not serve yet.
+ */
+export async function passControlToIntegration(
+  cfg: ZendeskConfig,
+  conversationId: string,
+  switchboardIntegration: string
+): Promise<void> {
+  await zendeskFetch(cfg, `/conversations/${conversationId}/passControl`, {
+    method: "POST",
+    body: { switchboardIntegration },
+  });
+}
+
+/**
  * Hands the conversation to the next switchboard integration (Agent Workspace).
  * `nextSwitchboardIntegrationId` must be configured on our integration in Zendesk.
  */
