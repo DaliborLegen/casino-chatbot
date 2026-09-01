@@ -191,6 +191,8 @@ async function handleUserMessage(cfg: ZendeskConfig, event: ZendeskEvent): Promi
   if (isSupportOpen()) {
     try {
       await passControlToAgent(cfg, conversationId, messageIdOf(event));
+      // Logged because a silent success looks exactly like a dropped event.
+      console.log("Zendesk: handed to agents", { conversationId, integrationId });
       return;
     } catch (err) {
       console.error("Zendesk passControl failed:", err);
