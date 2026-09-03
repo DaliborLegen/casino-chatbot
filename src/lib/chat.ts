@@ -211,6 +211,47 @@ export async function ensureConversation(sessionId: string, tenant: TenantId): P
     .upsert({ session_id: sessionId, tenant }, { onConflict: "session_id", ignoreDuplicates: true });
 }
 
+/**
+ * Records a conversation that was handed to human agents instead of answered.
+ *
+ * Without this the admin history only shows conversations the bot spoke in,
+ * which made the daytime Zendesk traffic look like it never happened. We keep
+ * the guest's opening message and a `handoff` marker; the rest of the exchange
+ * lives in the agents' tool, since our integration stops receiving events once
+ * it gives up control.
+ */
+export async function recordAgentHandoff(
+  sessionId: string,
+  tenant: TenantId,
+  userMessage?: string
+): Promise<void> {
+  if (!hasSupabase()) return;
+  const supabase = getSupabase();
+  await ensureConversation(sessionId, tenant);
+
+  const { data: conversation } = await supabase
+    .from("conversations")
+    .select("id, metadata")
+    .eq("session_id", sessionId)
+    .single();
+  if (!conversation) return;
+
+  const metadata = { ...((conversation.metadata as Record<string, unknown>) ?? {}), handoff: true };
+  await supabase
+    .from("conversations")
+    .update({ metadata, updated_at: new Date().toISOString() })
+    .eq("id", conversation.id);
+
+  const text = userMessage?.trim();
+  if (text) {
+    await supabase.from("messages").insert({
+      conversation_id: conversation.id,
+      role: "user",
+      content: text,
+    });
+  }
+}
+
 export async function generateReply(
   sessionId: string,
   userMessage: string,

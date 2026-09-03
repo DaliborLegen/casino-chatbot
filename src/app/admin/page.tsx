@@ -14,6 +14,8 @@ interface Row {
   message_count: number;
   last_user: string | null;
   last_assistant: string | null;
+  /** True when the bot handed the conversation to human agents instead of answering. */
+  handoff: boolean;
 }
 
 interface Filters {
@@ -129,7 +131,7 @@ async function loadConversations(
 
   let query = supabase
     .from("conversations")
-    .select("id, session_id, created_at, updated_at")
+    .select("id, session_id, created_at, updated_at, metadata")
     .eq("tenant", tenant)
     .order("updated_at", { ascending: false })
     .limit(candidateLimit);
@@ -168,6 +170,7 @@ async function loadConversations(
       message_count: counts.get(c.id) || 0,
       last_user: lastUser.get(c.id) || null,
       last_assistant: lastAssistant.get(c.id) || null,
+      handoff: (c.metadata as { handoff?: boolean } | null)?.handoff === true,
     }))
     .filter((r) => r.message_count > 0)
     .filter((r) => !filters.source || sourceOf(r.session_id) === filters.source)
@@ -340,6 +343,14 @@ export default async function AdminPage({
                   <span className={`inline-block px-2 py-0.5 rounded text-xs ${src.cls}`}>
                     {src.label}
                   </span>
+                  {r.handoff && (
+                    <span
+                      className="ml-1 inline-block px-2 py-0.5 rounded text-xs bg-amber-900/40 text-amber-300"
+                      title="Bot je pogovor predal podpori, nadaljevanje je pri njih"
+                    >
+                      podpora
+                    </span>
+                  )}
                 </div>
                 <div className="text-sm text-zinc-300 whitespace-nowrap">
                   <span className="md:hidden text-zinc-500 mr-1">Posodobljeno:</span>
@@ -357,7 +368,11 @@ export default async function AdminPage({
                   {truncate(r.last_user, 120)}
                 </div>
                 <div className="text-sm text-zinc-400 mt-1 md:mt-0">
-                  {truncate(r.last_assistant, 120)}
+                  {r.handoff && !r.last_assistant ? (
+                    <span className="text-amber-300/70">predano podpori</span>
+                  ) : (
+                    truncate(r.last_assistant, 120)
+                  )}
                 </div>
               </Link>
             );

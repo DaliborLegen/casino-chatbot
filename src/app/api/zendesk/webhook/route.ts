@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { ensureConversation, fallbackReply, generateReply } from "@/lib/chat";
+import { ensureConversation, fallbackReply, generateReply, recordAgentHandoff } from "@/lib/chat";
 import { MAX_MESSAGE_LENGTH } from "@/lib/limits";
 import { isSessionRateLimited } from "@/lib/rate-limit";
 import { isSupportOpen } from "@/lib/support-hours";
@@ -187,12 +187,19 @@ async function handleUserMessage(cfg: ZendeskConfig, event: ZendeskEvent): Promi
     return;
   }
 
+  const tenant = tenantFor(event);
+
   // Support hours → hand over to Agent Workspace, don't call the bot at all.
   if (isSupportOpen()) {
     try {
       await passControlToAgent(cfg, conversationId, messageIdOf(event));
       // Logged because a silent success looks exactly like a dropped event.
       console.log("Zendesk: handed to agents", { conversationId, integrationId });
+      // Keep a trace in the history, otherwise daytime traffic is invisible in
+      // the admin. Never let a bookkeeping failure undo a completed handoff.
+      await recordAgentHandoff(sessionId, tenant, content?.type === "text" ? content.text : undefined).catch(
+        (err) => console.error("Zendesk: handoff not recorded:", err)
+      );
       return;
     } catch (err) {
       console.error("Zendesk passControl failed:", err);
@@ -212,7 +219,6 @@ async function handleUserMessage(cfg: ZendeskConfig, event: ZendeskEvent): Promi
   if (text.length > MAX_MESSAGE_LENGTH) return;
   if (await isSessionRateLimited(sessionId)) return;
 
-  const tenant = tenantFor(event);
   let reply: string;
   try {
     await ensureConversation(sessionId, tenant);
