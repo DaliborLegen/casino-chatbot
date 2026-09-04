@@ -275,6 +275,21 @@ export async function POST(req: NextRequest) {
   const events = body.events ?? [];
   let handled = 0;
 
+  // Diagnostics: most events we receive are not user messages, and without this
+  // an ignored event is indistinguishable from one that never arrived.
+  if (process.env.ZENDESK_TRACE_EVENTS === "1") {
+    console.log(
+      "Zendesk: events",
+      events.map((e) => ({
+        type: e.type,
+        author: e.payload?.message?.author?.type,
+        integrationId: e.payload?.message?.source?.integrationId,
+        active: e.payload?.conversation?.activeSwitchboardIntegration?.id,
+        conversationId: conversationIdOf(e),
+      }))
+    );
+  }
+
   for (const event of events) {
     if (event.type !== "conversation:message") continue;
     if (event.payload?.message?.author?.type !== "user") continue; // ignore our own + agent messages
