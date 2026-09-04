@@ -192,9 +192,13 @@ async function handleUserMessage(cfg: ZendeskConfig, event: ZendeskEvent): Promi
   // Support hours → hand over to Agent Workspace, don't call the bot at all.
   if (isSupportOpen()) {
     try {
-      await passControlToAgent(cfg, conversationId, messageIdOf(event));
+      // Zendesk's own bot owns the pre-chat form (it asks the guest for an
+      // email), so during support hours we hand to it rather than jumping
+      // straight to Agent Workspace. Set to "next" to skip it again.
+      const target = process.env.ZENDESK_DAYTIME_SWITCHBOARD || "next";
+      await passControlToAgent(cfg, conversationId, messageIdOf(event), target);
       // Logged because a silent success looks exactly like a dropped event.
-      console.log("Zendesk: handed to agents", { conversationId, integrationId });
+      console.log("Zendesk: handed over", { conversationId, integrationId, target });
       // Keep a trace in the history, otherwise daytime traffic is invisible in
       // the admin. Never let a bookkeeping failure undo a completed handoff.
       await recordAgentHandoff(sessionId, tenant, content?.type === "text" ? content.text : undefined).catch(

@@ -119,12 +119,18 @@ export async function passControlToIntegration(
 export async function passControlToAgent(
   cfg: ZendeskConfig,
   conversationId: string,
-  firstMessageId?: string
+  firstMessageId?: string,
+  /**
+   * Where the conversation goes. "next" is our configured neighbour (Agent
+   * Workspace); naming zd-answerBot instead lets Zendesk's own bot run its
+   * pre-chat flow, which asks the guest for an email before an agent takes over.
+   */
+  target: string = "next"
 ): Promise<void> {
   await zendeskFetch(cfg, `/conversations/${conversationId}/passControl`, {
     method: "POST",
     body: {
-      switchboardIntegration: "next",
+      switchboardIntegration: target,
       metadata: {
         "dataCapture.systemField.tags": "chatbot,handoff",
         ...(firstMessageId ? { first_message_id: firstMessageId } : {}),
