@@ -81,9 +81,14 @@ interface ZendeskEvent {
   id?: string;
   type?: string;
   payload?: {
+    /** Why the conversation was created; "startConversation" = widget opened. */
+    creationReason?: string;
     conversation?: {
       id?: string;
       _id?: string;
+      /** Which casino brand the conversation belongs to. */
+      brandId?: string;
+      creationReason?: string;
       activeSwitchboardIntegration?: { id?: string };
     };
     message?: {
