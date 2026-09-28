@@ -428,8 +428,11 @@ export async function POST(req: NextRequest) {
   }
 
   for (const event of events) {
-    if (event.type !== "conversation:message") continue;
-    if (event.payload?.message?.author?.type !== "user") continue; // ignore our own + agent messages
+    const isNewConversation = event.type === "conversation:create";
+    if (!isNewConversation) {
+      if (event.type !== "conversation:message") continue;
+      if (event.payload?.message?.author?.type !== "user") continue; // ignore our own + agent messages
+    }
 
     const eventId = event.id;
     if (eventId && alreadyHandled(eventId)) continue;
@@ -439,7 +442,9 @@ export async function POST(req: NextRequest) {
 
     handled++;
     try {
-      await withConversationLock(conversationId, () => handleUserMessage(cfg, event));
+      await withConversationLock(conversationId, () =>
+        isNewConversation ? handleConversationStart(cfg, event) : handleUserMessage(cfg, event)
+      );
     } catch (err) {
       // Logged, but still ACK below: a 5xx makes Zendesk retry the whole batch,
       // which is what caused the LiveChat retry storm.
