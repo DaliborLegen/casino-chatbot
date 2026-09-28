@@ -171,14 +171,19 @@ export async function passControlToIntegration(
 export async function passControlToAgent(
   cfg: ZendeskConfig,
   conversationId: string,
-  firstMessageId?: string,
-  /**
-   * Where the conversation goes. "next" is our configured neighbour (Agent
-   * Workspace); naming zd-answerBot instead lets Zendesk's own bot run its
-   * pre-chat flow, which asks the guest for an email before an agent takes over.
-   */
-  target: string = "next"
+  opts: {
+    firstMessageId?: string;
+    /**
+     * Where the conversation goes. "next" is our configured neighbour (Agent
+     * Workspace); naming zd-answerBot instead lets Zendesk's own bot run its
+     * pre-chat flow, which asks the guest for an email before an agent takes over.
+     */
+    target?: string;
+    /** Collected pre-chat details, mapped onto the ticket's requester fields. */
+    contact?: { name?: string; email?: string };
+  } = {}
 ): Promise<void> {
+  const { firstMessageId, target = "next", contact } = opts;
   await zendeskFetch(cfg, `/conversations/${conversationId}/passControl`, {
     method: "POST",
     body: {
@@ -186,6 +191,11 @@ export async function passControlToAgent(
       metadata: {
         "dataCapture.systemField.tags": "chatbot,handoff",
         ...(firstMessageId ? { first_message_id: firstMessageId } : {}),
+        // Zendesk maps dataCapture.systemField.* onto the ticket it creates at
+        // handoff. The email is not honoured on every plan, which is why we
+        // also write it to the guest's Sunshine profile.
+        ...(contact?.name ? { "dataCapture.systemField.requester.name": contact.name } : {}),
+        ...(contact?.email ? { "dataCapture.systemField.requester.email": contact.email } : {}),
         origin_source_type: "web",
       },
     },
