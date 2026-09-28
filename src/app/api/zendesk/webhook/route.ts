@@ -11,9 +11,12 @@ import {
   passControlToAgent,
   passControlToIntegration,
   postBusinessMessage,
+  sendContactForm,
+  updateUserProfile,
   verifyWebhookSignature,
   type ZendeskConfig,
 } from "@/lib/zendesk";
+import { hasContactDetails, loadContact, saveContact } from "@/lib/zendesk-contact";
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
