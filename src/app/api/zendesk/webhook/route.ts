@@ -262,6 +262,70 @@ async function replyAsBot(
   await postBusinessMessage(cfg, conversationId, reply);
 }
 
+/**
+ * Which brands may be greeted the moment the widget opens.
+ *
+ * A `conversation:create` event names the brand, not the channel integration,
+ * so the message-time allowlist (`ZENDESK_ONLY_INTEGRATIONS`) can't be reused.
+ * Format: "<brandId>:<tenant>". Unset means: greet nobody on open, which leaves
+ * the old behaviour (form on the first message) untouched.
+ */
+function tenantByBrand(): Record<string, TenantId> {
+  const raw = process.env.ZENDESK_TENANT_BY_BRAND;
+  if (!raw) return {};
+  const map: Record<string, TenantId> = {};
+  for (const pair of raw.split(",")) {
+    const [id, name] = pair.split(":").map((s) => s.trim());
+    if (id && isTenantId(name)) map[id] = name;
+  }
+  return map;
+}
+
+/**
+ * Greets the guest and asks for their details the moment they open the widget,
+ * before they have written anything.
+ *
+ * Zendesk creates the conversation when the messenger opens and flags the event
+ * with `creationReason: "startConversation"`; their own docs call that the right
+ * moment for a bot greeting. Any other reason (including "message") means the
+ * guest is already talking, and the message path handles it.
+ */
+async function handleConversationStart(cfg: ZendeskConfig, event: ZendeskEvent): Promise<void> {
+  const conversationId = conversationIdOf(event);
+  if (!conversationId) return;
+
+  const reason = event.payload?.creationReason ?? event.payload?.conversation?.creationReason;
+  if (reason !== "startConversation") return;
+
+  const brands = tenantByBrand();
+  if (Object.keys(brands).length === 0) return;
+
+  const brandId =
+    event.payload?.conversation?.brandId ?? (await getConversationBrandId(cfg, conversationId));
+  const tenant = brandId ? brands[brandId] : undefined;
+  if (!tenant) {
+    console.log("Zendesk: new conversation on a brand we don't greet", { conversationId, brandId });
+    return;
+  }
+
+  const activeFromPayload = event.payload?.conversation?.activeSwitchboardIntegration?.id;
+  if (!(await botHasControl(cfg, conversationId, activeFromPayload))) return;
+
+  const sessionId = `zd_${conversationId}`;
+  const contact = await loadContact(sessionId);
+  if (contact.formSentAt || hasContactDetails(contact)) return;
+
+  try {
+    await sendContactForm(cfg, conversationId, FORM_INTRO);
+    await saveContact(sessionId, tenant, { formSentAt: new Date().toISOString() });
+    console.log("Zendesk: greeted on open", { conversationId, tenant });
+  } catch (err) {
+    // The guest has not written anything yet, so nobody is left waiting: let the
+    // first message try again rather than marking the form as asked.
+    console.error("Zendesk: greeting on open failed:", err);
+  }
+}
+
 async function handleUserMessage(cfg: ZendeskConfig, event: ZendeskEvent): Promise<void> {
   const conversationId = conversationIdOf(event);
   if (!conversationId) return;
