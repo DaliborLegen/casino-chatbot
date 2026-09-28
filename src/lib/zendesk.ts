@@ -98,6 +98,58 @@ export async function postBusinessMessage(
 }
 
 /**
+ * Asks the guest for a name and an email through a native form message.
+ *
+ * Until 8 September 2026 Zendesk's own AnswerBot did this via a proactive
+ * welcome greeting; with that greeting gone, conversations reached the agents
+ * with no contact details. Web Widget renders `form` inline and answers with a
+ * `formResponse` message, which the webhook picks up like any other message.
+ */
+export async function sendContactForm(
+  cfg: ZendeskConfig,
+  conversationId: string,
+  intro: string
+): Promise<void> {
+  await postBusinessMessage(cfg, conversationId, intro);
+  await zendeskFetch(cfg, `/conversations/${conversationId}/messages`, {
+    method: "POST",
+    body: {
+      author: { type: "business" },
+      content: {
+        type: "form",
+        // The guest can still type instead of filling this in — a form that
+        // blocks the input would trap anyone whose widget fails to render it.
+        blockChatInput: false,
+        fields: [
+          { type: "text", name: "name", label: "Ime in priimek" },
+          { type: "email", name: "email", label: "E-poštni naslov" },
+        ],
+      },
+    },
+  });
+}
+
+/**
+ * Writes the collected details onto the Sunshine user, so the agent sees a
+ * named guest rather than an anonymous visitor. Best effort: `passControl`
+ * metadata carries the same values, and Zendesk ignores unknown profile fields.
+ */
+export async function updateUserProfile(
+  cfg: ZendeskConfig,
+  userId: string,
+  contact: { name?: string; email?: string }
+): Promise<void> {
+  const [givenName, ...rest] = (contact.name ?? "").trim().split(/\s+/).filter(Boolean);
+  const profile: Record<string, string> = {};
+  if (givenName) profile.givenName = givenName;
+  if (rest.length) profile.surname = rest.join(" ");
+  if (contact.email) profile.email = contact.email;
+  if (Object.keys(profile).length === 0) return;
+
+  await zendeskFetch(cfg, `/users/${userId}`, { method: "PATCH", body: { profile } });
+}
+
+/**
  * Hands the conversation to a named switchboard integration, e.g. back to
  * Zendesk's own answerBot for brands our bot does not serve yet.
  */
