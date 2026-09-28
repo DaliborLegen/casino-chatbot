@@ -38,7 +38,7 @@ function apiBase(cfg: ZendeskConfig): string {
 async function zendeskFetch(
   cfg: ZendeskConfig,
   path: string,
-  init: { method: "GET" | "POST"; body?: unknown }
+  init: { method: "GET" | "POST" | "PATCH"; body?: unknown }
 ): Promise<unknown> {
   // One retry on a transient failure: a dropped passControl would leave the
   // guest waiting for an agent who never gets the conversation. Both calls we
