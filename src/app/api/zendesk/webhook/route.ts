@@ -56,6 +56,24 @@ function withConversationLock(conversationId: string, task: () => Promise<void>)
   return next;
 }
 
+/**
+ * A `formResponse` carries the guest's answers, one entry per field, with the
+ * value under a key named after the field type (`text`, `email`).
+ */
+interface ZendeskFormField {
+  name?: string;
+  type?: string;
+  label?: string;
+  text?: string;
+  email?: string;
+}
+
+interface ZendeskContent {
+  type?: string;
+  text?: string;
+  fields?: ZendeskFormField[];
+}
+
 interface ZendeskEvent {
   id?: string;
   type?: string;
@@ -68,8 +86,8 @@ interface ZendeskEvent {
     message?: {
       id?: string;
       _id?: string;
-      author?: { type?: string };
-      content?: { type?: string; text?: string };
+      author?: { type?: string; userId?: string };
+      content?: ZendeskContent;
       /** Which channel integration the message came in through (one per brand). */
       source?: { type?: string; integrationId?: string };
     };
@@ -155,6 +173,92 @@ async function botHasControl(
   return active === cfg.botSwitchboardId;
 }
 
+const FORM_INTRO =
+  "Pozdravljeni! Preden nadaljujemo, prosim pustite ime in e-poštni naslov, da vas naša podpora lahko kontaktira, če se pogovor prekine.";
+
+function contactFromFormResponse(content: ZendeskContent | undefined): {
+  name?: string;
+  email?: string;
+} {
+  const contact: { name?: string; email?: string } = {};
+  for (const field of content?.fields ?? []) {
+    const value = (field.email ?? field.text ?? "").trim();
+    if (!value) continue;
+    if (field.name === "email" || field.type === "email") contact.email = value;
+    else if (field.name === "name" || field.type === "text") contact.name = value;
+  }
+  return contact;
+}
+
+/** Hands the conversation to the agents and leaves a trace in the admin history. */
+async function handOverToAgents(
+  cfg: ZendeskConfig,
+  conversationId: string,
+  sessionId: string,
+  tenant: TenantId,
+  opts: {
+    firstMessageId?: string;
+    integrationId?: string;
+    contact?: { name?: string; email?: string };
+    userMessage?: string;
+  }
+): Promise<void> {
+  // Zendesk's own bot owns the pre-chat form on brands where a proactive
+  // greeting still runs; elsewhere "next" is Agent Workspace and we are the
+  // ones who collected the contact details.
+  const target = process.env.ZENDESK_DAYTIME_SWITCHBOARD || "next";
+  await passControlToAgent(cfg, conversationId, {
+    firstMessageId: opts.firstMessageId,
+    target,
+    contact: opts.contact,
+  });
+  // Logged because a silent success looks exactly like a dropped event.
+  console.log("Zendesk: handed over", {
+    conversationId,
+    integrationId: opts.integrationId,
+    target,
+    withContact: Boolean(opts.contact?.email || opts.contact?.name),
+  });
+  // Keep a trace in the history, otherwise daytime traffic is invisible in the
+  // admin. Never let a bookkeeping failure undo a completed handoff.
+  await recordAgentHandoff(sessionId, tenant, opts.userMessage).catch((err) =>
+    console.error("Zendesk: handoff not recorded:", err)
+  );
+}
+
+/** Answers as the bot, re-checking control because generating takes seconds. */
+async function replyAsBot(
+  cfg: ZendeskConfig,
+  conversationId: string,
+  sessionId: string,
+  tenant: TenantId,
+  text: string
+): Promise<void> {
+  if (text.length > MAX_MESSAGE_LENGTH) return;
+  if (await isSessionRateLimited(sessionId)) return;
+
+  let reply: string;
+  try {
+    await ensureConversation(sessionId, tenant);
+    reply = await generateReply(sessionId, text, tenant);
+  } catch (err) {
+    // generateReply handles Claude failures itself, so this is the store failing.
+    // Outside support hours nobody else answers, so still say something.
+    console.error("Zendesk reply generation error:", err);
+    reply = fallbackReply(tenant);
+  }
+  if (!reply) return;
+
+  // An agent may have picked the chat up while we were generating, so re-check
+  // control before speaking over them.
+  if (!(await botHasControl(cfg, conversationId, undefined))) {
+    console.log("Zendesk: control changed while generating, dropping reply", { conversationId });
+    return;
+  }
+
+  await postBusinessMessage(cfg, conversationId, reply);
+}
+
 async function handleUserMessage(cfg: ZendeskConfig, event: ZendeskEvent): Promise<void> {
   const conversationId = conversationIdOf(event);
   if (!conversationId) return;
@@ -182,28 +286,81 @@ async function handleUserMessage(cfg: ZendeskConfig, event: ZendeskEvent): Promi
       // The conversation must never stay parked on us: we do not answer for
       // this brand, so nobody would. Agent Workspace is the safe landing spot.
       console.error("Zendesk handback failed, passing to agents instead:", err);
-      await passControlToAgent(cfg, conversationId, messageIdOf(event));
+      await passControlToAgent(cfg, conversationId, { firstMessageId: messageIdOf(event) });
     }
     return;
   }
 
   const tenant = tenantFor(event);
 
-  // Support hours → hand over to Agent Workspace, don't call the bot at all.
+  // The guest filled in the pre-chat form: keep the details, then carry on with
+  // whatever they wrote before it.
+  if (content?.type === "formResponse") {
+    const answers = contactFromFormResponse(content);
+    const state = await saveContact(sessionId, tenant, answers);
+    const userId = message?.author?.userId;
+    if (userId) {
+      await updateUserProfile(cfg, userId, answers).catch((err) =>
+        console.error("Zendesk: guest profile not updated:", err)
+      );
+    }
+
+    const pending = state.pendingMessage?.trim();
+    if (isSupportOpen()) {
+      await handOverToAgents(cfg, conversationId, sessionId, tenant, {
+        firstMessageId: messageIdOf(event),
+        integrationId,
+        contact: state,
+        userMessage: pending,
+      });
+      return;
+    }
+    // Outside support hours the bot answers; the guest should not have to
+    // repeat the question they asked before the form.
+    if (!pending) {
+      await postBusinessMessage(
+        cfg,
+        conversationId,
+        state.name
+          ? `Hvala, ${state.name}. Kako vam lahko pomagam?`
+          : "Hvala. Kako vam lahko pomagam?"
+      );
+      return;
+    }
+    await replyAsBot(cfg, conversationId, sessionId, tenant, pending);
+    return;
+  }
+
+  const text = content?.type === "text" ? content.text?.trim() : undefined;
+
+  // Ask for name and email once per conversation, before agents or bot take
+  // over: since their welcome greeting was deleted, nobody else asks.
+  const contact = await loadContact(sessionId);
+  if (!contact.formSentAt && !hasContactDetails(contact)) {
+    try {
+      await sendContactForm(cfg, conversationId, FORM_INTRO);
+      await saveContact(sessionId, tenant, {
+        formSentAt: new Date().toISOString(),
+        pendingMessage: text,
+      });
+      return;
+    } catch (err) {
+      // A form we failed to send must not stall the conversation; mark it as
+      // asked and fall through to the normal flow.
+      console.error("Zendesk: contact form failed, continuing without it:", err);
+      await saveContact(sessionId, tenant, { formSentAt: new Date().toISOString() });
+    }
+  }
+
+  // Support hours → hand over to the agents, don't call the bot at all.
   if (isSupportOpen()) {
     try {
-      // Zendesk's own bot owns the pre-chat form (it asks the guest for an
-      // email), so during support hours we hand to it rather than jumping
-      // straight to Agent Workspace. Set to "next" to skip it again.
-      const target = process.env.ZENDESK_DAYTIME_SWITCHBOARD || "next";
-      await passControlToAgent(cfg, conversationId, messageIdOf(event), target);
-      // Logged because a silent success looks exactly like a dropped event.
-      console.log("Zendesk: handed over", { conversationId, integrationId, target });
-      // Keep a trace in the history, otherwise daytime traffic is invisible in
-      // the admin. Never let a bookkeeping failure undo a completed handoff.
-      await recordAgentHandoff(sessionId, tenant, content?.type === "text" ? content.text : undefined).catch(
-        (err) => console.error("Zendesk: handoff not recorded:", err)
-      );
+      await handOverToAgents(cfg, conversationId, sessionId, tenant, {
+        firstMessageId: messageIdOf(event),
+        integrationId,
+        contact,
+        userMessage: text,
+      });
       return;
     } catch (err) {
       console.error("Zendesk passControl failed:", err);
@@ -218,31 +375,8 @@ async function handleUserMessage(cfg: ZendeskConfig, event: ZendeskEvent): Promi
     return;
   }
 
-  const text = content?.text?.trim();
   if (!text) return;
-  if (text.length > MAX_MESSAGE_LENGTH) return;
-  if (await isSessionRateLimited(sessionId)) return;
-
-  let reply: string;
-  try {
-    await ensureConversation(sessionId, tenant);
-    reply = await generateReply(sessionId, text, tenant);
-  } catch (err) {
-    // generateReply handles Claude failures itself, so this is the store failing.
-    // Outside support hours nobody else answers, so still say something.
-    console.error("Zendesk reply generation error:", err);
-    reply = fallbackReply(tenant);
-  }
-  if (!reply) return;
-
-  // Generating a reply takes seconds; an agent may have picked the chat up in
-  // the meantime, so re-check control before speaking over them.
-  if (!(await botHasControl(cfg, conversationId, undefined))) {
-    console.log("Zendesk: control changed while generating, dropping reply", { conversationId });
-    return;
-  }
-
-  await postBusinessMessage(cfg, conversationId, reply);
+  await replyAsBot(cfg, conversationId, sessionId, tenant, text);
 }
 
 export async function POST(req: NextRequest) {
