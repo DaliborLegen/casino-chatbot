@@ -204,8 +204,24 @@ export async function passControlToAgent(
 
 interface ConversationResponse {
   conversation?: {
+    brandId?: string;
     activeSwitchboardIntegration?: { id?: string };
   };
+}
+
+/**
+ * Reads which brand a conversation belongs to. The `conversation:create` event
+ * doesn't name the channel integration, so the brand is what tells us which
+ * casino just opened the widget.
+ */
+export async function getConversationBrandId(
+  cfg: ZendeskConfig,
+  conversationId: string
+): Promise<string | null> {
+  const data = (await zendeskFetch(cfg, `/conversations/${conversationId}`, {
+    method: "GET",
+  })) as ConversationResponse;
+  return data.conversation?.brandId ?? null;
 }
 
 /**
