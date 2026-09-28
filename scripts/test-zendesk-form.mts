@@ -15,6 +15,7 @@ process.env.ZENDESK_BOT_SWITCHBOARD_ID = BOT_SWITCHBOARD;
 process.env.ZENDESK_ONLY_INTEGRATIONS = INTEGRATION_777;
 process.env.ZENDESK_TENANT_BY_INTEGRATION = `${INTEGRATION_777}:casino777`;
 process.env.ZENDESK_TENANT = "casino777";
+process.env.ZENDESK_TENANT_BY_BRAND = "brand_777:casino777";
 delete process.env.ZENDESK_WEBHOOK_SECRET; // preskoci preverjanje podpisa
 delete process.env.NEXT_PUBLIC_SUPABASE_URL;
 delete process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -81,6 +82,30 @@ function post(
             content,
             source: { type: "web", integrationId: INTEGRATION_777 },
           },
+        },
+      },
+    ],
+  });
+  const req = new Request("https://chat-bot.bet/api/zendesk/webhook", {
+    method: "POST",
+    body,
+    headers: { "content-type": "application/json" },
+  });
+  return POST(req as unknown as NextRequest);
+}
+
+function postCreate(
+  conversationId: string,
+  opts: { reason?: string; brandId?: string } = {}
+) {
+  const body = JSON.stringify({
+    events: [
+      {
+        id: `evt_${++eventSeq}`,
+        type: "conversation:create",
+        payload: {
+          creationReason: opts.reason ?? "startConversation",
+          conversation: { id: conversationId, brandId: opts.brandId ?? "brand_777" },
         },
       },
     ],
@@ -198,6 +223,27 @@ check(
   (nightReplies[0].body.content as { text: string }).text,
   "Odgovor bota."
 );
+
+// 6. Gost samo odpre klepet: obrazec pride se pred prvim sporocilom.
+open();
+calls = [];
+await postCreate("conv_open");
+check("6a. obrazec ob odprtju", forms().length, 1);
+check("6b. brez predaje agentom", handoffs().length, 0);
+calls = [];
+await post("conv_open", { type: "text", text: "Pozdravljeni" });
+check("6c. brez drugega obrazca", forms().length, 0);
+check("6d. sporocilo gre agentom", handoffs().length, 1);
+
+// 7. Pogovor, ki nastane sele s sporocilom: ob odprtju ne pozdravimo.
+calls = [];
+await postCreate("conv_reason", { reason: "message" });
+check("7. brez obrazca ob reason=message", forms().length, 0);
+
+// 8. Tuja znamka: ne pozdravljamo.
+calls = [];
+await postCreate("conv_brand", { brandId: "brand_casino" });
+check("8. brez obrazca za tujo znamko", forms().length, 0);
 
 console.log(failures === 0 ? "\nVse preverbe OK" : `\n${failures} preverb ni uspelo`);
 process.exit(failures === 0 ? 0 : 1);

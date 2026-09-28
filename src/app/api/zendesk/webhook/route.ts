@@ -7,6 +7,7 @@ import { isTenantId, type TenantId } from "@/lib/tenants";
 import {
   describeSignatureHeaders,
   getActiveSwitchboardId,
+  getConversationBrandId,
   getZendeskConfig,
   passControlToAgent,
   passControlToIntegration,
