@@ -333,7 +333,10 @@ async function handleConversationStart(cfg: ZendeskConfig, event: ZendeskEvent):
 
   try {
     await sendContactForm(cfg, conversationId, FORM_INTRO);
-    await saveContact(sessionId, tenant, { formSentAt: new Date().toISOString() });
+    await saveContact(sessionId, tenant, {
+      formSentAt: new Date().toISOString(),
+      formPrompts: 1,
+    });
     console.log("Zendesk: greeted on open", { conversationId, tenant });
   } catch (err) {
     // The guest has not written anything yet, so nobody is left waiting: let the
