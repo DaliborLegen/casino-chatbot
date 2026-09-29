@@ -185,19 +185,27 @@ await post("conv_day", { type: "text", text: "Se eno vprasanje" });
 check("3a. brez obrazca", forms().length, 0);
 check("3b. takojsnja predaja", handoffs().length, 1);
 
-// 4. Gost obrazec ignorira in pise naprej: ne sprasujemo znova.
+// 4. Gost obrazec ignorira in pise naprej: obrazec dobi znova, brez predaje.
 calls = [];
 await post("conv_skip", { type: "text", text: "Prvo sporocilo" });
-check("4a. obrazec poslan enkrat", forms().length, 1);
+check("4a. obrazec ob prvem sporocilu", forms().length, 1);
+check(
+  "4b. obrazec zaklene vnos",
+  (forms()[0].body.content as { blockChatInput?: boolean }).blockChatInput,
+  true
+);
 calls = [];
 await post("conv_skip", { type: "text", text: "Nocem izpolniti obrazca" });
-check("4b. brez drugega obrazca", forms().length, 0);
-check("4c. predaja agentom kljub praznemu kontaktu", handoffs().length, 1);
-check(
-  "4d. brez imena v predaji",
-  (handoffs()[0].body.metadata as Record<string, string>)["dataCapture.systemField.requester.name"],
-  undefined
-);
+check("4c. obrazec znova", forms().length, 1);
+check("4d. brez predaje agentom", handoffs().length, 0);
+calls = [];
+await post("conv_skip", { type: "text", text: "Se vedno nocem" });
+check("4e. tretji poskus", forms().length, 1);
+check("4f. se vedno brez predaje", handoffs().length, 0);
+calls = [];
+await post("conv_skip", { type: "text", text: "Pa dajte ze" });
+check("4g. po treh poskusih ne sprasujemo vec", forms().length, 0);
+check("4h. gost gre agentom tudi brez podatkov", handoffs().length, 1);
 
 // 5. Ponoci: obrazec, nato bot odgovori na vprasanje izpred obrazca.
 closed();
@@ -232,8 +240,8 @@ check("6a. obrazec ob odprtju", forms().length, 1);
 check("6b. brez predaje agentom", handoffs().length, 0);
 calls = [];
 await post("conv_open", { type: "text", text: "Pozdravljeni" });
-check("6c. brez drugega obrazca", forms().length, 0);
-check("6d. sporocilo gre agentom", handoffs().length, 1);
+check("6c. brez podatkov ni predaje agentom", handoffs().length, 0);
+check("6d. namesto tega opomnik z obrazcem", forms().length, 1);
 
 // 7. Pogovor, ki nastane sele s sporocilom: ob odprtju ne pozdravimo.
 calls = [];
