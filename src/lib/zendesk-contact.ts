@@ -21,6 +21,8 @@ export interface ContactState {
   formSentAt?: string;
   /** The guest's opening message, kept so we can answer it after the form. */
   pendingMessage?: string;
+  /** How many times we have put the form in front of this guest. */
+  formPrompts?: number;
 }
 
 const memory = new Map<string, ContactState>();
