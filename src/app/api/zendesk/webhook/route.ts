@@ -406,22 +406,35 @@ async function handleUserMessage(cfg: ZendeskConfig, event: ZendeskEvent): Promi
 
   const text = content?.type === "text" ? content.text?.trim() : undefined;
 
-  // Ask for name and email once per conversation, before agents or bot take
-  // over: since their welcome greeting was deleted, nobody else asks.
+  // Name and email come before anything else: the casino wants them the way
+  // LiveChat's pre-chat form collected them. The form itself locks the text
+  // input, so this only fires for a guest who got a message past it.
   const contact = await loadContact(sessionId);
-  if (!contact.formSentAt && !hasContactDetails(contact)) {
-    try {
-      await sendContactForm(cfg, conversationId, FORM_INTRO);
-      await saveContact(sessionId, tenant, {
-        formSentAt: new Date().toISOString(),
-        pendingMessage: text,
-      });
-      return;
-    } catch (err) {
-      // A form we failed to send must not stall the conversation; mark it as
-      // asked and fall through to the normal flow.
-      console.error("Zendesk: contact form failed, continuing without it:", err);
-      await saveContact(sessionId, tenant, { formSentAt: new Date().toISOString() });
+  if (!hasContactDetails(contact)) {
+    const prompts = contact.formPrompts ?? 0;
+    if (prompts < MAX_FORM_PROMPTS) {
+      try {
+        await sendContactForm(cfg, conversationId, prompts === 0 ? FORM_INTRO : FORM_REMINDER);
+        await saveContact(sessionId, tenant, {
+          formSentAt: new Date().toISOString(),
+          formPrompts: prompts + 1,
+          // Keep the first question only; later ones would overwrite it.
+          ...(contact.pendingMessage ? {} : { pendingMessage: text }),
+        });
+        return;
+      } catch (err) {
+        // A form we failed to send must not stall the conversation: count the
+        // attempt and fall through to the normal flow.
+        console.error("Zendesk: contact form failed, continuing without it:", err);
+        await saveContact(sessionId, tenant, {
+          formSentAt: new Date().toISOString(),
+          formPrompts: prompts + 1,
+        });
+      }
+    } else {
+      // Asked enough times. Someone who still won't fill it in gets help
+      // anyway — an unanswered guest is worse than a nameless ticket.
+      console.log("Zendesk: continuing without contact details", { conversationId, prompts });
     }
   }
 
