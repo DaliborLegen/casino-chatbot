@@ -117,9 +117,10 @@ export async function sendContactForm(
       author: { type: "business" },
       content: {
         type: "form",
-        // The guest can still type instead of filling this in — a form that
-        // blocks the input would trap anyone whose widget fails to render it.
-        blockChatInput: false,
+        // Locks the text input until the form is submitted, the way LiveChat's
+        // pre-chat form did. The webhook still nudges anyone who gets a message
+        // through another channel, so nobody ends up unable to reach support.
+        blockChatInput: true,
         fields: [
           { type: "text", name: "name", label: "Ime in priimek" },
           { type: "email", name: "email", label: "E-poštni naslov" },
