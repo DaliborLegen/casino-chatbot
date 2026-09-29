@@ -185,6 +185,16 @@ async function botHasControl(
 const FORM_INTRO =
   "Pozdravljeni! Preden nadaljujemo, prosim pustite ime in e-poštni naslov, da vas naša podpora lahko kontaktira, če se pogovor prekine.";
 
+const FORM_REMINDER =
+  "Za nadaljevanje pogovora prosim izpolnite ime in e-poštni naslov.";
+
+/**
+ * How many times the form is put in front of a guest who hasn't filled it in.
+ * The form locks the chat input, so reaching this at all means something got a
+ * message through anyway; after this we help them regardless.
+ */
+const MAX_FORM_PROMPTS = 3;
+
 function contactFromFormResponse(content: ZendeskContent | undefined): {
   name?: string;
   email?: string;
