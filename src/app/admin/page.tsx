@@ -331,8 +331,8 @@ export default async function AdminPage({
               className="rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 focus:outline-none"
             >
               <option value="">Ves dan</option>
-              <option value="dan">Podnevi (agenti)</option>
-              <option value="noc">Ponoči (bot)</option>
+              <option value="dan">Začeti podnevi (8:00–24:00)</option>
+              <option value="noc">Začeti ponoči (0:00–8:00)</option>
             </select>
           </div>
           <button
