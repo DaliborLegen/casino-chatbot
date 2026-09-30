@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getSupabase } from "@/lib/supabase";
 import { getAdminTenant } from "@/lib/admin-tenant";
+import { isSupportOpen } from "@/lib/support-hours";
 import type { TenantId } from "@/lib/tenants";
 
 export const dynamic = "force-dynamic";
@@ -25,6 +26,12 @@ interface Filters {
   source: "" | "lc" | "zd" | "widget";
   /** How many days back to include, 0 = no limit. */
   days: number;
+  /**
+   * Which shift the conversation started in: "day" = while agents are on duty,
+   * "night" = the hours the bot covers alone. Follows the same schedule the bot
+   * uses to decide whether to hand over, so the two always agree.
+   */
+  shift: "" | "day" | "night";
 }
 
 interface Stats {
@@ -174,6 +181,11 @@ async function loadConversations(
     }))
     .filter((r) => r.message_count > 0)
     .filter((r) => !filters.source || sourceOf(r.session_id) === filters.source)
+    .filter((r) => {
+      if (!filters.shift) return true;
+      const duringDay = isSupportOpen(new Date(r.created_at));
+      return filters.shift === "day" ? duringDay : !duringDay;
+    })
     .slice(0, limit);
 }
 
@@ -213,7 +225,7 @@ function truncate(s: string | null, n: number) {
 export default async function AdminPage({
   searchParams,
 }: {
-  searchParams: Promise<{ limit?: string; q?: string; vir?: string; dni?: string }>;
+  searchParams: Promise<{ limit?: string; q?: string; vir?: string; dni?: string; cas?: string }>;
 }) {
   const params = await searchParams;
   const limit = Math.min(Number(params.limit) || 100, 500);
@@ -222,13 +234,14 @@ export default async function AdminPage({
     q: (params.q || "").trim().slice(0, 120),
     source: rawSource,
     days: Math.min(Math.max(Number(params.dni) || 0, 0), 365),
+    shift: params.cas === "dan" ? "day" : params.cas === "noc" ? "night" : "",
   };
   const tenant = await getAdminTenant();
   const [rows, stats] = await Promise.all([
     loadConversations(limit, tenant.id, filters),
     loadStats(tenant.id),
   ]);
-  const filtered = !!(filters.q || filters.source || filters.days);
+  const filtered = !!(filters.q || filters.source || filters.days || filters.shift);
 
   return (
     <div className="text-zinc-100 px-4 sm:px-5 py-6">
@@ -306,6 +319,20 @@ export default async function AdminPage({
               <option value="7">Zadnjih 7 dni</option>
               <option value="30">Zadnjih 30 dni</option>
               <option value="90">Zadnjih 90 dni</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-zinc-400 uppercase tracking-wide mb-1.5">
+              Čas
+            </label>
+            <select
+              name="cas"
+              defaultValue={filters.shift === "day" ? "dan" : filters.shift === "night" ? "noc" : ""}
+              className="rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 focus:outline-none"
+            >
+              <option value="">Ves dan</option>
+              <option value="dan">Podnevi (agenti)</option>
+              <option value="noc">Ponoči (bot)</option>
             </select>
           </div>
           <button
@@ -391,6 +418,7 @@ export default async function AdminPage({
               ...(filters.q ? { q: filters.q } : {}),
               ...(filters.source ? { vir: filters.source } : {}),
               ...(filters.days ? { dni: String(filters.days) } : {}),
+              ...(filters.shift ? { cas: filters.shift === "day" ? "dan" : "noc" } : {}),
             })}`}
             className="underline hover:text-zinc-300"
           >
