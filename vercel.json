@@ -7,6 +7,22 @@
     {
       "path": "/api/cron/daily-insights",
       "schedule": "0 8 * * *"
+    },
+    {
+      "path": "/api/cron/daily-insights?tenant=casino777",
+      "schedule": "10 7 * * *"
+    },
+    {
+      "path": "/api/cron/daily-insights?tenant=casino777",
+      "schedule": "10 8 * * *"
+    },
+    {
+      "path": "/api/cron/daily-insights?tenant=supercasino",
+      "schedule": "20 7 * * *"
+    },
+    {
+      "path": "/api/cron/daily-insights?tenant=supercasino",
+      "schedule": "20 8 * * *"
     }
   ]
 }

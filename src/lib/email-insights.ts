@@ -1,5 +1,6 @@
 import { Resend } from "resend";
 import type { InsightResult } from "@/lib/insights";
+import { getTenant } from "@/lib/tenants";
 
 function escapeHtml(s: string): string {
   return s
@@ -96,7 +97,7 @@ function buildHtml(result: InsightResult, adminUrl: string): string {
 <html lang="sl">
 <head>
 <meta charset="utf-8" />
-<title>Casino.si AI chatbot — dnevna analiza ${result.report_date}</title>
+<title>${getTenant(result.tenant).name} AI chatbot — dnevna analiza ${result.report_date}</title>
 </head>
 <body style="margin:0;padding:0;background:#f5f5f5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#222">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f5f5f5;padding:24px 0">
@@ -105,7 +106,7 @@ function buildHtml(result: InsightResult, adminUrl: string): string {
         <table role="presentation" width="640" cellpadding="0" cellspacing="0" border="0" style="max-width:640px;width:100%;background:#ffffff;border:1px solid #e5e5e5;border-radius:8px;overflow:hidden">
           <tr>
             <td style="padding:20px 28px;border-bottom:1px solid #e5e5e5;background:#fafafa">
-              <div style="font-size:12px;color:#888;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px">Casino.si AI chatbot</div>
+              <div style="font-size:12px;color:#888;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px">${getTenant(result.tenant).name} AI chatbot</div>
               <div style="font-size:18px;font-weight:600;color:#111">Dnevna analiza — ${result.report_date}</div>
               <div style="font-size:13px;color:#666;margin-top:6px">
                 Pogovorov: <strong style="color:#222">${result.stats.conversation_count}</strong> &nbsp;·&nbsp;
@@ -146,7 +147,12 @@ export interface EmailSendResult {
 
 export async function sendInsightEmail(result: InsightResult): Promise<EmailSendResult> {
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.INSIGHTS_EMAIL_TO;
+  const brand = getTenant(result.tenant).name;
+  // Each brand can have its own recipients; without one they all go to the
+  // address we already use for casino.si.
+  const to =
+    process.env[`INSIGHTS_EMAIL_TO_${result.tenant.toUpperCase()}`] ||
+    process.env.INSIGHTS_EMAIL_TO;
   const from = process.env.INSIGHTS_EMAIL_FROM;
 
   if (!apiKey) return { sent: false, skippedReason: "RESEND_API_KEY not set" };
@@ -165,7 +171,7 @@ export async function sendInsightEmail(result: InsightResult): Promise<EmailSend
   const adminUrl = `${adminBase}/admin/insights/${result.report_date}`;
 
   const html = buildHtml(result, adminUrl);
-  const text = `Casino.si AI chatbot — dnevna analiza ${result.report_date}
+  const text = `${brand} AI chatbot — dnevna analiza ${result.report_date}
 
 Pogovorov: ${result.stats.conversation_count} | Sporočil: ${result.stats.message_count}
 
@@ -175,7 +181,7 @@ ${result.markdown}
 Celotno poročilo: ${adminUrl}
 Model: ${result.stats.model}`;
 
-  const subject = `Casino.si AI chatbot — dnevna analiza ${result.report_date}`;
+  const subject = `${brand} AI chatbot — dnevna analiza ${result.report_date}`;
 
   try {
     const resend = new Resend(apiKey);
