@@ -17,6 +17,8 @@ interface Row {
   last_assistant: string | null;
   /** True when the bot handed the conversation to human agents instead of answering. */
   handoff: boolean;
+  /** When the bot last spoke inside the selected shift (only with that filter). */
+  shift_reply_at: string | null;
 }
 
 interface Filters {
@@ -174,8 +176,8 @@ async function loadConversations(
     // returning guest, so a conversation can start in the afternoon and have
     // every bot reply days later at 7am — the start time says nothing about
     // when the bot worked.
-    const botByDay = new Set<string>();
-    const botByNight = new Set<string>();
+    const botByDay = new Map<string, string>();
+    const botByNight = new Map<string, string>();
     for (const m of msgs || []) {
       counts.set(m.conversation_id, (counts.get(m.conversation_id) || 0) + 1);
       if (m.role === "user" && !lastUser.has(m.conversation_id)) {
@@ -184,7 +186,9 @@ async function loadConversations(
         if (!lastAssistant.has(m.conversation_id)) {
           lastAssistant.set(m.conversation_id, m.content);
         }
-        (isSupportOpen(new Date(m.created_at)) ? botByDay : botByNight).add(m.conversation_id);
+        // Messages arrive newest first, so the first hit is the latest one.
+        const bucket = isSupportOpen(new Date(m.created_at)) ? botByDay : botByNight;
+        if (!bucket.has(m.conversation_id)) bucket.set(m.conversation_id, m.created_at);
       }
     }
 
@@ -195,6 +199,12 @@ async function loadConversations(
       if (filters.shift === "day" && !botByDay.has(c.id)) continue;
       if (filters.shift === "night" && !botByNight.has(c.id)) continue;
       rows.push({
+        shift_reply_at:
+          filters.shift === "day"
+            ? botByDay.get(c.id) ?? null
+            : filters.shift === "night"
+              ? botByNight.get(c.id) ?? null
+              : null,
         id: c.id,
         session_id: c.session_id,
         created_at: c.created_at,
@@ -376,7 +386,7 @@ export default async function AdminPage({
         <div className="rounded-lg border border-zinc-800 overflow-hidden">
           <div className="hidden md:grid grid-cols-[110px_140px_140px_60px_1fr_1fr] gap-3 px-4 py-2 bg-zinc-900 text-xs font-medium text-zinc-400 uppercase tracking-wide">
             <div>Vir</div>
-            <div>Posodobljeno</div>
+            <div>{filters.shift ? "Botov odgovor" : "Posodobljeno"}</div>
             <div>Začelo</div>
             <div className="text-right">#</div>
             <div>Zadnje vprašanje</div>
@@ -404,8 +414,10 @@ export default async function AdminPage({
                   )}
                 </div>
                 <div className="text-sm text-zinc-300 whitespace-nowrap">
-                  <span className="md:hidden text-zinc-500 mr-1">Posodobljeno:</span>
-                  {fmt(r.updated_at)}
+                  <span className="md:hidden text-zinc-500 mr-1">
+                    {filters.shift ? "Botov odgovor:" : "Posodobljeno:"}
+                  </span>
+                  {fmt(r.shift_reply_at ?? r.updated_at)}
                 </div>
                 <div className="text-sm text-zinc-500 whitespace-nowrap">
                   <span className="md:hidden text-zinc-500 mr-1">Začelo:</span>
