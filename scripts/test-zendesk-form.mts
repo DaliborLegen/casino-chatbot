@@ -178,6 +178,15 @@ check("2e. ime v predaji", meta["dataCapture.systemField.requester.name"], "Ana 
 check("2f. email v predaji", meta["dataCapture.systemField.requester.email"], "ana@example.com");
 check("2g. cilj predaje", handoffs()[0].body.switchboardIntegration, "next");
 check("2h. brez novega obrazca", forms().length, 0);
+const unlockNotice = posted().filter(
+  (c) => (c.body.content as { type?: string } | undefined)?.type === "text"
+);
+check("2i. sporocilo, ki odklene vnos", unlockNotice.length, 1);
+check(
+  "2j. sporocilo omenja podporo",
+  (unlockNotice[0].body.content as { text: string }).text.includes("podporo"),
+  true
+);
 
 // 3. Naslednje sporocilo v istem pogovoru: brez ponovnega obrazca.
 calls = [];
