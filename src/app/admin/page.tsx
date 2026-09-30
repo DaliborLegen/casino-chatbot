@@ -115,18 +115,12 @@ async function loadConversations(
   filters: Filters
 ): Promise<Row[]> {
   const supabase = getSupabase();
-  // The webhook creates a conversation row for every LiveChat chat in the
-  // shared license (incoming_chat), including daytime chats human agents handle
-  // and the bot never answers — those stay at 0 messages. We hide them below so
-  // the dashboard shows only real conversations. Over-fetch candidates to keep
-  // the page full after filtering.
-  const candidateLimit = Math.min(limit * 2, 500);
 
   // Text search runs over messages first, then narrows the conversation list to
   // the sessions that actually contain the phrase.
   let matchedIds: string[] | null = null;
   if (filters.q) {
-    const pattern = `%${filters.q.replace(/[%_]/g, (c) => `\\${c}`)}%`;
+    const pattern = `%${filters.q.replace(/[%_]/g, (c) => "\\" + c)}%`;
     const { data: hits } = await supabase
       .from("messages")
       .select("conversation_id")
@@ -136,57 +130,80 @@ async function loadConversations(
     if (matchedIds.length === 0) return [];
   }
 
-  let query = supabase
-    .from("conversations")
-    .select("id, session_id, created_at, updated_at, metadata")
-    .eq("tenant", tenant)
-    .order("updated_at", { ascending: false })
-    .limit(candidateLimit);
+  /**
+   * The webhook creates a conversation row for every LiveChat chat in the shared
+   * license, including the ones human agents handle and the bot never answers —
+   * on casino.si that is ~85% of them, and they stay at 0 messages. Since the
+   * filtering happens here rather than in the query, we walk the list page by
+   * page until enough rows survive; a single over-fetch used to cap the list
+   * long before the requested limit, so "load more" did nothing.
+   */
+  const PAGE = 250;
+  const MAX_SCANNED = 4000;
+  const rows: Row[] = [];
+  let scanned = 0;
 
-  if (matchedIds) query = query.in("id", matchedIds);
-  if (filters.days > 0) query = query.gte("updated_at", daysAgoIso(filters.days));
+  while (rows.length < limit && scanned < MAX_SCANNED) {
+    let query = supabase
+      .from("conversations")
+      .select("id, session_id, created_at, updated_at, metadata")
+      .eq("tenant", tenant)
+      .order("updated_at", { ascending: false })
+      .range(scanned, scanned + PAGE - 1);
 
-  const { data: convos, error } = await query;
-  if (error || !convos) return [];
+    if (matchedIds) query = query.in("id", matchedIds);
+    if (filters.days > 0) query = query.gte("updated_at", daysAgoIso(filters.days));
 
-  const ids = convos.map((c) => c.id);
-  const { data: msgs } = await supabase
-    .from("messages")
-    .select("conversation_id, role, content, created_at")
-    .in("conversation_id", ids)
-    .order("created_at", { ascending: false });
+    const { data: convos, error } = await query;
+    if (error || !convos || convos.length === 0) break;
+    scanned += convos.length;
 
-  const lastUser = new Map<string, string>();
-  const lastAssistant = new Map<string, string>();
-  const counts = new Map<string, number>();
-  for (const m of msgs || []) {
-    counts.set(m.conversation_id, (counts.get(m.conversation_id) || 0) + 1);
-    if (m.role === "user" && !lastUser.has(m.conversation_id)) {
-      lastUser.set(m.conversation_id, m.content);
-    } else if (m.role === "assistant" && !lastAssistant.has(m.conversation_id)) {
-      lastAssistant.set(m.conversation_id, m.content);
+    const { data: msgs } = await supabase
+      .from("messages")
+      .select("conversation_id, role, content, created_at")
+      .in(
+        "conversation_id",
+        convos.map((c) => c.id)
+      )
+      .order("created_at", { ascending: false });
+
+    const lastUser = new Map<string, string>();
+    const lastAssistant = new Map<string, string>();
+    const counts = new Map<string, number>();
+    for (const m of msgs || []) {
+      counts.set(m.conversation_id, (counts.get(m.conversation_id) || 0) + 1);
+      if (m.role === "user" && !lastUser.has(m.conversation_id)) {
+        lastUser.set(m.conversation_id, m.content);
+      } else if (m.role === "assistant" && !lastAssistant.has(m.conversation_id)) {
+        lastAssistant.set(m.conversation_id, m.content);
+      }
     }
+
+    for (const c of convos) {
+      const messageCount = counts.get(c.id) || 0;
+      if (messageCount === 0) continue;
+      if (filters.source && sourceOf(c.session_id) !== filters.source) continue;
+      if (filters.shift) {
+        const duringDay = isSupportOpen(new Date(c.created_at));
+        if (filters.shift === "day" ? !duringDay : duringDay) continue;
+      }
+      rows.push({
+        id: c.id,
+        session_id: c.session_id,
+        created_at: c.created_at,
+        updated_at: c.updated_at,
+        message_count: messageCount,
+        last_user: lastUser.get(c.id) || null,
+        last_assistant: lastAssistant.get(c.id) || null,
+        handoff: (c.metadata as { handoff?: boolean } | null)?.handoff === true,
+      });
+      if (rows.length >= limit) break;
+    }
+
+    if (convos.length < PAGE) break; // reached the end of the list
   }
 
-  return convos
-    .map((c) => ({
-      id: c.id,
-      session_id: c.session_id,
-      created_at: c.created_at,
-      updated_at: c.updated_at,
-      message_count: counts.get(c.id) || 0,
-      last_user: lastUser.get(c.id) || null,
-      last_assistant: lastAssistant.get(c.id) || null,
-      handoff: (c.metadata as { handoff?: boolean } | null)?.handoff === true,
-    }))
-    .filter((r) => r.message_count > 0)
-    .filter((r) => !filters.source || sourceOf(r.session_id) === filters.source)
-    .filter((r) => {
-      if (!filters.shift) return true;
-      const duringDay = isSupportOpen(new Date(r.created_at));
-      return filters.shift === "day" ? duringDay : !duringDay;
-    })
-    .slice(0, limit);
+  return rows;
 }
 
 function fmt(d: string) {
