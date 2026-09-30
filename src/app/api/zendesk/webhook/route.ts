@@ -393,6 +393,16 @@ async function handleUserMessage(cfg: ZendeskConfig, event: ZendeskEvent): Promi
 
     const pending = state.pendingMessage?.trim();
     if (isSupportOpen()) {
+      // The form locks the chat input, and Zendesk only unlocks it on the next
+      // business message. Without this line the guest sits unable to type until
+      // an agent happens to reply, which is exactly what the casino reported.
+      await postBusinessMessage(
+        cfg,
+        conversationId,
+        state.name
+          ? `Hvala, ${state.name}. Povezujem vas z našo podporo, medtem pa lahko že opišete svoje vprašanje.`
+          : "Hvala. Povezujem vas z našo podporo, medtem pa lahko že opišete svoje vprašanje."
+      ).catch((err) => console.error("Zendesk: handoff notice not sent:", err));
       await handOverToAgents(cfg, conversationId, sessionId, tenant, {
         firstMessageId: messageIdOf(event),
         integrationId,
