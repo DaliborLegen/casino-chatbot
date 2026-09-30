@@ -27,9 +27,9 @@ interface Filters {
   /** How many days back to include, 0 = no limit. */
   days: number;
   /**
-   * Which shift the conversation started in: "day" = while agents are on duty,
-   * "night" = the hours the bot covers alone. Follows the same schedule the bot
-   * uses to decide whether to hand over, so the two always agree.
+   * Which shift the bot's own replies fall in: "day" = while agents are on
+   * duty, "night" = the hours the bot covers alone. Judged per message, not by
+   * when the conversation started, because LiveChat reuses a chat id for weeks.
    */
   shift: "" | "day" | "night";
 }
@@ -170,12 +170,21 @@ async function loadConversations(
     const lastUser = new Map<string, string>();
     const lastAssistant = new Map<string, string>();
     const counts = new Map<string, number>();
+    // Which shifts the bot actually spoke in. LiveChat keeps one chat id for a
+    // returning guest, so a conversation can start in the afternoon and have
+    // every bot reply days later at 7am — the start time says nothing about
+    // when the bot worked.
+    const botByDay = new Set<string>();
+    const botByNight = new Set<string>();
     for (const m of msgs || []) {
       counts.set(m.conversation_id, (counts.get(m.conversation_id) || 0) + 1);
       if (m.role === "user" && !lastUser.has(m.conversation_id)) {
         lastUser.set(m.conversation_id, m.content);
-      } else if (m.role === "assistant" && !lastAssistant.has(m.conversation_id)) {
-        lastAssistant.set(m.conversation_id, m.content);
+      } else if (m.role === "assistant") {
+        if (!lastAssistant.has(m.conversation_id)) {
+          lastAssistant.set(m.conversation_id, m.content);
+        }
+        (isSupportOpen(new Date(m.created_at)) ? botByDay : botByNight).add(m.conversation_id);
       }
     }
 
@@ -183,10 +192,8 @@ async function loadConversations(
       const messageCount = counts.get(c.id) || 0;
       if (messageCount === 0) continue;
       if (filters.source && sourceOf(c.session_id) !== filters.source) continue;
-      if (filters.shift) {
-        const duringDay = isSupportOpen(new Date(c.created_at));
-        if (filters.shift === "day" ? !duringDay : duringDay) continue;
-      }
+      if (filters.shift === "day" && !botByDay.has(c.id)) continue;
+      if (filters.shift === "night" && !botByNight.has(c.id)) continue;
       rows.push({
         id: c.id,
         session_id: c.session_id,
@@ -348,8 +355,8 @@ export default async function AdminPage({
               className="rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 focus:outline-none"
             >
               <option value="">Ves dan</option>
-              <option value="dan">Začeti podnevi (8:00–24:00)</option>
-              <option value="noc">Začeti ponoči (0:00–8:00)</option>
+              <option value="dan">Bot je odgovarjal podnevi (8:00–24:00)</option>
+              <option value="noc">Bot je odgovarjal ponoči (0:00–8:00)</option>
             </select>
           </div>
           <button
