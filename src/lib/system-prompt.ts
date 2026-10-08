@@ -1,6 +1,7 @@
 import faqData from "@/data/faq.json";
 import gamesData from "@/data/games.json";
 import casinoInfo from "@/data/casino-info.json";
+import { isSupportOpen, supportStartHour } from "@/lib/support-hours";
 
 interface FaqItem {
   question: string;
@@ -234,7 +235,7 @@ ${faqSection}
 ${gamesSection}
 `;
 
-export function buildTimeContext(now: Date = new Date()): string {
+export function buildTimeContext(now: Date = new Date(), supportEmail?: string): string {
   const fmt = new Intl.DateTimeFormat("sl-SI", {
     timeZone: "Europe/Ljubljana",
     weekday: "long",
@@ -245,9 +246,21 @@ export function buildTimeContext(now: Date = new Date()): string {
     minute: "2-digit",
     hour12: false,
   });
-  return `## Trenutni kontekst
+  let ctx = `## Trenutni kontekst
 - Trenutni čas (Europe/Ljubljana): ${fmt.format(now)}
 `;
+  // Outside agent hours the standard escalation line ("dosegljivi med 8:00 in
+  // 24:00 ... ali prek live chata") reads as "write to us here", while nobody is
+  // on duty. Tell the bot it's after hours so it points to the next opening.
+  if (!isSupportOpen(now)) {
+    const start = `${supportStartHour()}:00`;
+    const email = supportEmail ? ` Do takrat lahko pišejo na ${supportEmail}.` : "";
+    ctx += `- Človeška ekipa je TRENUTNO ZAPRTA, spet bo na voljo ob ${start}.
+- Ko uporabnika usmerjaš na ekipo, NE piši »dosegljivi med 8:00 in 24:00« in NE predlagaj live chata (uporabnik je že v njem, agentov pa ni). Namesto tega povej, da je ekipa spet na voljo ob ${start}.${email}
+- Ob slovesu ne želi »lep dan«, ker je noč; uporabi npr. »Lep večer vam želim« ali »Lahko noč« (v vikanju).
+`;
+  }
+  return ctx;
 }
 
 export function buildSystemPrompt(now: Date = new Date()): string {

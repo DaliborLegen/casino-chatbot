@@ -285,7 +285,7 @@ export async function generateReply(
           text: systemPromptFor(tenant) + knowledgeSection,
           cache_control: { type: "ephemeral" },
         },
-        { type: "text", text: buildTimeContext() },
+        { type: "text", text: buildTimeContext(new Date(), getTenant(tenant).supportEmail) },
       ],
       messages,
     });

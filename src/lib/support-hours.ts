@@ -102,6 +102,11 @@ export function endOfDayInSupportZone(dateStr?: string | null): string | null {
   return new Date(utcMs).toISOString();
 }
 
+/** Hour (0–23) at which agents come back on duty, as configured. */
+export function supportStartHour(): number {
+  return intEnv("SUPPORT_HOURS_START", DEFAULT_START_HOUR);
+}
+
 /** True when human agents are on duty (default 08:00–24:00, every day). */
 export function isSupportOpen(now: Date = new Date()): boolean {
   const { hour, date, weekday } = localTime(now);
