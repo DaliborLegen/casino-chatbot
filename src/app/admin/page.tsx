@@ -280,7 +280,7 @@ export default async function AdminPage({
   return (
     <div className="text-zinc-100 px-4 sm:px-5 py-6">
       <div className="max-w-6xl mx-auto">
-        <header className="flex items-baseline justify-between mb-6">
+        <header className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-6">
           <h1 className="text-2xl font-semibold">
             Pogovori
             <span className="ml-3 align-middle inline-block h-1 w-10 rounded-full" style={{ background: "var(--accent)" }} />
@@ -355,14 +355,14 @@ export default async function AdminPage({
               <option value="90">Zadnjih 90 dni</option>
             </select>
           </div>
-          <div>
+          <div className="min-w-0 max-w-full">
             <label className="block text-xs font-medium text-zinc-400 uppercase tracking-wide mb-1.5">
               Čas
             </label>
             <select
               name="cas"
               defaultValue={filters.shift === "day" ? "dan" : filters.shift === "night" ? "noc" : ""}
-              className="rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 focus:outline-none"
+              className="max-w-full rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 focus:outline-none"
             >
               <option value="">Ves dan</option>
               <option value="dan">Bot je odgovarjal podnevi (8:00–24:00)</option>
@@ -427,10 +427,10 @@ export default async function AdminPage({
                   <span className="md:hidden text-zinc-500 mr-1">Sporočil:</span>
                   {r.message_count}
                 </div>
-                <div className="text-sm text-zinc-200 mt-1 md:mt-0">
+                <div className="text-sm text-zinc-200 mt-1 md:mt-0 min-w-0 [overflow-wrap:anywhere]">
                   {truncate(r.last_user, 120)}
                 </div>
-                <div className="text-sm text-zinc-400 mt-1 md:mt-0">
+                <div className="text-sm text-zinc-400 mt-1 md:mt-0 min-w-0 [overflow-wrap:anywhere]">
                   {r.handoff && !r.last_assistant ? (
                     <span className="text-amber-300/70">predano podpori</span>
                   ) : (

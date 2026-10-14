@@ -19,7 +19,7 @@ export default function AdminNav() {
           <Link
             key={l.href}
             href={l.href}
-            className="px-2.5 sm:px-3 py-1.5 rounded-md font-medium whitespace-nowrap transition-colors"
+            className="px-2 sm:px-3 py-1.5 rounded-md font-medium whitespace-nowrap transition-colors"
             style={
               active
                 ? { color: "var(--nav-active)", background: "rgba(0,0,0,0.22)" }
