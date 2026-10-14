@@ -365,8 +365,8 @@ export default async function AdminPage({
               className="max-w-full rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 focus:outline-none"
             >
               <option value="">Ves dan</option>
-              <option value="dan">Bot je odgovarjal podnevi (8:00–24:00)</option>
-              <option value="noc">Bot je odgovarjal ponoči (0:00–8:00)</option>
+              <option value="noc">Bot · nočna (0:00–8:00)</option>
+              <option value="dan">Delavci · dnevna (8:00–24:00)</option>
             </select>
           </div>
           <button
